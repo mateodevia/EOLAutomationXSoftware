@@ -1,14 +1,15 @@
-entidadesRepetidas().println();
+entidadesNoRepetidas().println();
+ServicioRest.allInstances.first().parametrosNoRepetidos().println();
 
 //1. No existen entidades con el mismo nombre
-operation entidadesRepetidas():Boolean{
+operation entidadesNoRepetidas():Boolean{
 	
 	var response = true;
 	
 	for(e in Entidad.allInstances){
 		var count = 0;
 		for(e2 in Entidad.allInstances){
-			if(e=e2){
+			if(e.nombre=e2.nombre){
 				count = count + 1;
 			}
 		}
@@ -21,19 +22,25 @@ operation entidadesRepetidas():Boolean{
 }
 
 //2. Todos los parámetros (path y query) de un servicio dado tienen un nombre único en el servicio.
-operation Servicio parametrosRepetidos():Boolean{
+operation ServicioRest parametrosNoRepetidos():Boolean{
 	
 	var response = true;
 	
-	for(parametro in Request.allInstances.select(r|r.servicioRest=self).parametros.select(p|p.tipo= "Path" or p.tipo="Query")){
-		var count = 0;
-		for(parametro2 in Request.allInstances.select(r|r.servicioRest=self).parametros.select(p|p.tipo= "Path" or p.tipo="Query")){
-			if(parametro=parametro2){
-				count = count + 1;
+	var requests: Sequence = Request.allInstances.select(r|r.servicioRest=self);
+	
+	for(request in requests){
+		var parametros: Collection = request.parametros;
+		
+		for(parametro in parametros){
+			var count = 0;
+			for(parametro2 in parametros){
+				if(parametro.llave = parametro2.llave){
+					count = count + 1;
+				}
 			}
-		}
-		if(count > 1){
-			response = false;
+			if(count > 1){
+				response = false;
+			}
 		}
 	}
 	
