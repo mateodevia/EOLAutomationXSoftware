@@ -1,0 +1,56 @@
+entidadesRepetidas().println();
+
+//1. No existen entidades con el mismo nombre
+operation entidadesRepetidas():Boolean{
+	
+	var response = true;
+	
+	for(e in Entidad.allInstances){
+		var count = 0;
+		for(e2 in Entidad.allInstances){
+			if(e=e2){
+				count = count + 1;
+			}
+		}
+		if(count > 1){
+			response = false;
+		}
+	}
+	
+	return response;
+}
+
+//2. Todos los parámetros (path y query) de un servicio dado tienen un nombre único en el servicio.
+operation Servicio parametrosRepetidos():Boolean{
+	
+	var response = true;
+	
+	for(parametro in Request.allInstances.select(r|r.servicioRest=self).parametros.select(p|p.tipo= "Path" or p.tipo="Query")){
+		var count = 0;
+		for(parametro2 in Request.allInstances.select(r|r.servicioRest=self).parametros.select(p|p.tipo= "Path" or p.tipo="Query")){
+			if(parametro=parametro2){
+				count = count + 1;
+			}
+		}
+		if(count > 1){
+			response = false;
+		}
+	}
+	
+	return response;
+}
+
+//3. Los servicios de tipo get no tienen body en el request.
+operation entidadesRepetidas():Boolean{
+	return false;
+}
+
+//4. En cada entidad solo un atributo puede ser de tipo "primary key".
+operation entidadesRepetidas():Boolean{
+	return false;
+}
+
+//5. Concordancia entre la restricción de un atributo de una entidad y su tipo de dato.
+operation entidadesRepetidas():Boolean{
+	return false;
+}

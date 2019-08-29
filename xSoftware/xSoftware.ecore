@@ -17,6 +17,8 @@
         eType="#//Parametro" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pruebas" upperBound="-1"
         eType="#//Prueba" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primitivetypes" upperBound="-1"
+        eType="#//PrimitiveType" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Api">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Lenguaje" lowerBound="1"
@@ -39,12 +41,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metodo" eType="#//TipoMetodoRest"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entidad">
+  <eClassifiers xsi:type="ecore:EClass" name="Entidad" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atributo">
+  <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//DataType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -74,8 +76,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Asercion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elemento1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elemento2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento1" lowerBound="1"
+        eType="#//Elemento" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento2" lowerBound="1"
+        eType="#//Elemento" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoMetodoRest">
     <eLiterals name="GET"/>
@@ -98,5 +102,18 @@
     <eLiterals name="&lt;=" value="2"/>
     <eLiterals name=">=" value="3"/>
     <eLiterals name="=" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//DataType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoPrimitivo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Elemento">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipo" lowerBound="1" eType="#//DataType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoPrimitivo">
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="String" value="2"/>
+    <eLiterals name="byte" value="3"/>
   </eClassifiers>
 </ecore:EPackage>
