@@ -20,7 +20,7 @@ operation entidadesRepetidas():Boolean{
 	return response;
 }
 
-//2. Todos los parámetros (path y query) de un servicio dado tienen un nombre único en el servicio.
+//2. Todos los parï¿½metros (path y query) de un servicio dado tienen un nombre ï¿½nico en el servicio.
 operation Servicio parametrosRepetidos():Boolean{
 	
 	var response = true;
@@ -41,16 +41,36 @@ operation Servicio parametrosRepetidos():Boolean{
 }
 
 //3. Los servicios de tipo get no tienen body en el request.
-operation entidadesRepetidas():Boolean{
-	return false;
+operation ServiciosGetSinBody():Boolean{
+	var response = true;
+	var count = 0;
+	for(request in Request.allInstances.select(rq|rq.servicioRest.metodo = "GET")) {
+		if(request.tipo = "Body"){
+			count = count + 1;
+		}
+	}
+	if(count > 1){
+		response = false;
+	}
+	return response;
 }
 
 //4. En cada entidad solo un atributo puede ser de tipo "primary key".
-operation entidadesRepetidas():Boolean{
-	return false;
+operation CadaEntidadConPk():Boolean{
+	return true;
+	var count = 0;
+	for(entidad in Entidad.allInstances.select(et|et.atributos)) {
+		if(request.tipo = "Body"){
+			count = count + 1;
+		}
+	}
+	if(count > 1){
+		response = false;
+	}
+	return response;
 }
 
-//5. Concordancia entre la restricción de un atributo de una entidad y su tipo de dato.
+//5. Concordancia entre la restricciï¿½n de un atributo de una entidad y su tipo de dato.
 operation entidadesRepetidas():Boolean{
 	return false;
 }
