@@ -15,8 +15,8 @@
     </recursos>
   </apis>
   <entidades nombre="Student">
-    <atributos nombre="first_name" tipo="primary key" valor="//@primitivetypes.0" mokaroo="Row Number"/>
-    <atributos nombre="last_name" tipo="" valor="//@primitivetypes.1" mokaroo="Last Name"/>
+    <atributos nombre="first_name" tipo="primary Key" valor="//@primitivetypes.0"/>
+    <atributos nombre="last_name" tipo="primary Key" valor="//@primitivetypes.1" mokaroo="Last Name"/>
     <atributos nombre="gender" valor="//@primitivetypes.2" mokaroo="Gender"/>
     <atributos nombre="code" tipo="" valor="//@primitivetypes.5" mokaroo="Country Code"/>
     <atributos nombre="country" tipo="" valor="//@primitivetypes.3" mokaroo="Country"/>

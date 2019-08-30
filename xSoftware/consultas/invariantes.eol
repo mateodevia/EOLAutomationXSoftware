@@ -70,12 +70,9 @@ operation CadaEntidadConPk():Boolean{
 	var pk = 0;
 	var response = true;
 	for(entidad in Entidad.allInstances) {
-		if(entidad.select(et|et.atributos.exists(at|at.tipo = "primary Key")).size() > 1){
-			pk = pk + 1;
+		if(entidad.atributos.select(at|at.tipo = "primary Key").size() > 1){
+			response = false;
 		}
-	}
-	if(pk > 1){
-		response = false;
 	}
 	return response;
 }
