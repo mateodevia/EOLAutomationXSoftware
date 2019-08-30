@@ -1,5 +1,7 @@
 entidadesNoRepetidas().println();
-//ServicioRest.allInstances.first().parametrosNoRepetidos().println();
+ServicioRest.allInstances.first().parametrosNoRepetidos().println();
+ServiciosGetSinBody().println();
+CadaEntidadConPk().println();
 
 concordanciaAtributos().println();
 
