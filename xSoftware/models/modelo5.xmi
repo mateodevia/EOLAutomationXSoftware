@@ -15,24 +15,19 @@
     </recursos>
   </apis>
   <entidades nombre="Student">
-    <atributos nombre="first_name" tipo=""/>
-    <atributos nombre="last_name" tipo="" mokaroo="Last Name"/>
-    <atributos nombre="gender" mokaroo="Gender"/>
-    <atributos nombre="code" mokaroo="Country Code"/>
-    <atributos nombre="country" tipo="" mokaroo="Country"/>
-    <atributos nombre="city" mokaroo="City"/>
-    <atributos nombre="university" mokaroo="Full Name"/>
+    <atributos nombre="first_name" tipo="primary key" valor="//@primitivetypes.0" mokaroo="Row Number"/>
+    <atributos nombre="last_name" tipo="" valor="//@primitivetypes.1" mokaroo="Last Name"/>
+    <atributos nombre="gender" valor="//@primitivetypes.2" mokaroo="Gender"/>
+    <atributos nombre="code" tipo="" valor="//@primitivetypes.5" mokaroo="Country Code"/>
+    <atributos nombre="country" tipo="" valor="//@primitivetypes.3" mokaroo="Country"/>
+    <atributos nombre="city" valor="//@primitivetypes.4" mokaroo="City"/>
+    <atributos nombre="university" tipo="" valor="//@primitivetypes.6" mokaroo="Full Name"/>
   </entidades>
-  <entidades nombre="Country">
-    <atributos nombre="shortName" tipo=""/>
-    <atributos nombre="name" mokaroo="Full Name"/>
-    <atributos nombre="name" mokaroo="Full Name"/>
-    <atributos nombre="phone" mokaroo="Full Name"/>
-    <atributos nombre="continent" mokaroo="Full Name"/>
-    <atributos nombre="capital" mokaroo="City"/>
-    <atributos nombre="currency" mokaroo="Full Name"/>
-    <atributos nombre="emoji" mokaroo="Full Name"/>
-    <atributos nombre="emojiu" mokaroo="Full Name"/>
-    <atributos xsi:type="xSoftware:AtributoArreglo" nombre="languages" tipo="" mokaroo="Arreglo"/>
-  </entidades>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Mateo"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Devia"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Male"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Colombia"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Bogota"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="201630956"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Andes"/>
 </xSoftware:Sistema>
