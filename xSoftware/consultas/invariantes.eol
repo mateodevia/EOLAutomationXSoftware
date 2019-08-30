@@ -30,7 +30,7 @@ operation ServicioRest parametrosNoRepetidos():Boolean{
 	var response = true;
 	
 	var requests: Sequence = Request.allInstances.select(r|r.servicioRest=self);
-	
+		
 	for(request in requests){
 		var parametros: Collection = request.parametros;
 		
@@ -54,7 +54,7 @@ operation ServicioRest parametrosNoRepetidos():Boolean{
 operation ServiciosGetSinBody():Boolean{
 	var response = true;
 	var count = 0;
-	for(request in Request.allInstances.select(rq|rq.servicioRest.metodo = "GET")) {
+	for(request in Request.allInstances.select(rq|rq.isTypeOf(Request)).select(rq2|rq2.servicioRest.metodo = "GET")) {
 		if(request.tipo = "Body"){
 			count = count + 1;
 		}
