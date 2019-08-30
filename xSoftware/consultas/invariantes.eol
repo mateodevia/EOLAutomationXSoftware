@@ -64,14 +64,14 @@ operation ServiciosGetSinBody():Boolean{
 
 //4. En cada entidad solo un atributo puede ser de tipo "primary key".
 operation CadaEntidadConPk():Boolean{
-	return true;
-	var count = 0;
-	for(entidad in Entidad.allInstances.select(et|et.atributos)) {
-		if(request.tipo = "Body"){
-			count = count + 1;
+	var pk = 0;
+	var response = true;
+	for(entidad in Entidad.allInstances) {
+		if(entidad.select(et|et.atributos.exists(at|at.tipo = "primary Key")).size() > 1){
+			pk = pk + 1;
 		}
 	}
-	if(count > 1){
+	if(pk > 1){
 		response = false;
 	}
 	return response;
