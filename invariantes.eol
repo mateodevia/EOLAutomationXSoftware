@@ -81,6 +81,5 @@ operation CadaEntidadConPk():Boolean{
 
 //5. Concordancia entre la restriccion de un atributo de una entidad y su tipo de dato.
 operation concordanciaAtributos():Boolean{
-	Atributo.allInstances.println();
-	return Atributo.allInstances.forAll(atributo| (atributo.mokaroo="Boolean" and atributo.valor.isTypeOf(MyBoolean)) or (atributo.mokaroo="Latitude" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo="Longitud" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo="Row Number" and atributo.valor.isTypeOf(MyNumeric)) or ( atributo.valor.isTypeOf(MyString)) );
+	return Atributo.allInstances.forAll(atributo| (atributo.mokaroo.literal="Boolean" and atributo.valor.isTypeOf(MyBoolean)) or (atributo.mokaroo.literal="Latitude" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Longitud" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Row Number" and atributo.valor.isTypeOf(MyNumeric)) or ( atributo.valor.isTypeOf(MyString) and atributo.mokaroo.literal<>"Boolean" and atributo.mokaroo.literal<>"Latitude" and atributo.mokaroo.literal<>"Longitud" and atributo.mokaroo.literal<>"Row Number") );
 }
