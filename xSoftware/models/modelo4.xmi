@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xSoftware:Sistema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xSoftware="http://www.uniandes.edu.co/xsoftware" nombre="xSoftware">
+  <apis nombre="MISO4202-ApiTest">
+    <recursos nombre="countries">
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/countries"/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/countries/{country}"/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/countries/{country}/states"/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/countries/{country}/cities"/>
+    </recursos>
+    <recursos nombre="students">
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/students"/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/students" metodo="POST"/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1/students/{id} "/>
+      <serviciosRest uri="miso4202-apitest.herokuapp.com/api/v1studentw/{id}" metodo="DELETE"/>
+    </recursos>
+  </apis>
+  <entidades nombre="Student">
+    <atributos nombre="first_name" tipo=""/>
+    <atributos nombre="last_name" tipo="" mokaroo="Last Name"/>
+    <atributos nombre="gender" mokaroo="Gender"/>
+    <atributos nombre="code" mokaroo="Country Code"/>
+    <atributos nombre="country" tipo="" mokaroo="Country"/>
+    <atributos nombre="city" mokaroo="City"/>
+    <atributos nombre="university" mokaroo="Full Name"/>
+  </entidades>
+  <entidades nombre="Country">
+    <atributos nombre="shortName" tipo=""/>
+    <atributos nombre="name" mokaroo="Full Name"/>
+    <atributos nombre="name" mokaroo="Full Name"/>
+    <atributos nombre="phone" mokaroo="Full Name"/>
+    <atributos nombre="continent" mokaroo="Full Name"/>
+    <atributos nombre="capital" mokaroo="City"/>
+    <atributos nombre="currency" mokaroo="Full Name"/>
+    <atributos nombre="emoji" mokaroo="Full Name"/>
+    <atributos nombre="emojiu" mokaroo="Full Name"/>
+    <atributos xsi:type="xSoftware:AtributoArreglo" nombre="languages" tipo="" mokaroo="Arreglo"/>
+  </entidades>
+</xSoftware:Sistema>

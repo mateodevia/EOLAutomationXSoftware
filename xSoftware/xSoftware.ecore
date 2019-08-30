@@ -49,7 +49,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" eSuperTypes="#//Elemento">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" lowerBound="1" eType="#//PrimitiveType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valor" eType="#//PrimitiveType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mokaroo" eType="#//Mockaroo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Request">
@@ -60,10 +60,10 @@
         eType="#//Parametro"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Response">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="respuestas" upperBound="-1"
         eType="#//Parametro"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametro">
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro" eSuperTypes="#//Elemento">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="llave" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoParametro"/>
@@ -124,5 +124,10 @@
     <eLiterals name="Longitud" value="11"/>
     <eLiterals name="Row Number" value="12"/>
     <eLiterals name="Boolean" value="13"/>
+    <eLiterals name="Arreglo" value="14"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoArreglo" eSuperTypes="#//Atributo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" upperBound="-1"
+        eType="#//PrimitiveType"/>
   </eClassifiers>
 </ecore:EPackage>

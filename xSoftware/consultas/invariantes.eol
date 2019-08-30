@@ -2,7 +2,6 @@ entidadesNoRepetidas().println();
 ServicioRest.allInstances.first().parametrosNoRepetidos().println();
 ServiciosGetSinBody().println();
 CadaEntidadConPk().println();
-
 concordanciaAtributos().println();
 
 //1. No existen entidades con el mismo nombre
@@ -83,5 +82,5 @@ operation CadaEntidadConPk():Boolean{
 
 //5. Concordancia entre la restriccion de un atributo de una entidad y su tipo de dato.
 operation concordanciaAtributos():Boolean{
-	return Atributo.allInstances.forAll(atributo| (atributo.mokaroo.literal="Boolean" and atributo.valor.isTypeOf(MyBoolean)) or (atributo.mokaroo.literal="Latitude" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Longitud" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Row Number" and atributo.valor.isTypeOf(MyNumeric)) or ( atributo.valor.isTypeOf(MyString) and atributo.mokaroo.literal<>"Boolean" and atributo.mokaroo.literal<>"Latitude" and atributo.mokaroo.literal<>"Longitud" and atributo.mokaroo.literal<>"Row Number") );
+	return Atributo.allInstances.forAll(atributo| (atributo.mokaroo.literal="Boolean" and atributo.valor.isTypeOf(MyBoolean)) or (atributo.mokaroo.literal="Latitude" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Longitud" and atributo.valor.isTypeOf(MyNumeric)) or (atributo.mokaroo.literal="Row Number" and atributo.valor.isTypeOf(MyNumeric)) or ( atributo.valor.isTypeOf(MyString) and atributo.mokaroo.literal<>"Boolean" and atributo.mokaroo.literal<>"Latitude" and atributo.mokaroo.literal<>"Longitud" and atributo.mokaroo.literal<>"Row Number") or (atributo.mokaroo.literal="Arreglo"));
 }
