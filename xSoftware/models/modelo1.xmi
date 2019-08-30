@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xSoftware:Sistema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xSoftware="http://www.uniandes.edu.co/xsoftware">
+  <entidades>
+    <atributos nombre="nombre" tipo="" valor="//@primitivetypes.2"/>
+    <atributos nombre="edad" tipo="" valor="//@primitivetypes.1" mokaroo="Row Number"/>
+    <atributos nombre="esAleta" tipo="" valor="//@primitivetypes.0" mokaroo="Boolean"/>
+  </entidades>
+  <primitivetypes xsi:type="xSoftware:MyBoolean" valor="true"/>
+  <primitivetypes xsi:type="xSoftware:MyNumeric" valor="21.0"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Mateo"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Devia"/>
+  <primitivetypes xsi:type="xSoftware:MyString" valor="Colombia"/>
+</xSoftware:Sistema>
