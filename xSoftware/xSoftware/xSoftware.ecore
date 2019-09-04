@@ -47,7 +47,6 @@
         eType="#//Asercion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Asercion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemento1" lowerBound="1"
         eType="#//Elemento"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemento2" lowerBound="1"
@@ -64,14 +63,6 @@
     <eLiterals name="Query" value="1"/>
     <eLiterals name="Body" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Operador">
-    <eLiterals name="="/>
-    <eLiterals name=">" value="1"/>
-    <eLiterals name="&lt;=" value="2"/>
-    <eLiterals name=">=" value="3"/>
-    <eLiterals name="&lt;" value="4"/>
-    <eLiterals name="==" value="5"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" abstract="true" eSuperTypes="#//Elemento"/>
   <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MyNumeric" eSuperTypes="#//PrimitiveType">
@@ -84,19 +75,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Mockaroo">
-    <eLiterals name="First Name"/>
-    <eLiterals name="Last Name" value="1"/>
-    <eLiterals name="Family Name" value="2"/>
-    <eLiterals name="Full Name" value="3"/>
+    <eLiterals name="FirstName"/>
+    <eLiterals name="LastName" value="1"/>
+    <eLiterals name="FamilyName" value="2"/>
+    <eLiterals name="FullName" value="3"/>
     <eLiterals name="Gender" value="4"/>
-    <eLiterals name="Email Address" value="5"/>
+    <eLiterals name="EmailAddress" value="5"/>
     <eLiterals name="Phone" value="6"/>
     <eLiterals name="Country" value="7"/>
     <eLiterals name="City" value="8"/>
-    <eLiterals name="Country Code" value="9"/>
+    <eLiterals name="CountryCode" value="9"/>
     <eLiterals name="Latitude" value="10"/>
     <eLiterals name="Longitud" value="11"/>
-    <eLiterals name="Row Number" value="12"/>
+    <eLiterals name="RowNumber" value="12"/>
     <eLiterals name="Boolean" value="13"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoArreglo" eSuperTypes="#//Atributo">
