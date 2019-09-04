@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/xSoftware2/src" modelPluginID="xSoftware2" modelName="XSoftware"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>../xSoftware.ecore</foreignModel>
+  <genPackages prefix="XSoftware" disposableProviderFactory="true" ecorePackage="xSoftware.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//TipoMetodoRest">
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/GET"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/POST"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/PUT"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/DELETE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//TipoParametro">
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Path"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Query"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Body"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//Mockaroo">
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FirstName"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LastName"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FamilyName"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FullName"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Gender"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/EmailAddress"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Phone"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Country"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/City"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/CountryCode"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Latitude"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Longitud"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/RowNumber"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Boolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//TipoAtributo">
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoAtributo/string"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoAtributo/int"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoAtributo/boolean"/>
+    </genEnums>
+    <genClasses ecoreClass="xSoftware.ecore#//Api">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Api/url"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Api/entidades"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Api/primitivetypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Api/serviciosRest"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Api/tests"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//ServicioRest">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/entidades"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/metodo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/response"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Entidad">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Entidad/atributos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/primaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/mockType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Response">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/atributos"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Parametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Test">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Test/descripcion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Test/mappings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Test/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Test/asertions"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Asercion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento2"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//PrimitiveType"/>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//Elemento"/>
+    <genClasses ecoreClass="xSoftware.ecore#//MyNumeric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyNumeric/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//MyString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyString/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//MyBoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyBoolean/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//AtributoArreglo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//AtributoArreglo/elementos"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//Mapping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/parametro"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
