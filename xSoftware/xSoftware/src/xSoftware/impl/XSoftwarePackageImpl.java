@@ -878,20 +878,20 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		addEEnumLiteral(tipoParametroEEnum, TipoParametro.BODY);
 
 		initEEnum(mockarooEEnum, Mockaroo.class, "Mockaroo");
-		addEEnumLiteral(mockarooEEnum, Mockaroo.FIRST_NAME);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.LAST_NAME);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.FAMILY_NAME);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.FULL_NAME);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.GENDER);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.EMAIL_ADDRESS);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.PHONE);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.COUNTRY);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.CITY);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.COUNTRY_CODE);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.LATITUDE);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.LONGITUD);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.ROW_NUMBER);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.BOOLEAN);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.FIRST_NAME_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.LAST_NAME_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.FAMILY_NAME_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.FULL_NAME_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.GENDER_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.EMAIL_ADDRESS_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.PHONE_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.COUNTRY_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.CITY_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.COUNTRY_CODE_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.LATITUDE_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.LONGITUD_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.ROW_NUMBER_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.BOOLEAN_TYPE);
 
 		initEEnum(tipoAtributoEEnum, TipoAtributo.class, "TipoAtributo");
 		addEEnumLiteral(tipoAtributoEEnum, TipoAtributo.STRING);

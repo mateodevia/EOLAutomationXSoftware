@@ -77,20 +77,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Mockaroo">
-    <eLiterals name="FirstName"/>
-    <eLiterals name="LastName" value="1"/>
-    <eLiterals name="FamilyName" value="2"/>
-    <eLiterals name="FullName" value="3"/>
-    <eLiterals name="Gender" value="4"/>
-    <eLiterals name="EmailAddress" value="5"/>
-    <eLiterals name="Phone" value="6"/>
-    <eLiterals name="Country" value="7"/>
-    <eLiterals name="City" value="8"/>
-    <eLiterals name="CountryCode" value="9"/>
-    <eLiterals name="Latitude" value="10"/>
-    <eLiterals name="Longitud" value="11"/>
-    <eLiterals name="RowNumber" value="12"/>
-    <eLiterals name="Boolean" value="13"/>
+    <eLiterals name="FirstNameType"/>
+    <eLiterals name="LastNameType" value="1"/>
+    <eLiterals name="FamilyNameType" value="2"/>
+    <eLiterals name="FullNameType" value="3"/>
+    <eLiterals name="GenderType" value="4"/>
+    <eLiterals name="EmailAddressType" value="5"/>
+    <eLiterals name="PhoneType" value="6"/>
+    <eLiterals name="CountryType" value="7"/>
+    <eLiterals name="CityType" value="8"/>
+    <eLiterals name="CountryCodeType" value="9"/>
+    <eLiterals name="LatitudeType" value="10"/>
+    <eLiterals name="LongitudType" value="11"/>
+    <eLiterals name="RowNumberType" value="12"/>
+    <eLiterals name="BooleanType" value="13"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoArreglo" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementos" upperBound="-1"

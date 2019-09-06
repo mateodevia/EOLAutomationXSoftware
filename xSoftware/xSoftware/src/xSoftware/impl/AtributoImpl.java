@@ -78,7 +78,7 @@ public class AtributoImpl extends ElementoImpl implements Atributo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Mockaroo MOCK_TYPE_EDEFAULT = Mockaroo.FIRST_NAME;
+	protected static final Mockaroo MOCK_TYPE_EDEFAULT = Mockaroo.FIRST_NAME_TYPE;
 
 	/**
 	 * The cached value of the '{@link #getMockType() <em>Mock Type</em>}' attribute.

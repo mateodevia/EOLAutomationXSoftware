@@ -3,9 +3,13 @@
 package xSoftware.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import xSoftware.AtributoArreglo;
 import xSoftware.Elemento;
 import xSoftware.XSoftwarePackage;
@@ -33,6 +37,7 @@ public class AtributoArregloImpl extends AtributoImpl implements AtributoArreglo
 	 * @ordered
 	 */
 	protected EList<Elemento> elementos;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

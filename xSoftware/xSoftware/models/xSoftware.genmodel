@@ -17,20 +17,20 @@
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Body"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//Mockaroo">
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FirstName"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LastName"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FamilyName"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FullName"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Gender"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/EmailAddress"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Phone"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Country"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/City"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/CountryCode"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Latitude"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Longitud"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/RowNumber"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FirstNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LastNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FamilyNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FullNameType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/GenderType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/EmailAddressType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/PhoneType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/CountryType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/CityType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/CountryCodeType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LatitudeType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LongitudType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/RowNumberType"/>
+      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/BooleanType"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//TipoAtributo">
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoAtributo/string"/>
