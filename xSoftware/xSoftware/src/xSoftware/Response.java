@@ -34,7 +34,7 @@ public interface Response extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Atributos</em>' containment reference list.
 	 * @see xSoftware.XSoftwarePackage#getResponse_Atributos()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Atributo> getAtributos();

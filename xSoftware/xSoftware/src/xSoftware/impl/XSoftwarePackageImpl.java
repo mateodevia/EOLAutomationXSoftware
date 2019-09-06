@@ -369,6 +369,15 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getServicioRest_Url() {
+		return (EAttribute)servicioRestEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntidad() {
 		return entidadEClass;
 	}
@@ -791,6 +800,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEAttribute(servicioRestEClass, SERVICIO_REST__METODO);
 		createEAttribute(servicioRestEClass, SERVICIO_REST__NOMBRE);
 		createEReference(servicioRestEClass, SERVICIO_REST__RESPONSE);
+		createEAttribute(servicioRestEClass, SERVICIO_REST__URL);
 
 		entidadEClass = createEClass(ENTIDAD);
 		createEAttribute(entidadEClass, ENTIDAD__NOMBRE);
@@ -903,10 +913,11 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getApi_Tests(), this.getTest(), null, "tests", null, 0, -1, Api.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(servicioRestEClass, ServicioRest.class, "ServicioRest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getServicioRest_Entidades(), this.getEntidad(), null, "entidades", null, 1, -1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicioRest_Entidades(), this.getEntidad(), null, "entidades", null, 0, -1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServicioRest_Metodo(), this.getTipoMetodoRest(), "metodo", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServicioRest_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServicioRest_Response(), this.getResponse(), null, "response", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getServicioRest_Url(), ecorePackage.getEString(), "url", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadEClass, Entidad.class, "Entidad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntidad_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -915,7 +926,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEAttribute(getAtributoMocka_MockType(), this.getMockaroo(), "mockType", null, 0, 1, AtributoMocka.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResponse_Atributos(), this.getAtributo(), null, "atributos", null, 1, -1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResponse_Atributos(), this.getAtributo(), null, "atributos", null, 0, -1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parametroEClass, Parametro.class, "Parametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

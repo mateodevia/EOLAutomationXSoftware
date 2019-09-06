@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link xSoftware.ServicioRest#getMetodo <em>Metodo</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getNombre <em>Nombre</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getResponse <em>Response</em>}</li>
+ *   <li>{@link xSoftware.ServicioRest#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getServicioRest()
@@ -37,7 +38,7 @@ public interface ServicioRest extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Entidades</em>' reference list.
 	 * @see xSoftware.XSoftwarePackage#getServicioRest_Entidades()
-	 * @model required="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Entidad> getEntidades();
@@ -122,5 +123,31 @@ public interface ServicioRest extends EObject {
 	 * @generated
 	 */
 	void setResponse(Response value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see xSoftware.XSoftwarePackage#getServicioRest_Url()
+	 * @model
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 } // ServicioRest

@@ -35,6 +35,7 @@ import xSoftware.XSoftwarePackage;
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getMetodo <em>Metodo</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getNombre <em>Nombre</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getResponse <em>Response</em>}</li>
+ *   <li>{@link xSoftware.impl.ServicioRestImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 	 * @ordered
 	 */
 	protected Response response;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +242,27 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.SERVICIO_REST__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -246,6 +288,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 				return getNombre();
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				return getResponse();
+			case XSoftwarePackage.SERVICIO_REST__URL:
+				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -272,6 +316,9 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				setResponse((Response)newValue);
 				return;
+			case XSoftwarePackage.SERVICIO_REST__URL:
+				setUrl((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -296,6 +343,9 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				setResponse((Response)null);
 				return;
+			case XSoftwarePackage.SERVICIO_REST__URL:
+				setUrl(URL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -316,6 +366,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				return response != null;
+			case XSoftwarePackage.SERVICIO_REST__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -334,6 +386,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 		result.append(metodo);
 		result.append(", nombre: ");
 		result.append(nombre);
+		result.append(", url: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}

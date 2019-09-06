@@ -13,12 +13,13 @@
         eType="#//Test" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServicioRest">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" lowerBound="1"
-        upperBound="-1" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"
+        eType="#//Entidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metodo" eType="#//TipoMetodoRest"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"
         eType="#//Response" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entidad">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -27,8 +28,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mockType" eType="#//Mockaroo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Response">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" lowerBound="1"
-        upperBound="-1" eType="#//Atributo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
+        eType="#//Atributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parametro">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

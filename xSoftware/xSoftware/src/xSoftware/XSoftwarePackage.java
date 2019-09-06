@@ -177,13 +177,22 @@ public interface XSoftwarePackage extends EPackage {
 	int SERVICIO_REST__RESPONSE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO_REST__URL = 4;
+
+	/**
 	 * The number of structural features of the '<em>Servicio Rest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST_FEATURE_COUNT = 4;
+	int SERVICIO_REST_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Servicio Rest</em>' class.
@@ -1128,6 +1137,17 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getServicioRest_Response();
 
 	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see xSoftware.ServicioRest#getUrl()
+	 * @see #getServicioRest()
+	 * @generated
+	 */
+	EAttribute getServicioRest_Url();
+
+	/**
 	 * Returns the meta object for class '{@link xSoftware.Entidad <em>Entidad</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1693,6 +1713,14 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference SERVICIO_REST__RESPONSE = eINSTANCE.getServicioRest_Response();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVICIO_REST__URL = eINSTANCE.getServicioRest_Url();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.EntidadImpl <em>Entidad</em>}' class.
