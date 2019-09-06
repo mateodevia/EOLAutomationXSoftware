@@ -14,10 +14,13 @@ import xSoftware.Api;
 import xSoftware.Asercion;
 import xSoftware.Atributo;
 import xSoftware.AtributoArreglo;
+import xSoftware.AtributoMocka;
+import xSoftware.AtributoSimple;
 import xSoftware.Elemento;
 import xSoftware.Entidad;
 import xSoftware.Mapping;
 import xSoftware.Mockaroo;
+import xSoftware.MockarooEntity;
 import xSoftware.MyBoolean;
 import xSoftware.MyNumeric;
 import xSoftware.MyString;
@@ -25,6 +28,7 @@ import xSoftware.Parametro;
 import xSoftware.PrimitiveType;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
+import xSoftware.SimpleEntity;
 import xSoftware.Test;
 import xSoftware.TipoAtributo;
 import xSoftware.TipoMetodoRest;
@@ -65,7 +69,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass atributoEClass = null;
+	private EClass atributoMockaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,6 +147,34 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	private EClass mappingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass simpleEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass mockarooEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atributoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atributoSimpleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -346,17 +378,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntidad_Atributos() {
-		return (EReference)entidadEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getEntidad_Nombre() {
-		return (EAttribute)entidadEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)entidadEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -364,8 +387,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAtributo() {
-		return atributoEClass;
+	public EClass getAtributoMocka() {
+		return atributoMockaEClass;
 	}
 
 	/**
@@ -373,35 +396,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAtributo_Nombre() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAtributo_PrimaryKey() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAtributo_MockType() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAtributo_Tipo() {
-		return (EAttribute)atributoEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAtributoMocka_MockType() {
+		return (EAttribute)atributoMockaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -643,6 +639,87 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSimpleEntity() {
+		return simpleEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSimpleEntity_Atributos() {
+		return (EReference)simpleEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMockarooEntity() {
+		return mockarooEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMockarooEntity_Atributos() {
+		return (EReference)mockarooEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAtributo() {
+		return atributoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAtributo_Nombre() {
+		return (EAttribute)atributoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAtributo_PrimaryKey() {
+		return (EAttribute)atributoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAtributo_Tipo() {
+		return (EAttribute)atributoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAtributoSimple() {
+		return atributoSimpleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTipoMetodoRest() {
 		return tipoMetodoRestEEnum;
 	}
@@ -716,14 +793,10 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(servicioRestEClass, SERVICIO_REST__RESPONSE);
 
 		entidadEClass = createEClass(ENTIDAD);
-		createEReference(entidadEClass, ENTIDAD__ATRIBUTOS);
 		createEAttribute(entidadEClass, ENTIDAD__NOMBRE);
 
-		atributoEClass = createEClass(ATRIBUTO);
-		createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
-		createEAttribute(atributoEClass, ATRIBUTO__PRIMARY_KEY);
-		createEAttribute(atributoEClass, ATRIBUTO__MOCK_TYPE);
-		createEAttribute(atributoEClass, ATRIBUTO__TIPO);
+		atributoMockaEClass = createEClass(ATRIBUTO_MOCKA);
+		createEAttribute(atributoMockaEClass, ATRIBUTO_MOCKA__MOCK_TYPE);
 
 		responseEClass = createEClass(RESPONSE);
 		createEReference(responseEClass, RESPONSE__ATRIBUTOS);
@@ -762,6 +835,19 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(mappingEClass, MAPPING__VALUE);
 		createEReference(mappingEClass, MAPPING__PARAMETRO);
 
+		simpleEntityEClass = createEClass(SIMPLE_ENTITY);
+		createEReference(simpleEntityEClass, SIMPLE_ENTITY__ATRIBUTOS);
+
+		mockarooEntityEClass = createEClass(MOCKAROO_ENTITY);
+		createEReference(mockarooEntityEClass, MOCKAROO_ENTITY__ATRIBUTOS);
+
+		atributoEClass = createEClass(ATRIBUTO);
+		createEAttribute(atributoEClass, ATRIBUTO__NOMBRE);
+		createEAttribute(atributoEClass, ATRIBUTO__PRIMARY_KEY);
+		createEAttribute(atributoEClass, ATRIBUTO__TIPO);
+
+		atributoSimpleEClass = createEClass(ATRIBUTO_SIMPLE);
+
 		// Create enums
 		tipoMetodoRestEEnum = createEEnum(TIPO_METODO_REST);
 		tipoParametroEEnum = createEEnum(TIPO_PARAMETRO);
@@ -797,12 +883,16 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		atributoEClass.getESuperTypes().add(this.getElemento());
+		atributoMockaEClass.getESuperTypes().add(this.getAtributo());
 		primitiveTypeEClass.getESuperTypes().add(this.getElemento());
 		myNumericEClass.getESuperTypes().add(this.getPrimitiveType());
 		myStringEClass.getESuperTypes().add(this.getPrimitiveType());
 		myBooleanEClass.getESuperTypes().add(this.getPrimitiveType());
 		atributoArregloEClass.getESuperTypes().add(this.getAtributo());
+		simpleEntityEClass.getESuperTypes().add(this.getEntidad());
+		mockarooEntityEClass.getESuperTypes().add(this.getEntidad());
+		atributoEClass.getESuperTypes().add(this.getElemento());
+		atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apiEClass, Api.class, "Api", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -819,14 +909,10 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getServicioRest_Response(), this.getResponse(), null, "response", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadEClass, Entidad.class, "Entidad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntidad_Atributos(), this.getAtributo(), null, "atributos", null, 1, -1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntidad_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(atributoEClass, Atributo.class, "Atributo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAtributo_PrimaryKey(), ecorePackage.getEBoolean(), "primaryKey", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAtributo_MockType(), this.getMockaroo(), "mockType", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAtributo_Tipo(), this.getTipoAtributo(), "tipo", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(atributoMockaEClass, AtributoMocka.class, "AtributoMocka", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAtributoMocka_MockType(), this.getMockaroo(), "mockType", null, 0, 1, AtributoMocka.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResponse_Atributos(), this.getAtributo(), null, "atributos", null, 1, -1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -864,6 +950,19 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapping_Value(), this.getElemento(), null, "value", null, 1, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMapping_Parametro(), this.getParametro(), null, "parametro", null, 1, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(simpleEntityEClass, SimpleEntity.class, "SimpleEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSimpleEntity_Atributos(), this.getAtributoSimple(), null, "atributos", null, 0, -1, SimpleEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(mockarooEntityEClass, MockarooEntity.class, "MockarooEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMockarooEntity_Atributos(), this.getAtributo(), null, "atributos", null, 0, -1, MockarooEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(atributoEClass, Atributo.class, "Atributo", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAtributo_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtributo_PrimaryKey(), ecorePackage.getEBoolean(), "primaryKey", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAtributo_Tipo(), this.getTipoAtributo(), "tipo", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(atributoSimpleEClass, AtributoSimple.class, "AtributoSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(tipoMetodoRestEEnum, TipoMetodoRest.class, "TipoMetodoRest");

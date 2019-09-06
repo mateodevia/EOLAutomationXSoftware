@@ -60,7 +60,7 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.API: return createApi();
 			case XSoftwarePackage.SERVICIO_REST: return createServicioRest();
 			case XSoftwarePackage.ENTIDAD: return createEntidad();
-			case XSoftwarePackage.ATRIBUTO: return createAtributo();
+			case XSoftwarePackage.ATRIBUTO_MOCKA: return createAtributoMocka();
 			case XSoftwarePackage.RESPONSE: return createResponse();
 			case XSoftwarePackage.PARAMETRO: return createParametro();
 			case XSoftwarePackage.TEST: return createTest();
@@ -70,6 +70,9 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.MY_BOOLEAN: return createMyBoolean();
 			case XSoftwarePackage.ATRIBUTO_ARREGLO: return createAtributoArreglo();
 			case XSoftwarePackage.MAPPING: return createMapping();
+			case XSoftwarePackage.SIMPLE_ENTITY: return createSimpleEntity();
+			case XSoftwarePackage.MOCKAROO_ENTITY: return createMockarooEntity();
+			case XSoftwarePackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -152,9 +155,9 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Atributo createAtributo() {
-		AtributoImpl atributo = new AtributoImpl();
-		return atributo;
+	public AtributoMocka createAtributoMocka() {
+		AtributoMockaImpl atributoMocka = new AtributoMockaImpl();
+		return atributoMocka;
 	}
 
 	/**
@@ -245,6 +248,36 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	public Mapping createMapping() {
 		MappingImpl mapping = new MappingImpl();
 		return mapping;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SimpleEntity createSimpleEntity() {
+		SimpleEntityImpl simpleEntity = new SimpleEntityImpl();
+		return simpleEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MockarooEntity createMockarooEntity() {
+		MockarooEntityImpl mockarooEntity = new MockarooEntityImpl();
+		return mockarooEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoSimple createAtributoSimple() {
+		AtributoSimpleImpl atributoSimple = new AtributoSimpleImpl();
+		return atributoSimple;
 	}
 
 	/**

@@ -51,14 +51,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/response"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Entidad">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Entidad/atributos"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/nombre"/>
     </genClasses>
-    <genClasses ecoreClass="xSoftware.ecore#//Atributo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/primaryKey"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/mockType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/tipo"/>
+    <genClasses ecoreClass="xSoftware.ecore#//AtributoMocka">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//AtributoMocka/mockType"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Response">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/atributos"/>
@@ -95,5 +91,17 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/parametro"/>
     </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//SimpleEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//SimpleEntity/atributos"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//MockarooEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//MockarooEntity/atributos"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/primaryKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/tipo"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//AtributoSimple"/>
   </genPackages>
 </genmodel:GenModel>

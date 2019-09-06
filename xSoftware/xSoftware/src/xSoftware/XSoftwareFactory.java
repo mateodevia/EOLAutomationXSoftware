@@ -49,13 +49,13 @@ public interface XSoftwareFactory extends EFactory {
 	Entidad createEntidad();
 
 	/**
-	 * Returns a new object of class '<em>Atributo</em>'.
+	 * Returns a new object of class '<em>Atributo Mocka</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Atributo</em>'.
+	 * @return a new object of class '<em>Atributo Mocka</em>'.
 	 * @generated
 	 */
-	Atributo createAtributo();
+	AtributoMocka createAtributoMocka();
 
 	/**
 	 * Returns a new object of class '<em>Response</em>'.
@@ -137,6 +137,33 @@ public interface XSoftwareFactory extends EFactory {
 	 * @generated
 	 */
 	Mapping createMapping();
+
+	/**
+	 * Returns a new object of class '<em>Simple Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Simple Entity</em>'.
+	 * @generated
+	 */
+	SimpleEntity createSimpleEntity();
+
+	/**
+	 * Returns a new object of class '<em>Mockaroo Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mockaroo Entity</em>'.
+	 * @generated
+	 */
+	MockarooEntity createMockarooEntity();
+
+	/**
+	 * Returns a new object of class '<em>Atributo Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Simple</em>'.
+	 * @generated
+	 */
+	AtributoSimple createAtributoSimple();
 
 	/**
 	 * Returns the package supported by this factory.

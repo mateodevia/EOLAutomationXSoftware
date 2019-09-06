@@ -84,10 +84,11 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case XSoftwarePackage.ATRIBUTO: {
-				Atributo atributo = (Atributo)theEObject;
-				T result = caseAtributo(atributo);
-				if (result == null) result = caseElemento(atributo);
+			case XSoftwarePackage.ATRIBUTO_MOCKA: {
+				AtributoMocka atributoMocka = (AtributoMocka)theEObject;
+				T result = caseAtributoMocka(atributoMocka);
+				if (result == null) result = caseAtributo(atributoMocka);
+				if (result == null) result = caseElemento(atributoMocka);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -166,6 +167,35 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case XSoftwarePackage.SIMPLE_ENTITY: {
+				SimpleEntity simpleEntity = (SimpleEntity)theEObject;
+				T result = caseSimpleEntity(simpleEntity);
+				if (result == null) result = caseEntidad(simpleEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.MOCKAROO_ENTITY: {
+				MockarooEntity mockarooEntity = (MockarooEntity)theEObject;
+				T result = caseMockarooEntity(mockarooEntity);
+				if (result == null) result = caseEntidad(mockarooEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.ATRIBUTO: {
+				Atributo atributo = (Atributo)theEObject;
+				T result = caseAtributo(atributo);
+				if (result == null) result = caseElemento(atributo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.ATRIBUTO_SIMPLE: {
+				AtributoSimple atributoSimple = (AtributoSimple)theEObject;
+				T result = caseAtributoSimple(atributoSimple);
+				if (result == null) result = caseAtributo(atributoSimple);
+				if (result == null) result = caseElemento(atributoSimple);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -216,17 +246,17 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Atributo</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Mocka</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Atributo</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Mocka</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAtributo(Atributo object) {
+	public T caseAtributoMocka(AtributoMocka object) {
 		return null;
 	}
 
@@ -392,6 +422,66 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMapping(Mapping object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Simple Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Simple Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSimpleEntity(SimpleEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mockaroo Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mockaroo Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMockarooEntity(MockarooEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributo(Atributo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Simple</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoSimple(AtributoSimple object) {
 		return null;
 	}
 

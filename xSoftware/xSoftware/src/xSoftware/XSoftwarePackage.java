@@ -205,22 +205,13 @@ public interface XSoftwarePackage extends EPackage {
 	int ENTIDAD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTIDAD__ATRIBUTOS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTIDAD__NOMBRE = 1;
+	int ENTIDAD__NOMBRE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Entidad</em>' class.
@@ -229,7 +220,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTIDAD_FEATURE_COUNT = 2;
+	int ENTIDAD_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Entidad</em>' class.
@@ -276,7 +267,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributo()
 	 * @generated
 	 */
-	int ATRIBUTO = 3;
+	int ATRIBUTO = 17;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -297,22 +288,13 @@ public interface XSoftwarePackage extends EPackage {
 	int ATRIBUTO__PRIMARY_KEY = ELEMENTO_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Mock Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO__MOCK_TYPE = ELEMENTO_FEATURE_COUNT + 2;
-
-	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__TIPO = ELEMENTO_FEATURE_COUNT + 3;
+	int ATRIBUTO__TIPO = ELEMENTO_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
@@ -321,7 +303,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = ELEMENTO_FEATURE_COUNT + 4;
+	int ATRIBUTO_FEATURE_COUNT = ELEMENTO_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -331,6 +313,70 @@ public interface XSoftwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int ATRIBUTO_OPERATION_COUNT = ELEMENTO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.AtributoMockaImpl <em>Atributo Mocka</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.AtributoMockaImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoMocka()
+	 * @generated
+	 */
+	int ATRIBUTO_MOCKA = 3;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA__NOMBRE = ATRIBUTO__NOMBRE;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA__PRIMARY_KEY = ATRIBUTO__PRIMARY_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA__TIPO = ATRIBUTO__TIPO;
+
+	/**
+	 * The feature id for the '<em><b>Mock Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA__MOCK_TYPE = ATRIBUTO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Atributo Mocka</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Atributo Mocka</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_MOCKA_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.ResponseImpl <em>Response</em>}' class.
@@ -693,15 +739,6 @@ public interface XSoftwarePackage extends EPackage {
 	int ATRIBUTO_ARREGLO__PRIMARY_KEY = ATRIBUTO__PRIMARY_KEY;
 
 	/**
-	 * The feature id for the '<em><b>Mock Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ATRIBUTO_ARREGLO__MOCK_TYPE = ATRIBUTO__MOCK_TYPE;
-
-	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -784,6 +821,153 @@ public interface XSoftwarePackage extends EPackage {
 	int MAPPING_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.SimpleEntityImpl <em>Simple Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.SimpleEntityImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getSimpleEntity()
+	 * @generated
+	 */
+	int SIMPLE_ENTITY = 15;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ENTITY__NOMBRE = ENTIDAD__NOMBRE;
+
+	/**
+	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ENTITY__ATRIBUTOS = ENTIDAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Simple Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ENTITY_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Simple Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_ENTITY_OPERATION_COUNT = ENTIDAD_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.MockarooEntityImpl <em>Mockaroo Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.MockarooEntityImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockarooEntity()
+	 * @generated
+	 */
+	int MOCKAROO_ENTITY = 16;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOCKAROO_ENTITY__NOMBRE = ENTIDAD__NOMBRE;
+
+	/**
+	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOCKAROO_ENTITY__ATRIBUTOS = ENTIDAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Mockaroo Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOCKAROO_ENTITY_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Mockaroo Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOCKAROO_ENTITY_OPERATION_COUNT = ENTIDAD_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.AtributoSimpleImpl <em>Atributo Simple</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.AtributoSimpleImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoSimple()
+	 * @generated
+	 */
+	int ATRIBUTO_SIMPLE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_SIMPLE__NOMBRE = ATRIBUTO__NOMBRE;
+
+	/**
+	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_SIMPLE__PRIMARY_KEY = ATRIBUTO__PRIMARY_KEY;
+
+	/**
+	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_SIMPLE__TIPO = ATRIBUTO__TIPO;
+
+	/**
+	 * The number of structural features of the '<em>Atributo Simple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_SIMPLE_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Atributo Simple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_SIMPLE_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -791,7 +975,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoMetodoRest()
 	 * @generated
 	 */
-	int TIPO_METODO_REST = 15;
+	int TIPO_METODO_REST = 19;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoParametro <em>Tipo Parametro</em>}' enum.
@@ -801,7 +985,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoParametro()
 	 * @generated
 	 */
-	int TIPO_PARAMETRO = 16;
+	int TIPO_PARAMETRO = 20;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.
@@ -811,7 +995,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockaroo()
 	 * @generated
 	 */
-	int MOCKAROO = 17;
+	int MOCKAROO = 21;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoAtributo <em>Tipo Atributo</em>}' enum.
@@ -821,7 +1005,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoAtributo()
 	 * @generated
 	 */
-	int TIPO_ATRIBUTO = 18;
+	int TIPO_ATRIBUTO = 22;
 
 
 	/**
@@ -954,17 +1138,6 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getEntidad();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link xSoftware.Entidad#getAtributos <em>Atributos</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Atributos</em>'.
-	 * @see xSoftware.Entidad#getAtributos()
-	 * @see #getEntidad()
-	 * @generated
-	 */
-	EReference getEntidad_Atributos();
-
-	/**
 	 * Returns the meta object for the attribute '{@link xSoftware.Entidad#getNombre <em>Nombre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -976,58 +1149,25 @@ public interface XSoftwarePackage extends EPackage {
 	EAttribute getEntidad_Nombre();
 
 	/**
-	 * Returns the meta object for class '{@link xSoftware.Atributo <em>Atributo</em>}'.
+	 * Returns the meta object for class '{@link xSoftware.AtributoMocka <em>Atributo Mocka</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Atributo</em>'.
-	 * @see xSoftware.Atributo
+	 * @return the meta object for class '<em>Atributo Mocka</em>'.
+	 * @see xSoftware.AtributoMocka
 	 * @generated
 	 */
-	EClass getAtributo();
+	EClass getAtributoMocka();
 
 	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see xSoftware.Atributo#getNombre()
-	 * @see #getAtributo()
-	 * @generated
-	 */
-	EAttribute getAtributo_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#isPrimaryKey <em>Primary Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Primary Key</em>'.
-	 * @see xSoftware.Atributo#isPrimaryKey()
-	 * @see #getAtributo()
-	 * @generated
-	 */
-	EAttribute getAtributo_PrimaryKey();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#getMockType <em>Mock Type</em>}'.
+	 * Returns the meta object for the attribute '{@link xSoftware.AtributoMocka#getMockType <em>Mock Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mock Type</em>'.
-	 * @see xSoftware.Atributo#getMockType()
-	 * @see #getAtributo()
+	 * @see xSoftware.AtributoMocka#getMockType()
+	 * @see #getAtributoMocka()
 	 * @generated
 	 */
-	EAttribute getAtributo_MockType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see xSoftware.Atributo#getTipo()
-	 * @see #getAtributo()
-	 * @generated
-	 */
-	EAttribute getAtributo_Tipo();
+	EAttribute getAtributoMocka_MockType();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Response <em>Response</em>}'.
@@ -1305,6 +1445,101 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getMapping_Parametro();
 
 	/**
+	 * Returns the meta object for class '{@link xSoftware.SimpleEntity <em>Simple Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Simple Entity</em>'.
+	 * @see xSoftware.SimpleEntity
+	 * @generated
+	 */
+	EClass getSimpleEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link xSoftware.SimpleEntity#getAtributos <em>Atributos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Atributos</em>'.
+	 * @see xSoftware.SimpleEntity#getAtributos()
+	 * @see #getSimpleEntity()
+	 * @generated
+	 */
+	EReference getSimpleEntity_Atributos();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.MockarooEntity <em>Mockaroo Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Mockaroo Entity</em>'.
+	 * @see xSoftware.MockarooEntity
+	 * @generated
+	 */
+	EClass getMockarooEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link xSoftware.MockarooEntity#getAtributos <em>Atributos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Atributos</em>'.
+	 * @see xSoftware.MockarooEntity#getAtributos()
+	 * @see #getMockarooEntity()
+	 * @generated
+	 */
+	EReference getMockarooEntity_Atributos();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.Atributo <em>Atributo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Atributo</em>'.
+	 * @see xSoftware.Atributo
+	 * @generated
+	 */
+	EClass getAtributo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see xSoftware.Atributo#getNombre()
+	 * @see #getAtributo()
+	 * @generated
+	 */
+	EAttribute getAtributo_Nombre();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#isPrimaryKey <em>Primary Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Primary Key</em>'.
+	 * @see xSoftware.Atributo#isPrimaryKey()
+	 * @see #getAtributo()
+	 * @generated
+	 */
+	EAttribute getAtributo_PrimaryKey();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.Atributo#getTipo <em>Tipo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tipo</em>'.
+	 * @see xSoftware.Atributo#getTipo()
+	 * @see #getAtributo()
+	 * @generated
+	 */
+	EAttribute getAtributo_Tipo();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.AtributoSimple <em>Atributo Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Atributo Simple</em>'.
+	 * @see xSoftware.AtributoSimple
+	 * @generated
+	 */
+	EClass getAtributoSimple();
+
+	/**
 	 * Returns the meta object for enum '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1470,14 +1705,6 @@ public interface XSoftwarePackage extends EPackage {
 		EClass ENTIDAD = eINSTANCE.getEntidad();
 
 		/**
-		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTIDAD__ATRIBUTOS = eINSTANCE.getEntidad_Atributos();
-
-		/**
 		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1486,30 +1713,14 @@ public interface XSoftwarePackage extends EPackage {
 		EAttribute ENTIDAD__NOMBRE = eINSTANCE.getEntidad_Nombre();
 
 		/**
-		 * The meta object literal for the '{@link xSoftware.impl.AtributoImpl <em>Atributo</em>}' class.
+		 * The meta object literal for the '{@link xSoftware.impl.AtributoMockaImpl <em>Atributo Mocka</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see xSoftware.impl.AtributoImpl
-		 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributo()
+		 * @see xSoftware.impl.AtributoMockaImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoMocka()
 		 * @generated
 		 */
-		EClass ATRIBUTO = eINSTANCE.getAtributo();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATRIBUTO__NOMBRE = eINSTANCE.getAtributo_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Primary Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATRIBUTO__PRIMARY_KEY = eINSTANCE.getAtributo_PrimaryKey();
+		EClass ATRIBUTO_MOCKA = eINSTANCE.getAtributoMocka();
 
 		/**
 		 * The meta object literal for the '<em><b>Mock Type</b></em>' attribute feature.
@@ -1517,15 +1728,7 @@ public interface XSoftwarePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ATRIBUTO__MOCK_TYPE = eINSTANCE.getAtributo_MockType();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATRIBUTO__TIPO = eINSTANCE.getAtributo_Tipo();
+		EAttribute ATRIBUTO_MOCKA__MOCK_TYPE = eINSTANCE.getAtributoMocka_MockType();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.ResponseImpl <em>Response</em>}' class.
@@ -1756,6 +1959,86 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference MAPPING__PARAMETRO = eINSTANCE.getMapping_Parametro();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.SimpleEntityImpl <em>Simple Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.SimpleEntityImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getSimpleEntity()
+		 * @generated
+		 */
+		EClass SIMPLE_ENTITY = eINSTANCE.getSimpleEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SIMPLE_ENTITY__ATRIBUTOS = eINSTANCE.getSimpleEntity_Atributos();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.MockarooEntityImpl <em>Mockaroo Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.MockarooEntityImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getMockarooEntity()
+		 * @generated
+		 */
+		EClass MOCKAROO_ENTITY = eINSTANCE.getMockarooEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOCKAROO_ENTITY__ATRIBUTOS = eINSTANCE.getMockarooEntity_Atributos();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.AtributoImpl <em>Atributo</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.AtributoImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributo()
+		 * @generated
+		 */
+		EClass ATRIBUTO = eINSTANCE.getAtributo();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATRIBUTO__NOMBRE = eINSTANCE.getAtributo_Nombre();
+
+		/**
+		 * The meta object literal for the '<em><b>Primary Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATRIBUTO__PRIMARY_KEY = eINSTANCE.getAtributo_PrimaryKey();
+
+		/**
+		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATRIBUTO__TIPO = eINSTANCE.getAtributo_Tipo();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.AtributoSimpleImpl <em>Atributo Simple</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.AtributoSimpleImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoSimple()
+		 * @generated
+		 */
+		EClass ATRIBUTO_SIMPLE = eINSTANCE.getAtributoSimple();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.

@@ -80,8 +80,8 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createEntidadAdapter();
 			}
 			@Override
-			public Adapter caseAtributo(Atributo object) {
-				return createAtributoAdapter();
+			public Adapter caseAtributoMocka(AtributoMocka object) {
+				return createAtributoMockaAdapter();
 			}
 			@Override
 			public Adapter caseResponse(Response object) {
@@ -126,6 +126,22 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMapping(Mapping object) {
 				return createMappingAdapter();
+			}
+			@Override
+			public Adapter caseSimpleEntity(SimpleEntity object) {
+				return createSimpleEntityAdapter();
+			}
+			@Override
+			public Adapter caseMockarooEntity(MockarooEntity object) {
+				return createMockarooEntityAdapter();
+			}
+			@Override
+			public Adapter caseAtributo(Atributo object) {
+				return createAtributoAdapter();
+			}
+			@Override
+			public Adapter caseAtributoSimple(AtributoSimple object) {
+				return createAtributoSimpleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -190,16 +206,16 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link xSoftware.Atributo <em>Atributo</em>}'.
+	 * Creates a new adapter for an object of class '{@link xSoftware.AtributoMocka <em>Atributo Mocka</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see xSoftware.Atributo
+	 * @see xSoftware.AtributoMocka
 	 * @generated
 	 */
-	public Adapter createAtributoAdapter() {
+	public Adapter createAtributoMockaAdapter() {
 		return null;
 	}
 
@@ -354,6 +370,62 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMappingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.SimpleEntity <em>Simple Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.SimpleEntity
+	 * @generated
+	 */
+	public Adapter createSimpleEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.MockarooEntity <em>Mockaroo Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.MockarooEntity
+	 * @generated
+	 */
+	public Adapter createMockarooEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.Atributo <em>Atributo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.Atributo
+	 * @generated
+	 */
+	public Adapter createAtributoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.AtributoSimple <em>Atributo Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.AtributoSimple
+	 * @generated
+	 */
+	public Adapter createAtributoSimpleAdapter() {
 		return null;
 	}
 

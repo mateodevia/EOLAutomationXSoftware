@@ -14,12 +14,11 @@ package xSoftware;
  * <ul>
  *   <li>{@link xSoftware.Atributo#getNombre <em>Nombre</em>}</li>
  *   <li>{@link xSoftware.Atributo#isPrimaryKey <em>Primary Key</em>}</li>
- *   <li>{@link xSoftware.Atributo#getMockType <em>Mock Type</em>}</li>
  *   <li>{@link xSoftware.Atributo#getTipo <em>Tipo</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getAtributo()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Atributo extends Elemento {
@@ -74,35 +73,6 @@ public interface Atributo extends Elemento {
 	 * @generated
 	 */
 	void setPrimaryKey(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Mock Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link xSoftware.Mockaroo}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Mock Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mock Type</em>' attribute.
-	 * @see xSoftware.Mockaroo
-	 * @see #setMockType(Mockaroo)
-	 * @see xSoftware.XSoftwarePackage#getAtributo_MockType()
-	 * @model
-	 * @generated
-	 */
-	Mockaroo getMockType();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.Atributo#getMockType <em>Mock Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mock Type</em>' attribute.
-	 * @see xSoftware.Mockaroo
-	 * @see #getMockType()
-	 * @generated
-	 */
-	void setMockType(Mockaroo value);
 
 	/**
 	 * Returns the value of the '<em><b>Tipo</b></em>' attribute.

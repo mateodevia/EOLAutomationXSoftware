@@ -2,8 +2,6 @@
  */
 package xSoftware;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Entidad#getAtributos <em>Atributos</em>}</li>
  *   <li>{@link xSoftware.Entidad#getNombre <em>Nombre</em>}</li>
  * </ul>
  *
@@ -24,22 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Entidad extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
-	 * The list contents are of type {@link xSoftware.Atributo}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Atributos</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Atributos</em>' containment reference list.
-	 * @see xSoftware.XSoftwarePackage#getEntidad_Atributos()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<Atributo> getAtributos();
-
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
