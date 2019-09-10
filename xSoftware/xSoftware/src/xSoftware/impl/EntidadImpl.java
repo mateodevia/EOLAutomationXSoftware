@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Entidad;
 import xSoftware.XSoftwarePackage;
@@ -25,7 +24,7 @@ import xSoftware.XSoftwarePackage;
  *
  * @generated
  */
-public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad {
+public class EntidadImpl extends TypeImpl implements Entidad {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->

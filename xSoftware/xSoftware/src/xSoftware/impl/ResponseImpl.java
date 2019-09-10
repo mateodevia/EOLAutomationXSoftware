@@ -2,22 +2,17 @@
  */
 package xSoftware.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import xSoftware.Atributo;
 import xSoftware.Response;
+import xSoftware.Type;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -28,21 +23,21 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.ResponseImpl#getAtributos <em>Atributos</em>}</li>
+ *   <li>{@link xSoftware.impl.ResponseImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ResponseImpl extends MinimalEObjectImpl.Container implements Response {
 	/**
-	 * The cached value of the '{@link #getAtributos() <em>Atributos</em>}' containment reference list.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAtributos()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Atributo> atributos;
+	protected Type type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,11 +63,42 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Atributo> getAtributos() {
-		if (atributos == null) {
-			atributos = new EObjectContainmentEList<Atributo>(Atributo.class, this, XSoftwarePackage.RESPONSE__ATRIBUTOS);
+	public Type getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
+		Type oldType = type;
+		type = newType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.RESPONSE__TYPE, oldType, newType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return atributos;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Type newType) {
+		if (newType != type) {
+			NotificationChain msgs = null;
+			if (type != null)
+				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.RESPONSE__TYPE, null, msgs);
+			if (newType != null)
+				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.RESPONSE__TYPE, null, msgs);
+			msgs = basicSetType(newType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.RESPONSE__TYPE, newType, newType));
 	}
 
 	/**
@@ -83,8 +109,8 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case XSoftwarePackage.RESPONSE__ATRIBUTOS:
-				return ((InternalEList<?>)getAtributos()).basicRemove(otherEnd, msgs);
+			case XSoftwarePackage.RESPONSE__TYPE:
+				return basicSetType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +123,8 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.RESPONSE__ATRIBUTOS:
-				return getAtributos();
+			case XSoftwarePackage.RESPONSE__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,13 +134,11 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.RESPONSE__ATRIBUTOS:
-				getAtributos().clear();
-				getAtributos().addAll((Collection<? extends Atributo>)newValue);
+			case XSoftwarePackage.RESPONSE__TYPE:
+				setType((Type)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +152,8 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.RESPONSE__ATRIBUTOS:
-				getAtributos().clear();
+			case XSoftwarePackage.RESPONSE__TYPE:
+				setType((Type)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +167,8 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.RESPONSE__ATRIBUTOS:
-				return atributos != null && !atributos.isEmpty();
+			case XSoftwarePackage.RESPONSE__TYPE:
+				return type != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,8 +2,6 @@
  */
 package xSoftware;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Response#getAtributos <em>Atributos</em>}</li>
+ *   <li>{@link xSoftware.Response#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getResponse()
@@ -24,19 +22,29 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Response extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Atributos</b></em>' containment reference list.
-	 * The list contents are of type {@link xSoftware.Atributo}.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Atributos</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Type</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Atributos</em>' containment reference list.
-	 * @see xSoftware.XSoftwarePackage#getResponse_Atributos()
-	 * @model containment="true"
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(Type)
+	 * @see xSoftware.XSoftwarePackage#getResponse_Type()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Atributo> getAtributos();
+	Type getType();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.Response#getType <em>Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' containment reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(Type value);
 
 } // Response

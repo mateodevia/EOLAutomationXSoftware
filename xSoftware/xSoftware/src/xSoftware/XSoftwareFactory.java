@@ -166,6 +166,15 @@ public interface XSoftwareFactory extends EFactory {
 	AtributoSimple createAtributoSimple();
 
 	/**
+	 * Returns a new object of class '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request</em>'.
+	 * @generated
+	 */
+	Request createRequest();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

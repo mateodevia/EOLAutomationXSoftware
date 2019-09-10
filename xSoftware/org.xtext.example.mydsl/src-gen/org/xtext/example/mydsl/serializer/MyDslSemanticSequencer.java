@@ -20,12 +20,14 @@ import xSoftware.Asercion;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
+import xSoftware.Entidad;
 import xSoftware.Mapping;
 import xSoftware.MockarooEntity;
 import xSoftware.MyBoolean;
 import xSoftware.MyNumeric;
 import xSoftware.MyString;
 import xSoftware.Parametro;
+import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
 import xSoftware.SimpleEntity;
@@ -61,6 +63,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case XSoftwarePackage.ATRIBUTO_SIMPLE:
 				sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
 				return; 
+			case XSoftwarePackage.ENTIDAD:
+				sequence_TipoEntidad(context, (Entidad) semanticObject); 
+				return; 
 			case XSoftwarePackage.MAPPING:
 				sequence_Mapping(context, (Mapping) semanticObject); 
 				return; 
@@ -78,6 +83,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case XSoftwarePackage.PARAMETRO:
 				sequence_Parametro(context, (Parametro) semanticObject); 
+				return; 
+			case XSoftwarePackage.REQUEST:
+				sequence_Request(context, (Request) semanticObject); 
 				return; 
 			case XSoftwarePackage.RESPONSE:
 				sequence_Response(context, (Response) semanticObject); 
@@ -223,39 +231,60 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Contexts:
 	 *     PrimitiveType returns MyBoolean
+	 *     Type returns MyBoolean
 	 *     MyBoolean returns MyBoolean
 	 *
 	 * Constraint:
-	 *     valor?='valor'?
+	 *     nombre='boolean'
 	 */
 	protected void sequence_MyBoolean(ISerializationContext context, MyBoolean semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMyBooleanAccess().getNombreBooleanKeyword_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
 	 *     PrimitiveType returns MyNumeric
+	 *     Type returns MyNumeric
 	 *     MyNumeric returns MyNumeric
 	 *
 	 * Constraint:
-	 *     valor=EDouble?
+	 *     nombre='int'
 	 */
 	protected void sequence_MyNumeric(ISerializationContext context, MyNumeric semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMyNumericAccess().getNombreIntKeyword_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
 	 *     PrimitiveType returns MyString
+	 *     Type returns MyString
 	 *     MyString returns MyString
 	 *
 	 * Constraint:
-	 *     valor=EString?
+	 *     nombre='string'
 	 */
 	protected void sequence_MyString(ISerializationContext context, MyString semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PRIMITIVE_TYPE__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getMyStringAccess().getNombreStringKeyword_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	
@@ -273,13 +302,37 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     Request returns Request
+	 *
+	 * Constraint:
+	 *     type=Type
+	 */
+	protected void sequence_Request(ISerializationContext context, Request semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.REQUEST__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.REQUEST__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRequestAccess().getTypeTypeParserRuleCall_4_0(), semanticObject.getType());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Response returns Response
 	 *
 	 * Constraint:
-	 *     atributos+=Atributo2
+	 *     type=Type
 	 */
 	protected void sequence_Response(ISerializationContext context, Response semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.RESPONSE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.RESPONSE__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getResponseAccess().getTypeTypeParserRuleCall_4_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	
@@ -288,25 +341,10 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ServicioRest returns ServicioRest
 	 *
 	 * Constraint:
-	 *     (metodo=TipoMetodoRest nombre=EString url=EString response=Response)
+	 *     (metodo=TipoMetodoRest nombre=EString url=EString request=Request? response=Response)
 	 */
 	protected void sequence_ServicioRest(ISerializationContext context, ServicioRest semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__METODO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__METODO));
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__NOMBRE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__NOMBRE));
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__URL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__URL));
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__RESPONSE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.SERVICIO_REST__RESPONSE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getServicioRestAccess().getMetodoTipoMetodoRestEnumRuleCall_0_0(), semanticObject.getMetodo());
-		feeder.accept(grammarAccess.getServicioRestAccess().getNombreEStringParserRuleCall_1_0(), semanticObject.getNombre());
-		feeder.accept(grammarAccess.getServicioRestAccess().getUrlEStringParserRuleCall_6_0(), semanticObject.getUrl());
-		feeder.accept(grammarAccess.getServicioRestAccess().getResponseResponseParserRuleCall_10_0(), semanticObject.getResponse());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -332,6 +370,25 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 */
 	protected void sequence_Test(ISerializationContext context, Test semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Type returns Entidad
+	 *     TipoEntidad returns Entidad
+	 *
+	 * Constraint:
+	 *     nombre=EString
+	 */
+	protected void sequence_TipoEntidad(ISerializationContext context, Entidad semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ENTIDAD__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ENTIDAD__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTipoEntidadAccess().getNombreEStringParserRuleCall_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	

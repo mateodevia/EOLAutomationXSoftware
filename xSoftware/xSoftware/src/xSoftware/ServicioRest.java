@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link xSoftware.ServicioRest#getNombre <em>Nombre</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getResponse <em>Response</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getUrl <em>Url</em>}</li>
+ *   <li>{@link xSoftware.ServicioRest#getRequest <em>Request</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getServicioRest()
@@ -149,5 +150,31 @@ public interface ServicioRest extends EObject {
 	 * @generated
 	 */
 	void setUrl(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Request</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Request</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Request</em>' containment reference.
+	 * @see #setRequest(Request)
+	 * @see xSoftware.XSoftwarePackage#getServicioRest_Request()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Request getRequest();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.ServicioRest#getRequest <em>Request</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Request</em>' containment reference.
+	 * @see #getRequest()
+	 * @generated
+	 */
+	void setRequest(Request value);
 
 } // ServicioRest

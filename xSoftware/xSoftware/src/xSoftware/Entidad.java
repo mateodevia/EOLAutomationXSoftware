@@ -2,7 +2,6 @@
  */
 package xSoftware;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Entidad extends EObject {
+public interface Entidad extends Type {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->

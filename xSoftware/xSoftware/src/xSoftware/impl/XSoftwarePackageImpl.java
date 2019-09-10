@@ -26,6 +26,7 @@ import xSoftware.MyNumeric;
 import xSoftware.MyString;
 import xSoftware.Parametro;
 import xSoftware.PrimitiveType;
+import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
 import xSoftware.SimpleEntity;
@@ -33,6 +34,7 @@ import xSoftware.Test;
 import xSoftware.TipoAtributo;
 import xSoftware.TipoMetodoRest;
 import xSoftware.TipoParametro;
+import xSoftware.Type;
 import xSoftware.XSoftwareFactory;
 import xSoftware.XSoftwarePackage;
 
@@ -175,6 +177,20 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	private EClass atributoSimpleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requestEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass typeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -378,6 +394,15 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getServicioRest_Request() {
+		return (EReference)servicioRestEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntidad() {
 		return entidadEClass;
 	}
@@ -423,7 +448,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getResponse_Atributos() {
+	public EReference getResponse_Type() {
 		return (EReference)responseEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -533,6 +558,15 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 */
 	public EClass getPrimitiveType() {
 		return primitiveTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrimitiveType_Nombre() {
+		return (EAttribute)primitiveTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -729,6 +763,33 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRequest() {
+		return requestEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRequest_Type() {
+		return (EReference)requestEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getType() {
+		return typeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTipoMetodoRest() {
 		return tipoMetodoRestEEnum;
 	}
@@ -801,6 +862,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEAttribute(servicioRestEClass, SERVICIO_REST__NOMBRE);
 		createEReference(servicioRestEClass, SERVICIO_REST__RESPONSE);
 		createEAttribute(servicioRestEClass, SERVICIO_REST__URL);
+		createEReference(servicioRestEClass, SERVICIO_REST__REQUEST);
 
 		entidadEClass = createEClass(ENTIDAD);
 		createEAttribute(entidadEClass, ENTIDAD__NOMBRE);
@@ -809,7 +871,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEAttribute(atributoMockaEClass, ATRIBUTO_MOCKA__MOCK_TYPE);
 
 		responseEClass = createEClass(RESPONSE);
-		createEReference(responseEClass, RESPONSE__ATRIBUTOS);
+		createEReference(responseEClass, RESPONSE__TYPE);
 
 		parametroEClass = createEClass(PARAMETRO);
 		createEAttribute(parametroEClass, PARAMETRO__NOMBRE);
@@ -826,6 +888,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(asercionEClass, ASERCION__ELEMENTO2);
 
 		primitiveTypeEClass = createEClass(PRIMITIVE_TYPE);
+		createEAttribute(primitiveTypeEClass, PRIMITIVE_TYPE__NOMBRE);
 
 		elementoEClass = createEClass(ELEMENTO);
 
@@ -857,6 +920,11 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEAttribute(atributoEClass, ATRIBUTO__TIPO);
 
 		atributoSimpleEClass = createEClass(ATRIBUTO_SIMPLE);
+
+		requestEClass = createEClass(REQUEST);
+		createEReference(requestEClass, REQUEST__TYPE);
+
+		typeEClass = createEClass(TYPE);
 
 		// Create enums
 		tipoMetodoRestEEnum = createEEnum(TIPO_METODO_REST);
@@ -893,8 +961,10 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		entidadEClass.getESuperTypes().add(this.getType());
 		atributoMockaEClass.getESuperTypes().add(this.getAtributo());
 		primitiveTypeEClass.getESuperTypes().add(this.getElemento());
+		primitiveTypeEClass.getESuperTypes().add(this.getType());
 		myNumericEClass.getESuperTypes().add(this.getPrimitiveType());
 		myStringEClass.getESuperTypes().add(this.getPrimitiveType());
 		myBooleanEClass.getESuperTypes().add(this.getPrimitiveType());
@@ -918,6 +988,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEAttribute(getServicioRest_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServicioRest_Response(), this.getResponse(), null, "response", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServicioRest_Url(), ecorePackage.getEString(), "url", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicioRest_Request(), this.getRequest(), null, "request", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadEClass, Entidad.class, "Entidad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntidad_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -926,7 +997,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEAttribute(getAtributoMocka_MockType(), this.getMockaroo(), "mockType", null, 0, 1, AtributoMocka.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResponse_Atributos(), this.getAtributo(), null, "atributos", null, 0, -1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResponse_Type(), this.getType(), null, "type", null, 1, 1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parametroEClass, Parametro.class, "Parametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -943,6 +1014,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getAsercion_Elemento2(), this.getElemento(), null, "elemento2", null, 1, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrimitiveType_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, PrimitiveType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementoEClass, Elemento.class, "Elemento", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -974,6 +1046,11 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEAttribute(getAtributo_Tipo(), this.getTipoAtributo(), "tipo", null, 0, 1, Atributo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(atributoSimpleEClass, AtributoSimple.class, "AtributoSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(requestEClass, Request.class, "Request", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRequest_Type(), this.getType(), null, "type", null, 1, 1, Request.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(tipoMetodoRestEEnum, TipoMetodoRest.class, "TipoMetodoRest");

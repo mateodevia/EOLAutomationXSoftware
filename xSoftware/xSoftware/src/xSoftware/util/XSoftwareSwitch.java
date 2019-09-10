@@ -81,6 +81,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.ENTIDAD: {
 				Entidad entidad = (Entidad)theEObject;
 				T result = caseEntidad(entidad);
+				if (result == null) result = caseType(entidad);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,6 +121,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				PrimitiveType primitiveType = (PrimitiveType)theEObject;
 				T result = casePrimitiveType(primitiveType);
 				if (result == null) result = caseElemento(primitiveType);
+				if (result == null) result = caseType(primitiveType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,6 +136,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseMyNumeric(myNumeric);
 				if (result == null) result = casePrimitiveType(myNumeric);
 				if (result == null) result = caseElemento(myNumeric);
+				if (result == null) result = caseType(myNumeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,6 +145,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseMyString(myString);
 				if (result == null) result = casePrimitiveType(myString);
 				if (result == null) result = caseElemento(myString);
+				if (result == null) result = caseType(myString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +154,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseMyBoolean(myBoolean);
 				if (result == null) result = casePrimitiveType(myBoolean);
 				if (result == null) result = caseElemento(myBoolean);
+				if (result == null) result = caseType(myBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -171,6 +176,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				SimpleEntity simpleEntity = (SimpleEntity)theEObject;
 				T result = caseSimpleEntity(simpleEntity);
 				if (result == null) result = caseEntidad(simpleEntity);
+				if (result == null) result = caseType(simpleEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,6 +184,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				MockarooEntity mockarooEntity = (MockarooEntity)theEObject;
 				T result = caseMockarooEntity(mockarooEntity);
 				if (result == null) result = caseEntidad(mockarooEntity);
+				if (result == null) result = caseType(mockarooEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -193,6 +200,18 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseAtributoSimple(atributoSimple);
 				if (result == null) result = caseAtributo(atributoSimple);
 				if (result == null) result = caseElemento(atributoSimple);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.REQUEST: {
+				Request request = (Request)theEObject;
+				T result = caseRequest(request);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.TYPE: {
+				Type type = (Type)theEObject;
+				T result = caseType(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -482,6 +501,36 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAtributoSimple(AtributoSimple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Request</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequest(Request object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseType(Type object) {
 		return null;
 	}
 

@@ -25,7 +25,7 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1;
 	protected AbstractElementAlias match_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q;
 	protected AbstractElementAlias match_ServicioRest___ColonKeyword_7_2_or_DollarSignKeyword_7_5_or_EStringParserRuleCall_7_0_or_LeftCurlyBracketKeyword_7_3_or_QuestionMarkKeyword_7_6_or_RightCurlyBracketKeyword_7_4_or_SolidusKeyword_7_1__a;
-	protected AbstractElementAlias match_ServicioRest___RequestKeyword_9_0_TypeKeyword_9_1_EQUALTerminalRuleCall_9_2_EStringParserRuleCall_9_3_a_SEMICOLONTerminalRuleCall_9_4_RightCurlyBracketKeyword_9_5__q;
+	protected AbstractElementAlias match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -33,7 +33,7 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAtributo2Access().getBooleanKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getIDTerminalRuleCall_0_0()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getIntKeyword_0_2()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getStringKeyword_0_1()));
 		match_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getAtributo2Access().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getRightSquareBracketKeyword_1_1()));
 		match_ServicioRest___ColonKeyword_7_2_or_DollarSignKeyword_7_5_or_EStringParserRuleCall_7_0_or_LeftCurlyBracketKeyword_7_3_or_QuestionMarkKeyword_7_6_or_RightCurlyBracketKeyword_7_4_or_SolidusKeyword_7_1__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getColonKeyword_7_2()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getDollarSignKeyword_7_5()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getEStringParserRuleCall_7_0()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getLeftCurlyBracketKeyword_7_3()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getQuestionMarkKeyword_7_6()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getRightCurlyBracketKeyword_7_4()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getSolidusKeyword_7_1()));
-		match_ServicioRest___RequestKeyword_9_0_TypeKeyword_9_1_EQUALTerminalRuleCall_9_2_EStringParserRuleCall_9_3_a_SEMICOLONTerminalRuleCall_9_4_RightCurlyBracketKeyword_9_5__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getRequestKeyword_9_0()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getTypeKeyword_9_1()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getEQUALTerminalRuleCall_9_2()), new TokenAlias(true, true, grammarAccess.getServicioRestAccess().getEStringParserRuleCall_9_3()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getSEMICOLONTerminalRuleCall_9_4()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getRightCurlyBracketKeyword_9_5()));
+		match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1()));
 	}
 	
 	@Override
@@ -98,8 +98,8 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ServicioRest___ColonKeyword_7_2_or_DollarSignKeyword_7_5_or_EStringParserRuleCall_7_0_or_LeftCurlyBracketKeyword_7_3_or_QuestionMarkKeyword_7_6_or_RightCurlyBracketKeyword_7_4_or_SolidusKeyword_7_1__a.equals(syntax))
 				emit_ServicioRest___ColonKeyword_7_2_or_DollarSignKeyword_7_5_or_EStringParserRuleCall_7_0_or_LeftCurlyBracketKeyword_7_3_or_QuestionMarkKeyword_7_6_or_RightCurlyBracketKeyword_7_4_or_SolidusKeyword_7_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_ServicioRest___RequestKeyword_9_0_TypeKeyword_9_1_EQUALTerminalRuleCall_9_2_EStringParserRuleCall_9_3_a_SEMICOLONTerminalRuleCall_9_4_RightCurlyBracketKeyword_9_5__q.equals(syntax))
-				emit_ServicioRest___RequestKeyword_9_0_TypeKeyword_9_1_EQUALTerminalRuleCall_9_2_EStringParserRuleCall_9_3_a_SEMICOLONTerminalRuleCall_9_4_RightCurlyBracketKeyword_9_5__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q.equals(syntax))
+				emit_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -139,7 +139,8 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	  *     )*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     url=EString (ambiguity) SEMICOLON ('Request {' 'Type' EQUAL EString* SEMICOLON '}')? response=Response
+	 *     url=EString (ambiguity) SEMICOLON request=Request
+	 *     url=EString (ambiguity) SEMICOLON response=Response
 	 */
 	protected void emit_ServicioRest___ColonKeyword_7_2_or_DollarSignKeyword_7_5_or_EStringParserRuleCall_7_0_or_LeftCurlyBracketKeyword_7_3_or_QuestionMarkKeyword_7_6_or_RightCurlyBracketKeyword_7_4_or_SolidusKeyword_7_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -147,19 +148,15 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (
-	  *         'Request {' 
-	  *         'Type' 
-	  *         EQUAL 
-	  *         EString* 
-	  *         SEMICOLON 
-	  *         '}'
-	  *     )?
+	 *     ('[' ']')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     url=EString (EString | '/' | ':' | '{' | '}' | '$' | '?')* SEMICOLON (ambiguity) response=Response
+	 *     nombre='boolean' (ambiguity) (rule end)
+	 *     nombre='int' (ambiguity) (rule end)
+	 *     nombre='string' (ambiguity) (rule end)
+	 *     nombre=EString (ambiguity) (rule end)
 	 */
-	protected void emit_ServicioRest___RequestKeyword_9_0_TypeKeyword_9_1_EQUALTerminalRuleCall_9_2_EStringParserRuleCall_9_3_a_SEMICOLONTerminalRuleCall_9_4_RightCurlyBracketKeyword_9_5__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

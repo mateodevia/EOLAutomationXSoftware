@@ -40,6 +40,7 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServicioRestAccess().getAlternatives_7(), "rule__ServicioRest__Alternatives_7");
 					put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 					put(grammarAccess.getEDoubleAccess().getAlternatives_4_0(), "rule__EDouble__Alternatives_4_0");
+					put(grammarAccess.getTypeAccess().getAlternatives_0(), "rule__Type__Alternatives_0");
 					put(grammarAccess.getTipoAtributoAccess().getAlternatives(), "rule__TipoAtributo__Alternatives");
 					put(grammarAccess.getMockarooAccess().getAlternatives(), "rule__Mockaroo__Alternatives");
 					put(grammarAccess.getTipoMetodoRestAccess().getAlternatives(), "rule__TipoMetodoRest__Alternatives");
@@ -55,7 +56,6 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAtributoSimpleAccess().getGroup(), "rule__AtributoSimple__Group__0");
 					put(grammarAccess.getMockarooEntityAccess().getGroup(), "rule__MockarooEntity__Group__0");
 					put(grammarAccess.getServicioRestAccess().getGroup(), "rule__ServicioRest__Group__0");
-					put(grammarAccess.getServicioRestAccess().getGroup_9(), "rule__ServicioRest__Group_9__0");
 					put(grammarAccess.getTestAccess().getGroup(), "rule__Test__Group__0");
 					put(grammarAccess.getTestAccess().getGroup_2(), "rule__Test__Group_2__0");
 					put(grammarAccess.getTestAccess().getGroup_5(), "rule__Test__Group_5__0");
@@ -63,14 +63,12 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTestAccess().getGroup_6(), "rule__Test__Group_6__0");
 					put(grammarAccess.getTestAccess().getGroup_6_3(), "rule__Test__Group_6_3__0");
 					put(grammarAccess.getSimpleEntityAccess().getGroup(), "rule__SimpleEntity__Group__0");
-					put(grammarAccess.getMyNumericAccess().getGroup(), "rule__MyNumeric__Group__0");
-					put(grammarAccess.getMyNumericAccess().getGroup_3(), "rule__MyNumeric__Group_3__0");
-					put(grammarAccess.getMyStringAccess().getGroup(), "rule__MyString__Group__0");
-					put(grammarAccess.getMyStringAccess().getGroup_3(), "rule__MyString__Group_3__0");
-					put(grammarAccess.getMyBooleanAccess().getGroup(), "rule__MyBoolean__Group__0");
 					put(grammarAccess.getEDoubleAccess().getGroup(), "rule__EDouble__Group__0");
 					put(grammarAccess.getEDoubleAccess().getGroup_4(), "rule__EDouble__Group_4__0");
 					put(grammarAccess.getResponseAccess().getGroup(), "rule__Response__Group__0");
+					put(grammarAccess.getRequestAccess().getGroup(), "rule__Request__Group__0");
+					put(grammarAccess.getTypeAccess().getGroup(), "rule__Type__Group__0");
+					put(grammarAccess.getTypeAccess().getGroup_1(), "rule__Type__Group_1__0");
 					put(grammarAccess.getMappingAccess().getGroup(), "rule__Mapping__Group__0");
 					put(grammarAccess.getAsercionAccess().getGroup(), "rule__Asercion__Group__0");
 					put(grammarAccess.getParametroAccess().getGroup(), "rule__Parametro__Group__0");
@@ -94,6 +92,7 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServicioRestAccess().getMetodoAssignment_0(), "rule__ServicioRest__MetodoAssignment_0");
 					put(grammarAccess.getServicioRestAccess().getNombreAssignment_1(), "rule__ServicioRest__NombreAssignment_1");
 					put(grammarAccess.getServicioRestAccess().getUrlAssignment_6(), "rule__ServicioRest__UrlAssignment_6");
+					put(grammarAccess.getServicioRestAccess().getRequestAssignment_9(), "rule__ServicioRest__RequestAssignment_9");
 					put(grammarAccess.getServicioRestAccess().getResponseAssignment_10(), "rule__ServicioRest__ResponseAssignment_10");
 					put(grammarAccess.getTestAccess().getDescripcionAssignment_2_1(), "rule__Test__DescripcionAssignment_2_1");
 					put(grammarAccess.getTestAccess().getServiceAssignment_4(), "rule__Test__ServiceAssignment_4");
@@ -103,10 +102,12 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTestAccess().getAsertionsAssignment_6_3_1(), "rule__Test__AsertionsAssignment_6_3_1");
 					put(grammarAccess.getSimpleEntityAccess().getNombreAssignment_1(), "rule__SimpleEntity__NombreAssignment_1");
 					put(grammarAccess.getSimpleEntityAccess().getAtributosAssignment_3(), "rule__SimpleEntity__AtributosAssignment_3");
-					put(grammarAccess.getMyNumericAccess().getValorAssignment_3_1(), "rule__MyNumeric__ValorAssignment_3_1");
-					put(grammarAccess.getMyStringAccess().getValorAssignment_3_1(), "rule__MyString__ValorAssignment_3_1");
-					put(grammarAccess.getMyBooleanAccess().getValorAssignment_1(), "rule__MyBoolean__ValorAssignment_1");
-					put(grammarAccess.getResponseAccess().getAtributosAssignment_4(), "rule__Response__AtributosAssignment_4");
+					put(grammarAccess.getResponseAccess().getTypeAssignment_4(), "rule__Response__TypeAssignment_4");
+					put(grammarAccess.getRequestAccess().getTypeAssignment_4(), "rule__Request__TypeAssignment_4");
+					put(grammarAccess.getTipoEntidadAccess().getNombreAssignment(), "rule__TipoEntidad__NombreAssignment");
+					put(grammarAccess.getMyStringAccess().getNombreAssignment(), "rule__MyString__NombreAssignment");
+					put(grammarAccess.getMyNumericAccess().getNombreAssignment(), "rule__MyNumeric__NombreAssignment");
+					put(grammarAccess.getMyBooleanAccess().getNombreAssignment(), "rule__MyBoolean__NombreAssignment");
 					put(grammarAccess.getMappingAccess().getValueAssignment_3(), "rule__Mapping__ValueAssignment_3");
 					put(grammarAccess.getMappingAccess().getParametroAssignment_5(), "rule__Mapping__ParametroAssignment_5");
 					put(grammarAccess.getAsercionAccess().getElemento1Assignment_3(), "rule__Asercion__Elemento1Assignment_3");

@@ -186,13 +186,22 @@ public interface XSoftwarePackage extends EPackage {
 	int SERVICIO_REST__URL = 4;
 
 	/**
+	 * The feature id for the '<em><b>Request</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO_REST__REQUEST = 5;
+
+	/**
 	 * The number of structural features of the '<em>Servicio Rest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST_FEATURE_COUNT = 5;
+	int SERVICIO_REST_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Servicio Rest</em>' class.
@@ -202,6 +211,34 @@ public interface XSoftwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICIO_REST_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.TypeImpl <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.TypeImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 20;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.EntidadImpl <em>Entidad</em>}' class.
@@ -220,7 +257,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTIDAD__NOMBRE = 0;
+	int ENTIDAD__NOMBRE = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Entidad</em>' class.
@@ -229,7 +266,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTIDAD_FEATURE_COUNT = 1;
+	int ENTIDAD_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Entidad</em>' class.
@@ -238,7 +275,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTIDAD_OPERATION_COUNT = 0;
+	int ENTIDAD_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.ElementoImpl <em>Elemento</em>}' class.
@@ -398,13 +435,13 @@ public interface XSoftwarePackage extends EPackage {
 	int RESPONSE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Atributos</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE__ATRIBUTOS = 0;
+	int RESPONSE__TYPE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Response</em>' class.
@@ -591,13 +628,22 @@ public interface XSoftwarePackage extends EPackage {
 	int PRIMITIVE_TYPE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_TYPE__NOMBRE = ELEMENTO_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Primitive Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_TYPE_FEATURE_COUNT = ELEMENTO_FEATURE_COUNT + 0;
+	int PRIMITIVE_TYPE_FEATURE_COUNT = ELEMENTO_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Primitive Type</em>' class.
@@ -617,6 +663,15 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	int MY_NUMERIC = 10;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MY_NUMERIC__NOMBRE = PRIMITIVE_TYPE__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -656,6 +711,15 @@ public interface XSoftwarePackage extends EPackage {
 	int MY_STRING = 11;
 
 	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MY_STRING__NOMBRE = PRIMITIVE_TYPE__NOMBRE;
+
+	/**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -691,6 +755,15 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	int MY_BOOLEAN = 12;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MY_BOOLEAN__NOMBRE = PRIMITIVE_TYPE__NOMBRE;
 
 	/**
 	 * The feature id for the '<em><b>Valor</b></em>' attribute.
@@ -977,6 +1050,43 @@ public interface XSoftwarePackage extends EPackage {
 	int ATRIBUTO_SIMPLE_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.RequestImpl <em>Request</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.RequestImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getRequest()
+	 * @generated
+	 */
+	int REQUEST = 19;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST__TYPE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Request</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUEST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -984,7 +1094,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoMetodoRest()
 	 * @generated
 	 */
-	int TIPO_METODO_REST = 19;
+	int TIPO_METODO_REST = 21;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoParametro <em>Tipo Parametro</em>}' enum.
@@ -994,7 +1104,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoParametro()
 	 * @generated
 	 */
-	int TIPO_PARAMETRO = 20;
+	int TIPO_PARAMETRO = 22;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.
@@ -1004,7 +1114,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockaroo()
 	 * @generated
 	 */
-	int MOCKAROO = 21;
+	int MOCKAROO = 23;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoAtributo <em>Tipo Atributo</em>}' enum.
@@ -1014,7 +1124,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoAtributo()
 	 * @generated
 	 */
-	int TIPO_ATRIBUTO = 22;
+	int TIPO_ATRIBUTO = 24;
 
 
 	/**
@@ -1148,6 +1258,17 @@ public interface XSoftwarePackage extends EPackage {
 	EAttribute getServicioRest_Url();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link xSoftware.ServicioRest#getRequest <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Request</em>'.
+	 * @see xSoftware.ServicioRest#getRequest()
+	 * @see #getServicioRest()
+	 * @generated
+	 */
+	EReference getServicioRest_Request();
+
+	/**
 	 * Returns the meta object for class '{@link xSoftware.Entidad <em>Entidad</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1200,15 +1321,15 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getResponse();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link xSoftware.Response#getAtributos <em>Atributos</em>}'.
+	 * Returns the meta object for the containment reference '{@link xSoftware.Response#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Atributos</em>'.
-	 * @see xSoftware.Response#getAtributos()
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see xSoftware.Response#getType()
 	 * @see #getResponse()
 	 * @generated
 	 */
-	EReference getResponse_Atributos();
+	EReference getResponse_Type();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Parametro <em>Parametro</em>}'.
@@ -1337,6 +1458,17 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPrimitiveType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.PrimitiveType#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see xSoftware.PrimitiveType#getNombre()
+	 * @see #getPrimitiveType()
+	 * @generated
+	 */
+	EAttribute getPrimitiveType_Nombre();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Elemento <em>Elemento</em>}'.
@@ -1560,6 +1692,37 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getAtributoSimple();
 
 	/**
+	 * Returns the meta object for class '{@link xSoftware.Request <em>Request</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Request</em>'.
+	 * @see xSoftware.Request
+	 * @generated
+	 */
+	EClass getRequest();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link xSoftware.Request#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Type</em>'.
+	 * @see xSoftware.Request#getType()
+	 * @see #getRequest()
+	 * @generated
+	 */
+	EReference getRequest_Type();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see xSoftware.Type
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
 	 * Returns the meta object for enum '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1723,6 +1886,14 @@ public interface XSoftwarePackage extends EPackage {
 		EAttribute SERVICIO_REST__URL = eINSTANCE.getServicioRest_Url();
 
 		/**
+		 * The meta object literal for the '<em><b>Request</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICIO_REST__REQUEST = eINSTANCE.getServicioRest_Request();
+
+		/**
 		 * The meta object literal for the '{@link xSoftware.impl.EntidadImpl <em>Entidad</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1769,12 +1940,12 @@ public interface XSoftwarePackage extends EPackage {
 		EClass RESPONSE = eINSTANCE.getResponse();
 
 		/**
-		 * The meta object literal for the '<em><b>Atributos</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESPONSE__ATRIBUTOS = eINSTANCE.getResponse_Atributos();
+		EReference RESPONSE__TYPE = eINSTANCE.getResponse_Type();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
@@ -1879,6 +2050,14 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRIMITIVE_TYPE = eINSTANCE.getPrimitiveType();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIMITIVE_TYPE__NOMBRE = eINSTANCE.getPrimitiveType_Nombre();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.ElementoImpl <em>Elemento</em>}' class.
@@ -2067,6 +2246,34 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ATRIBUTO_SIMPLE = eINSTANCE.getAtributoSimple();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.RequestImpl <em>Request</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.RequestImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getRequest()
+		 * @generated
+		 */
+		EClass REQUEST = eINSTANCE.getRequest();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST__TYPE = eINSTANCE.getRequest_Type();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.TypeImpl <em>Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.TypeImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getType()
+		 * @generated
+		 */
+		EClass TYPE = eINSTANCE.getType();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
