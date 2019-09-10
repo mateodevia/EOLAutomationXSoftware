@@ -46,12 +46,24 @@ MockarooEntity returns MockarooEntity:
 ServicioRest returns ServicioRest:
 	(metodo=TipoMetodoRest) (nombre=EString) '{'
 	
-		'URL' EQUAL '/' (url=EString) (EString | '/' | ':' | '{' | '}' | '$' | '?')* SEMICOLON
+		'URL' EQUAL '/' (url=EString) ((parametros+=(Parametro) | "/"EString))* SEMICOLON
 		
 		(request=Request)?
 		
 		response=Response
 	'}';
+
+Parametro returns Parametro:
+	(QueryParam | PathParam );
+	
+QueryParam returns QueryParam:
+	"?${" nombre=EString "}";
+	
+PathParam returns PathParam:
+	"/:{" nombre=EString "}";
+	
+BodyParam returns BodyParam:
+	"?${" nombre=EString "}";
 
 Test returns Test:
 	'Test'
@@ -109,13 +121,12 @@ MyNumeric returns MyNumeric:
 	nombre='int';
 	
 MyBoolean returns MyBoolean:
-	nombre='boolean';
-	
+	nombre='boolean';	
+		
 Mapping returns Mapping:
 	'Mapping'
 	'{'
 		'value' value=[Elemento|EString]
-		'parametro' parametro=Parametro
 	'}';
 
 Asercion returns Asercion:
@@ -123,20 +134,7 @@ Asercion returns Asercion:
 	'{'
 		'elemento1' elemento1=[Elemento|EString]
 		'elemento2' elemento2=[Elemento|EString]
-	'}';
-
-Parametro returns Parametro:
-	{Parametro}
-	'Parametro'
-	'{'
-		('nombre' nombre=EString)?
-		('tipo' tipo=TipoParametro)?
-	'}';
-
-enum TipoParametro returns TipoParametro:
-				Path = 'Path' | Query = 'Query' | Body = 'Body';
-				
-				
+	'}';		
 
 terminal EQUAL : "=";
 terminal SEMICOLON : ";";

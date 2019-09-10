@@ -62,7 +62,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.ENTIDAD: return createEntidad();
 			case XSoftwarePackage.ATRIBUTO_MOCKA: return createAtributoMocka();
 			case XSoftwarePackage.RESPONSE: return createResponse();
-			case XSoftwarePackage.PARAMETRO: return createParametro();
 			case XSoftwarePackage.TEST: return createTest();
 			case XSoftwarePackage.ASERCION: return createAsercion();
 			case XSoftwarePackage.MY_NUMERIC: return createMyNumeric();
@@ -74,6 +73,9 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.MOCKAROO_ENTITY: return createMockarooEntity();
 			case XSoftwarePackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
 			case XSoftwarePackage.REQUEST: return createRequest();
+			case XSoftwarePackage.BODY_PARAM: return createBodyParam();
+			case XSoftwarePackage.PATH_PARAM: return createPathParam();
+			case XSoftwarePackage.QUERY_PARAM: return createQueryParam();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -89,8 +91,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 		switch (eDataType.getClassifierID()) {
 			case XSoftwarePackage.TIPO_METODO_REST:
 				return createTipoMetodoRestFromString(eDataType, initialValue);
-			case XSoftwarePackage.TIPO_PARAMETRO:
-				return createTipoParametroFromString(eDataType, initialValue);
 			case XSoftwarePackage.MOCKAROO:
 				return createMockarooFromString(eDataType, initialValue);
 			case XSoftwarePackage.TIPO_ATRIBUTO:
@@ -110,8 +110,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 		switch (eDataType.getClassifierID()) {
 			case XSoftwarePackage.TIPO_METODO_REST:
 				return convertTipoMetodoRestToString(eDataType, instanceValue);
-			case XSoftwarePackage.TIPO_PARAMETRO:
-				return convertTipoParametroToString(eDataType, instanceValue);
 			case XSoftwarePackage.MOCKAROO:
 				return convertMockarooToString(eDataType, instanceValue);
 			case XSoftwarePackage.TIPO_ATRIBUTO:
@@ -169,16 +167,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	public Response createResponse() {
 		ResponseImpl response = new ResponseImpl();
 		return response;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Parametro createParametro() {
-		ParametroImpl parametro = new ParametroImpl();
-		return parametro;
 	}
 
 	/**
@@ -296,6 +284,36 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BodyParam createBodyParam() {
+		BodyParamImpl bodyParam = new BodyParamImpl();
+		return bodyParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PathParam createPathParam() {
+		PathParamImpl pathParam = new PathParamImpl();
+		return pathParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QueryParam createQueryParam() {
+		QueryParamImpl queryParam = new QueryParamImpl();
+		return queryParam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TipoMetodoRest createTipoMetodoRestFromString(EDataType eDataType, String initialValue) {
 		TipoMetodoRest result = TipoMetodoRest.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -308,26 +326,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * @generated
 	 */
 	public String convertTipoMetodoRestToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TipoParametro createTipoParametroFromString(EDataType eDataType, String initialValue) {
-		TipoParametro result = TipoParametro.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertTipoParametroToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -11,11 +11,6 @@
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/PUT"/>
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoMetodoRest/DELETE"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//TipoParametro">
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Path"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Query"/>
-      <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//TipoParametro/Body"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="xSoftware.ecore#//Mockaroo">
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/FirstNameType"/>
       <genEnumLiterals ecoreEnumLiteral="xSoftware.ecore#//Mockaroo/LastNameType"/>
@@ -51,6 +46,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/response"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/request"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/parametros"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Entidad">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/nombre"/>
@@ -60,10 +56,6 @@
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Response">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/type"/>
-    </genClasses>
-    <genClasses ecoreClass="xSoftware.ecore#//Parametro">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/tipo"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Test">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Test/descripcion"/>
@@ -93,7 +85,6 @@
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Mapping">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/parametro"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//SimpleEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//SimpleEntity/atributos"/>
@@ -111,5 +102,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Request/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//Type"/>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//Parametro">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//BodyParam"/>
+    <genClasses ecoreClass="xSoftware.ecore#//PathParam"/>
+    <genClasses ecoreClass="xSoftware.ecore#//QueryParam"/>
   </genPackages>
 </genmodel:GenModel>

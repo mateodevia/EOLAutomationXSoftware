@@ -88,10 +88,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createResponseAdapter();
 			}
 			@Override
-			public Adapter caseParametro(Parametro object) {
-				return createParametroAdapter();
-			}
-			@Override
 			public Adapter caseTest(Test object) {
 				return createTestAdapter();
 			}
@@ -150,6 +146,22 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseType(Type object) {
 				return createTypeAdapter();
+			}
+			@Override
+			public Adapter caseParametro(Parametro object) {
+				return createParametroAdapter();
+			}
+			@Override
+			public Adapter caseBodyParam(BodyParam object) {
+				return createBodyParamAdapter();
+			}
+			@Override
+			public Adapter casePathParam(PathParam object) {
+				return createPathParamAdapter();
+			}
+			@Override
+			public Adapter caseQueryParam(QueryParam object) {
+				return createQueryParamAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -238,20 +250,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResponseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link xSoftware.Parametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xSoftware.Parametro
-	 * @generated
-	 */
-	public Adapter createParametroAdapter() {
 		return null;
 	}
 
@@ -462,6 +460,62 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.Parametro <em>Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.Parametro
+	 * @generated
+	 */
+	public Adapter createParametroAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.BodyParam <em>Body Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.BodyParam
+	 * @generated
+	 */
+	public Adapter createBodyParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.PathParam <em>Path Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.PathParam
+	 * @generated
+	 */
+	public Adapter createPathParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.QueryParam <em>Query Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.QueryParam
+	 * @generated
+	 */
+	public Adapter createQueryParamAdapter() {
 		return null;
 	}
 

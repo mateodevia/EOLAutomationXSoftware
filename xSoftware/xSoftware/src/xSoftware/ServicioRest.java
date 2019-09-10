@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link xSoftware.ServicioRest#getResponse <em>Response</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getUrl <em>Url</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getRequest <em>Request</em>}</li>
+ *   <li>{@link xSoftware.ServicioRest#getParametros <em>Parametros</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getServicioRest()
@@ -176,5 +177,21 @@ public interface ServicioRest extends EObject {
 	 * @generated
 	 */
 	void setRequest(Request value);
+
+	/**
+	 * Returns the value of the '<em><b>Parametros</b></em>' containment reference list.
+	 * The list contents are of type {@link xSoftware.Parametro}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parametros</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parametros</em>' containment reference list.
+	 * @see xSoftware.XSoftwarePackage#getServicioRest_Parametros()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Parametro> getParametros();
 
 } // ServicioRest

@@ -195,13 +195,22 @@ public interface XSoftwarePackage extends EPackage {
 	int SERVICIO_REST__REQUEST = 5;
 
 	/**
+	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICIO_REST__PARAMETROS = 6;
+
+	/**
 	 * The number of structural features of the '<em>Servicio Rest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST_FEATURE_COUNT = 6;
+	int SERVICIO_REST_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Servicio Rest</em>' class.
@@ -220,7 +229,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getType()
 	 * @generated
 	 */
-	int TYPE = 20;
+	int TYPE = 19;
 
 	/**
 	 * The number of structural features of the '<em>Type</em>' class.
@@ -285,7 +294,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getElemento()
 	 * @generated
 	 */
-	int ELEMENTO = 9;
+	int ELEMENTO = 8;
 
 	/**
 	 * The number of structural features of the '<em>Elemento</em>' class.
@@ -313,7 +322,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributo()
 	 * @generated
 	 */
-	int ATRIBUTO = 17;
+	int ATRIBUTO = 16;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -462,52 +471,6 @@ public interface XSoftwarePackage extends EPackage {
 	int RESPONSE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.impl.ParametroImpl
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getParametro()
-	 * @generated
-	 */
-	int PARAMETRO = 5;
-
-	/**
-	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__NOMBRE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO__TIPO = 1;
-
-	/**
-	 * The number of structural features of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Parametro</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETRO_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link xSoftware.impl.TestImpl <em>Test</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,7 +478,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTest()
 	 * @generated
 	 */
-	int TEST = 6;
+	int TEST = 5;
 
 	/**
 	 * The feature id for the '<em><b>Descripcion</b></em>' attribute.
@@ -579,7 +542,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getAsercion()
 	 * @generated
 	 */
-	int ASERCION = 7;
+	int ASERCION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Elemento1</b></em>' reference.
@@ -625,7 +588,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getPrimitiveType()
 	 * @generated
 	 */
-	int PRIMITIVE_TYPE = 8;
+	int PRIMITIVE_TYPE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -662,7 +625,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMyNumeric()
 	 * @generated
 	 */
-	int MY_NUMERIC = 10;
+	int MY_NUMERIC = 9;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -708,7 +671,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMyString()
 	 * @generated
 	 */
-	int MY_STRING = 11;
+	int MY_STRING = 10;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -754,7 +717,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMyBoolean()
 	 * @generated
 	 */
-	int MY_BOOLEAN = 12;
+	int MY_BOOLEAN = 11;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -800,7 +763,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoArreglo()
 	 * @generated
 	 */
-	int ATRIBUTO_ARREGLO = 13;
+	int ATRIBUTO_ARREGLO = 12;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -864,7 +827,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMapping()
 	 * @generated
 	 */
-	int MAPPING = 14;
+	int MAPPING = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -876,22 +839,13 @@ public interface XSoftwarePackage extends EPackage {
 	int MAPPING__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAPPING__PARAMETRO = 1;
-
-	/**
 	 * The number of structural features of the '<em>Mapping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_FEATURE_COUNT = 2;
+	int MAPPING_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Mapping</em>' class.
@@ -910,7 +864,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getSimpleEntity()
 	 * @generated
 	 */
-	int SIMPLE_ENTITY = 15;
+	int SIMPLE_ENTITY = 14;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -956,7 +910,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockarooEntity()
 	 * @generated
 	 */
-	int MOCKAROO_ENTITY = 16;
+	int MOCKAROO_ENTITY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -1002,7 +956,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getAtributoSimple()
 	 * @generated
 	 */
-	int ATRIBUTO_SIMPLE = 18;
+	int ATRIBUTO_SIMPLE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
@@ -1057,7 +1011,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getRequest()
 	 * @generated
 	 */
-	int REQUEST = 19;
+	int REQUEST = 18;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1087,6 +1041,154 @@ public interface XSoftwarePackage extends EPackage {
 	int REQUEST_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.ParametroImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getParametro()
+	 * @generated
+	 */
+	int PARAMETRO = 20;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO__NOMBRE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Parametro</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Parametro</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETRO_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.BodyParamImpl <em>Body Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.BodyParamImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getBodyParam()
+	 * @generated
+	 */
+	int BODY_PARAM = 21;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_PARAM__NOMBRE = PARAMETRO__NOMBRE;
+
+	/**
+	 * The number of structural features of the '<em>Body Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_PARAM_FEATURE_COUNT = PARAMETRO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Body Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BODY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.PathParamImpl <em>Path Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.PathParamImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getPathParam()
+	 * @generated
+	 */
+	int PATH_PARAM = 22;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_PARAM__NOMBRE = PARAMETRO__NOMBRE;
+
+	/**
+	 * The number of structural features of the '<em>Path Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_PARAM_FEATURE_COUNT = PARAMETRO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Path Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATH_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.QueryParamImpl <em>Query Param</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.QueryParamImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getQueryParam()
+	 * @generated
+	 */
+	int QUERY_PARAM = 23;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_PARAM__NOMBRE = PARAMETRO__NOMBRE;
+
+	/**
+	 * The number of structural features of the '<em>Query Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_PARAM_FEATURE_COUNT = PARAMETRO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Query Param</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUERY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1094,17 +1196,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoMetodoRest()
 	 * @generated
 	 */
-	int TIPO_METODO_REST = 21;
-
-	/**
-	 * The meta object id for the '{@link xSoftware.TipoParametro <em>Tipo Parametro</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.TipoParametro
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoParametro()
-	 * @generated
-	 */
-	int TIPO_PARAMETRO = 22;
+	int TIPO_METODO_REST = 24;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.
@@ -1114,7 +1206,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockaroo()
 	 * @generated
 	 */
-	int MOCKAROO = 23;
+	int MOCKAROO = 25;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoAtributo <em>Tipo Atributo</em>}' enum.
@@ -1124,7 +1216,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoAtributo()
 	 * @generated
 	 */
-	int TIPO_ATRIBUTO = 24;
+	int TIPO_ATRIBUTO = 26;
 
 
 	/**
@@ -1269,6 +1361,17 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getServicioRest_Request();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link xSoftware.ServicioRest#getParametros <em>Parametros</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
+	 * @see xSoftware.ServicioRest#getParametros()
+	 * @see #getServicioRest()
+	 * @generated
+	 */
+	EReference getServicioRest_Parametros();
+
+	/**
 	 * Returns the meta object for class '{@link xSoftware.Entidad <em>Entidad</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1330,38 +1433,6 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getResponse_Type();
-
-	/**
-	 * Returns the meta object for class '{@link xSoftware.Parametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Parametro</em>'.
-	 * @see xSoftware.Parametro
-	 * @generated
-	 */
-	EClass getParametro();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Parametro#getNombre <em>Nombre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nombre</em>'.
-	 * @see xSoftware.Parametro#getNombre()
-	 * @see #getParametro()
-	 * @generated
-	 */
-	EAttribute getParametro_Nombre();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Parametro#getTipo <em>Tipo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tipo</em>'.
-	 * @see xSoftware.Parametro#getTipo()
-	 * @see #getParametro()
-	 * @generated
-	 */
-	EAttribute getParametro_Tipo();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Test <em>Test</em>}'.
@@ -1586,17 +1657,6 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getMapping_Value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link xSoftware.Mapping#getParametro <em>Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Parametro</em>'.
-	 * @see xSoftware.Mapping#getParametro()
-	 * @see #getMapping()
-	 * @generated
-	 */
-	EReference getMapping_Parametro();
-
-	/**
 	 * Returns the meta object for class '{@link xSoftware.SimpleEntity <em>Simple Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1723,6 +1783,57 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getType();
 
 	/**
+	 * Returns the meta object for class '{@link xSoftware.Parametro <em>Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parametro</em>'.
+	 * @see xSoftware.Parametro
+	 * @generated
+	 */
+	EClass getParametro();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.Parametro#getNombre <em>Nombre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nombre</em>'.
+	 * @see xSoftware.Parametro#getNombre()
+	 * @see #getParametro()
+	 * @generated
+	 */
+	EAttribute getParametro_Nombre();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.BodyParam <em>Body Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Body Param</em>'.
+	 * @see xSoftware.BodyParam
+	 * @generated
+	 */
+	EClass getBodyParam();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.PathParam <em>Path Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Path Param</em>'.
+	 * @see xSoftware.PathParam
+	 * @generated
+	 */
+	EClass getPathParam();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.QueryParam <em>Query Param</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Query Param</em>'.
+	 * @see xSoftware.QueryParam
+	 * @generated
+	 */
+	EClass getQueryParam();
+
+	/**
 	 * Returns the meta object for enum '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1731,16 +1842,6 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getTipoMetodoRest();
-
-	/**
-	 * Returns the meta object for enum '{@link xSoftware.TipoParametro <em>Tipo Parametro</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Tipo Parametro</em>'.
-	 * @see xSoftware.TipoParametro
-	 * @generated
-	 */
-	EEnum getTipoParametro();
 
 	/**
 	 * Returns the meta object for enum '{@link xSoftware.Mockaroo <em>Mockaroo</em>}'.
@@ -1894,6 +1995,14 @@ public interface XSoftwarePackage extends EPackage {
 		EReference SERVICIO_REST__REQUEST = eINSTANCE.getServicioRest_Request();
 
 		/**
+		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICIO_REST__PARAMETROS = eINSTANCE.getServicioRest_Parametros();
+
+		/**
 		 * The meta object literal for the '{@link xSoftware.impl.EntidadImpl <em>Entidad</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1946,32 +2055,6 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RESPONSE__TYPE = eINSTANCE.getResponse_Type();
-
-		/**
-		 * The meta object literal for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xSoftware.impl.ParametroImpl
-		 * @see xSoftware.impl.XSoftwarePackageImpl#getParametro()
-		 * @generated
-		 */
-		EClass PARAMETRO = eINSTANCE.getParametro();
-
-		/**
-		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETRO__NOMBRE = eINSTANCE.getParametro_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PARAMETRO__TIPO = eINSTANCE.getParametro_Tipo();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.TestImpl <em>Test</em>}' class.
@@ -2160,14 +2243,6 @@ public interface XSoftwarePackage extends EPackage {
 		EReference MAPPING__VALUE = eINSTANCE.getMapping_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAPPING__PARAMETRO = eINSTANCE.getMapping_Parametro();
-
-		/**
 		 * The meta object literal for the '{@link xSoftware.impl.SimpleEntityImpl <em>Simple Entity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2276,6 +2351,54 @@ public interface XSoftwarePackage extends EPackage {
 		EClass TYPE = eINSTANCE.getType();
 
 		/**
+		 * The meta object literal for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.ParametroImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getParametro()
+		 * @generated
+		 */
+		EClass PARAMETRO = eINSTANCE.getParametro();
+
+		/**
+		 * The meta object literal for the '<em><b>Nombre</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PARAMETRO__NOMBRE = eINSTANCE.getParametro_Nombre();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.BodyParamImpl <em>Body Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.BodyParamImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getBodyParam()
+		 * @generated
+		 */
+		EClass BODY_PARAM = eINSTANCE.getBodyParam();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.PathParamImpl <em>Path Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.PathParamImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getPathParam()
+		 * @generated
+		 */
+		EClass PATH_PARAM = eINSTANCE.getPathParam();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.QueryParamImpl <em>Query Param</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.QueryParamImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getQueryParam()
+		 * @generated
+		 */
+		EClass QUERY_PARAM = eINSTANCE.getQueryParam();
+
+		/**
 		 * The meta object literal for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2284,16 +2407,6 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TIPO_METODO_REST = eINSTANCE.getTipoMetodoRest();
-
-		/**
-		 * The meta object literal for the '{@link xSoftware.TipoParametro <em>Tipo Parametro</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xSoftware.TipoParametro
-		 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoParametro()
-		 * @generated
-		 */
-		EEnum TIPO_PARAMETRO = eINSTANCE.getTipoParametro();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.

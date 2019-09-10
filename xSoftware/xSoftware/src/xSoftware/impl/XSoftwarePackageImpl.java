@@ -16,6 +16,7 @@ import xSoftware.Atributo;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
+import xSoftware.BodyParam;
 import xSoftware.Elemento;
 import xSoftware.Entidad;
 import xSoftware.Mapping;
@@ -25,7 +26,9 @@ import xSoftware.MyBoolean;
 import xSoftware.MyNumeric;
 import xSoftware.MyString;
 import xSoftware.Parametro;
+import xSoftware.PathParam;
 import xSoftware.PrimitiveType;
+import xSoftware.QueryParam;
 import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
@@ -33,7 +36,6 @@ import xSoftware.SimpleEntity;
 import xSoftware.Test;
 import xSoftware.TipoAtributo;
 import xSoftware.TipoMetodoRest;
-import xSoftware.TipoParametro;
 import xSoftware.Type;
 import xSoftware.XSoftwareFactory;
 import xSoftware.XSoftwarePackage;
@@ -79,13 +81,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	private EClass responseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass parametroEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,14 +192,35 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum tipoMetodoRestEEnum = null;
+	private EClass parametroEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum tipoParametroEEnum = null;
+	private EClass bodyParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass queryParamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum tipoMetodoRestEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -403,6 +419,15 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getServicioRest_Parametros() {
+		return (EReference)servicioRestEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntidad() {
 		return entidadEClass;
 	}
@@ -450,33 +475,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 */
 	public EReference getResponse_Type() {
 		return (EReference)responseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getParametro() {
-		return parametroEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getParametro_Nombre() {
-		return (EAttribute)parametroEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getParametro_Tipo() {
-		return (EAttribute)parametroEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -673,15 +671,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMapping_Parametro() {
-		return (EReference)mappingEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSimpleEntity() {
 		return simpleEntityEClass;
 	}
@@ -790,8 +779,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getTipoMetodoRest() {
-		return tipoMetodoRestEEnum;
+	public EClass getParametro() {
+		return parametroEClass;
 	}
 
 	/**
@@ -799,8 +788,44 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getTipoParametro() {
-		return tipoParametroEEnum;
+	public EAttribute getParametro_Nombre() {
+		return (EAttribute)parametroEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBodyParam() {
+		return bodyParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPathParam() {
+		return pathParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQueryParam() {
+		return queryParamEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTipoMetodoRest() {
+		return tipoMetodoRestEEnum;
 	}
 
 	/**
@@ -863,6 +888,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(servicioRestEClass, SERVICIO_REST__RESPONSE);
 		createEAttribute(servicioRestEClass, SERVICIO_REST__URL);
 		createEReference(servicioRestEClass, SERVICIO_REST__REQUEST);
+		createEReference(servicioRestEClass, SERVICIO_REST__PARAMETROS);
 
 		entidadEClass = createEClass(ENTIDAD);
 		createEAttribute(entidadEClass, ENTIDAD__NOMBRE);
@@ -872,10 +898,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		responseEClass = createEClass(RESPONSE);
 		createEReference(responseEClass, RESPONSE__TYPE);
-
-		parametroEClass = createEClass(PARAMETRO);
-		createEAttribute(parametroEClass, PARAMETRO__NOMBRE);
-		createEAttribute(parametroEClass, PARAMETRO__TIPO);
 
 		testEClass = createEClass(TEST);
 		createEAttribute(testEClass, TEST__DESCRIPCION);
@@ -906,7 +928,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		mappingEClass = createEClass(MAPPING);
 		createEReference(mappingEClass, MAPPING__VALUE);
-		createEReference(mappingEClass, MAPPING__PARAMETRO);
 
 		simpleEntityEClass = createEClass(SIMPLE_ENTITY);
 		createEReference(simpleEntityEClass, SIMPLE_ENTITY__ATRIBUTOS);
@@ -926,9 +947,17 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		typeEClass = createEClass(TYPE);
 
+		parametroEClass = createEClass(PARAMETRO);
+		createEAttribute(parametroEClass, PARAMETRO__NOMBRE);
+
+		bodyParamEClass = createEClass(BODY_PARAM);
+
+		pathParamEClass = createEClass(PATH_PARAM);
+
+		queryParamEClass = createEClass(QUERY_PARAM);
+
 		// Create enums
 		tipoMetodoRestEEnum = createEEnum(TIPO_METODO_REST);
-		tipoParametroEEnum = createEEnum(TIPO_PARAMETRO);
 		mockarooEEnum = createEEnum(MOCKAROO);
 		tipoAtributoEEnum = createEEnum(TIPO_ATRIBUTO);
 	}
@@ -973,6 +1002,9 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		mockarooEntityEClass.getESuperTypes().add(this.getEntidad());
 		atributoEClass.getESuperTypes().add(this.getElemento());
 		atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
+		bodyParamEClass.getESuperTypes().add(this.getParametro());
+		pathParamEClass.getESuperTypes().add(this.getParametro());
+		queryParamEClass.getESuperTypes().add(this.getParametro());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apiEClass, Api.class, "Api", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -989,6 +1021,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getServicioRest_Response(), this.getResponse(), null, "response", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServicioRest_Url(), ecorePackage.getEString(), "url", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServicioRest_Request(), this.getRequest(), null, "request", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicioRest_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadEClass, Entidad.class, "Entidad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntidad_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -998,10 +1031,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		initEClass(responseEClass, Response.class, "Response", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getResponse_Type(), this.getType(), null, "type", null, 1, 1, Response.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(parametroEClass, Parametro.class, "Parametro", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getParametro_Tipo(), this.getTipoParametro(), "tipo", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTest_Descripcion(), ecorePackage.getEString(), "descripcion", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1032,7 +1061,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		initEClass(mappingEClass, Mapping.class, "Mapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMapping_Value(), this.getElemento(), null, "value", null, 1, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMapping_Parametro(), this.getParametro(), null, "parametro", null, 1, 1, Mapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(simpleEntityEClass, SimpleEntity.class, "SimpleEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSimpleEntity_Atributos(), this.getAtributoSimple(), null, "atributos", null, 0, -1, SimpleEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1052,17 +1080,21 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(parametroEClass, Parametro.class, "Parametro", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParametro_Nombre(), ecorePackage.getEString(), "nombre", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(bodyParamEClass, BodyParam.class, "BodyParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pathParamEClass, PathParam.class, "PathParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(queryParamEClass, QueryParam.class, "QueryParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(tipoMetodoRestEEnum, TipoMetodoRest.class, "TipoMetodoRest");
 		addEEnumLiteral(tipoMetodoRestEEnum, TipoMetodoRest.GET);
 		addEEnumLiteral(tipoMetodoRestEEnum, TipoMetodoRest.POST);
 		addEEnumLiteral(tipoMetodoRestEEnum, TipoMetodoRest.PUT);
 		addEEnumLiteral(tipoMetodoRestEEnum, TipoMetodoRest.DELETE);
-
-		initEEnum(tipoParametroEEnum, TipoParametro.class, "TipoParametro");
-		addEEnumLiteral(tipoParametroEEnum, TipoParametro.PATH);
-		addEEnumLiteral(tipoParametroEEnum, TipoParametro.QUERY);
-		addEEnumLiteral(tipoParametroEEnum, TipoParametro.BODY);
 
 		initEEnum(mockarooEEnum, Mockaroo.class, "Mockaroo");
 		addEEnumLiteral(mockarooEEnum, Mockaroo.FIRST_NAME_TYPE);

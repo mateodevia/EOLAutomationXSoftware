@@ -99,12 +99,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case XSoftwarePackage.PARAMETRO: {
-				Parametro parametro = (Parametro)theEObject;
-				T result = caseParametro(parametro);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case XSoftwarePackage.TEST: {
 				Test test = (Test)theEObject;
 				T result = caseTest(test);
@@ -215,6 +209,33 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case XSoftwarePackage.PARAMETRO: {
+				Parametro parametro = (Parametro)theEObject;
+				T result = caseParametro(parametro);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.BODY_PARAM: {
+				BodyParam bodyParam = (BodyParam)theEObject;
+				T result = caseBodyParam(bodyParam);
+				if (result == null) result = caseParametro(bodyParam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.PATH_PARAM: {
+				PathParam pathParam = (PathParam)theEObject;
+				T result = casePathParam(pathParam);
+				if (result == null) result = caseParametro(pathParam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.QUERY_PARAM: {
+				QueryParam queryParam = (QueryParam)theEObject;
+				T result = caseQueryParam(queryParam);
+				if (result == null) result = caseParametro(queryParam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -291,21 +312,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResponse(Response object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Parametro</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseParametro(Parametro object) {
 		return null;
 	}
 
@@ -531,6 +537,66 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseType(Type object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parametro</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parametro</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParametro(Parametro object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Body Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Body Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBodyParam(BodyParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Path Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Path Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathParam(PathParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Query Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Query Param</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQueryParam(QueryParam object) {
 		return null;
 	}
 

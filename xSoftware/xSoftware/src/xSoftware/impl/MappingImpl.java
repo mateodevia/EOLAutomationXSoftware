@@ -3,7 +3,6 @@
 package xSoftware.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -13,7 +12,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Elemento;
 import xSoftware.Mapping;
-import xSoftware.Parametro;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -25,7 +23,6 @@ import xSoftware.XSoftwarePackage;
  * </p>
  * <ul>
  *   <li>{@link xSoftware.impl.MappingImpl#getValue <em>Value</em>}</li>
- *   <li>{@link xSoftware.impl.MappingImpl#getParametro <em>Parametro</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,16 +37,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * @ordered
 	 */
 	protected Elemento value;
-
-	/**
-	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParametro()
-	 * @generated
-	 * @ordered
-	 */
-	protected Parametro parametro;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,71 +100,12 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro getParametro() {
-		return parametro;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParametro(Parametro newParametro, NotificationChain msgs) {
-		Parametro oldParametro = parametro;
-		parametro = newParametro;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__PARAMETRO, oldParametro, newParametro);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParametro(Parametro newParametro) {
-		if (newParametro != parametro) {
-			NotificationChain msgs = null;
-			if (parametro != null)
-				msgs = ((InternalEObject)parametro).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.MAPPING__PARAMETRO, null, msgs);
-			if (newParametro != null)
-				msgs = ((InternalEObject)newParametro).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.MAPPING__PARAMETRO, null, msgs);
-			msgs = basicSetParametro(newParametro, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__PARAMETRO, newParametro, newParametro));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case XSoftwarePackage.MAPPING__PARAMETRO:
-				return basicSetParametro(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case XSoftwarePackage.MAPPING__VALUE:
 				if (resolve) return getValue();
 				return basicGetValue();
-			case XSoftwarePackage.MAPPING__PARAMETRO:
-				return getParametro();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -192,9 +120,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 		switch (featureID) {
 			case XSoftwarePackage.MAPPING__VALUE:
 				setValue((Elemento)newValue);
-				return;
-			case XSoftwarePackage.MAPPING__PARAMETRO:
-				setParametro((Parametro)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -211,9 +136,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 			case XSoftwarePackage.MAPPING__VALUE:
 				setValue((Elemento)null);
 				return;
-			case XSoftwarePackage.MAPPING__PARAMETRO:
-				setParametro((Parametro)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -228,8 +150,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 		switch (featureID) {
 			case XSoftwarePackage.MAPPING__VALUE:
 				return value != null;
-			case XSoftwarePackage.MAPPING__PARAMETRO:
-				return parametro != null;
 		}
 		return super.eIsSet(featureID);
 	}

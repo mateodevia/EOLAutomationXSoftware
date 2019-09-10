@@ -67,15 +67,6 @@ public interface XSoftwareFactory extends EFactory {
 	Response createResponse();
 
 	/**
-	 * Returns a new object of class '<em>Parametro</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parametro</em>'.
-	 * @generated
-	 */
-	Parametro createParametro();
-
-	/**
 	 * Returns a new object of class '<em>Test</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,6 +164,33 @@ public interface XSoftwareFactory extends EFactory {
 	 * @generated
 	 */
 	Request createRequest();
+
+	/**
+	 * Returns a new object of class '<em>Body Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Body Param</em>'.
+	 * @generated
+	 */
+	BodyParam createBodyParam();
+
+	/**
+	 * Returns a new object of class '<em>Path Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Path Param</em>'.
+	 * @generated
+	 */
+	PathParam createPathParam();
+
+	/**
+	 * Returns a new object of class '<em>Query Param</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Query Param</em>'.
+	 * @generated
+	 */
+	QueryParam createQueryParam();
 
 	/**
 	 * Returns the package supported by this factory.

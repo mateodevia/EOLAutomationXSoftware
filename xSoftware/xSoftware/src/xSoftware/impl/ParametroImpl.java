@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Parametro;
-import xSoftware.TipoParametro;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -22,12 +21,11 @@ import xSoftware.XSoftwarePackage;
  * </p>
  * <ul>
  *   <li>{@link xSoftware.impl.ParametroImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link xSoftware.impl.ParametroImpl#getTipo <em>Tipo</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ParametroImpl extends MinimalEObjectImpl.Container implements Parametro {
+public abstract class ParametroImpl extends MinimalEObjectImpl.Container implements Parametro {
 	/**
 	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,26 +45,6 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	 * @ordered
 	 */
 	protected String nombre = NOMBRE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTipo()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final TipoParametro TIPO_EDEFAULT = TipoParametro.PATH;
-
-	/**
-	 * The cached value of the '{@link #getTipo() <em>Tipo</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTipo()
-	 * @generated
-	 * @ordered
-	 */
-	protected TipoParametro tipo = TIPO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,34 +91,11 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoParametro getTipo() {
-		return tipo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTipo(TipoParametro newTipo) {
-		TipoParametro oldTipo = tipo;
-		tipo = newTipo == null ? TIPO_EDEFAULT : newTipo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.PARAMETRO__TIPO, oldTipo, tipo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case XSoftwarePackage.PARAMETRO__NOMBRE:
 				return getNombre();
-			case XSoftwarePackage.PARAMETRO__TIPO:
-				return getTipo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,9 +110,6 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 		switch (featureID) {
 			case XSoftwarePackage.PARAMETRO__NOMBRE:
 				setNombre((String)newValue);
-				return;
-			case XSoftwarePackage.PARAMETRO__TIPO:
-				setTipo((TipoParametro)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,9 +126,6 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 			case XSoftwarePackage.PARAMETRO__NOMBRE:
 				setNombre(NOMBRE_EDEFAULT);
 				return;
-			case XSoftwarePackage.PARAMETRO__TIPO:
-				setTipo(TIPO_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,8 +140,6 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 		switch (featureID) {
 			case XSoftwarePackage.PARAMETRO__NOMBRE:
 				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case XSoftwarePackage.PARAMETRO__TIPO:
-				return tipo != TIPO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,8 +156,6 @@ public class ParametroImpl extends MinimalEObjectImpl.Container implements Param
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (nombre: ");
 		result.append(nombre);
-		result.append(", tipo: ");
-		result.append(tipo);
 		result.append(')');
 		return result.toString();
 	}

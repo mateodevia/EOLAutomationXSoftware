@@ -20,13 +20,15 @@ import xSoftware.Asercion;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
+import xSoftware.BodyParam;
 import xSoftware.Entidad;
 import xSoftware.Mapping;
 import xSoftware.MockarooEntity;
 import xSoftware.MyBoolean;
 import xSoftware.MyNumeric;
 import xSoftware.MyString;
-import xSoftware.Parametro;
+import xSoftware.PathParam;
+import xSoftware.QueryParam;
 import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
@@ -63,6 +65,9 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case XSoftwarePackage.ATRIBUTO_SIMPLE:
 				sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
 				return; 
+			case XSoftwarePackage.BODY_PARAM:
+				sequence_BodyParam(context, (BodyParam) semanticObject); 
+				return; 
 			case XSoftwarePackage.ENTIDAD:
 				sequence_TipoEntidad(context, (Entidad) semanticObject); 
 				return; 
@@ -81,8 +86,11 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case XSoftwarePackage.MY_STRING:
 				sequence_MyString(context, (MyString) semanticObject); 
 				return; 
-			case XSoftwarePackage.PARAMETRO:
-				sequence_Parametro(context, (Parametro) semanticObject); 
+			case XSoftwarePackage.PATH_PARAM:
+				sequence_PathParam(context, (PathParam) semanticObject); 
+				return; 
+			case XSoftwarePackage.QUERY_PARAM:
+				sequence_QueryParam(context, (QueryParam) semanticObject); 
 				return; 
 			case XSoftwarePackage.REQUEST:
 				sequence_Request(context, (Request) semanticObject); 
@@ -196,21 +204,36 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     BodyParam returns BodyParam
+	 *
+	 * Constraint:
+	 *     nombre=EString
+	 */
+	protected void sequence_BodyParam(ISerializationContext context, BodyParam semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBodyParamAccess().getNombreEStringParserRuleCall_1_0(), semanticObject.getNombre());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Mapping returns Mapping
 	 *
 	 * Constraint:
-	 *     (value=[Elemento|EString] parametro=Parametro)
+	 *     value=[Elemento|EString]
 	 */
 	protected void sequence_Mapping(ISerializationContext context, Mapping semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.MAPPING__VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.MAPPING__VALUE));
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.MAPPING__PARAMETRO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.MAPPING__PARAMETRO));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMappingAccess().getValueElementoEStringParserRuleCall_3_0_1(), semanticObject.eGet(XSoftwarePackage.Literals.MAPPING__VALUE, false));
-		feeder.accept(grammarAccess.getMappingAccess().getParametroParametroParserRuleCall_5_0(), semanticObject.getParametro());
 		feeder.finish();
 	}
 	
@@ -290,13 +313,39 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     Parametro returns Parametro
+	 *     Parametro returns PathParam
+	 *     PathParam returns PathParam
 	 *
 	 * Constraint:
-	 *     (nombre=EString? tipo=TipoParametro?)
+	 *     nombre=EString
 	 */
-	protected void sequence_Parametro(ISerializationContext context, Parametro semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_PathParam(ISerializationContext context, PathParam semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPathParamAccess().getNombreEStringParserRuleCall_1_0(), semanticObject.getNombre());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Parametro returns QueryParam
+	 *     QueryParam returns QueryParam
+	 *
+	 * Constraint:
+	 *     nombre=EString
+	 */
+	protected void sequence_QueryParam(ISerializationContext context, QueryParam semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getQueryParamAccess().getNombreEStringParserRuleCall_1_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	
@@ -341,7 +390,14 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ServicioRest returns ServicioRest
 	 *
 	 * Constraint:
-	 *     (metodo=TipoMetodoRest nombre=EString url=EString request=Request? response=Response)
+	 *     (
+	 *         metodo=TipoMetodoRest 
+	 *         nombre=EString 
+	 *         url=EString 
+	 *         parametros+=Parametro* 
+	 *         request=Request? 
+	 *         response=Response
+	 *     )
 	 */
 	protected void sequence_ServicioRest(ISerializationContext context, ServicioRest semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
