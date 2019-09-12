@@ -22,23 +22,29 @@ import org.xtext.example.mydsl.services.MyDslGrammarAccess;
 public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MyDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1;
-	protected AbstractElementAlias match_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q;
+	protected AbstractElementAlias match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1;
+	protected AbstractElementAlias match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
+	protected AbstractElementAlias match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
 	protected AbstractElementAlias match_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a;
-	protected AbstractElementAlias match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q;
+	protected AbstractElementAlias match_Test___MappingKeyword_12_0_LeftSquareBracketKeyword_12_1_RightSquareBracketKeyword_12_3__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MyDslGrammarAccess) access;
-		match_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAtributo2Access().getBooleanKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getIDTerminalRuleCall_0_0()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getIntKeyword_0_2()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getStringKeyword_0_1()));
-		match_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getAtributo2Access().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getAtributo2Access().getRightSquareBracketKeyword_1_1()));
+		match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getElementoAccess().getEBooleanParserRuleCall_3()), new TokenAlias(false, false, grammarAccess.getElementoAccess().getEIntParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getElementoAccess().getEStringParserRuleCall_1()));
+		match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRequestAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getRequestAccess().getRightSquareBracketKeyword_5_1()));
+		match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getResponseAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getResponseAccess().getRightSquareBracketKeyword_5_1()));
 		match_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getSolidusKeyword_7_1_0()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getEStringParserRuleCall_7_1_1()));
-		match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTypeAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getTypeAccess().getRightSquareBracketKeyword_1_1()));
+		match_Test___MappingKeyword_12_0_LeftSquareBracketKeyword_12_1_RightSquareBracketKeyword_12_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getTestAccess().getMappingKeyword_12_0()), new TokenAlias(false, false, grammarAccess.getTestAccess().getLeftSquareBracketKeyword_12_1()), new TokenAlias(false, false, grammarAccess.getTestAccess().getRightSquareBracketKeyword_12_3()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getEQUALRule())
+		if (ruleCall.getRule() == grammarAccess.getEBooleanRule())
+			return getEBooleanToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getEIntRule())
+			return getEIntToken(semanticObject, ruleCall, node);
+		else if (ruleCall.getRule() == grammarAccess.getEQUALRule())
 			return getEQUALToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEStringRule())
 			return getEStringToken(semanticObject, ruleCall, node);
@@ -46,6 +52,27 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getIDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSEMICOLONRule())
 			return getSEMICOLONToken(semanticObject, ruleCall, node);
+		return "";
+	}
+	
+	/**
+	 * EBoolean returns ecore::EBoolean:
+	 * 	'true' | 'false';
+	 */
+	protected String getEBooleanToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "true";
+	}
+	
+	/**
+	 * EInt returns ecore::EInt: 
+	 * 	INT
+	 * ;
+	 */
+	protected String getEIntToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
 		return "";
 	}
 	
@@ -92,26 +119,28 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1.equals(syntax))
-				emit_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q.equals(syntax))
-				emit_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1.equals(syntax))
+				emit_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
+				emit_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
+				emit_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a.equals(syntax))
 				emit_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q.equals(syntax))
-				emit_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Test___MappingKeyword_12_0_LeftSquareBracketKeyword_12_1_RightSquareBracketKeyword_12_3__q.equals(syntax))
+				emit_Test___MappingKeyword_12_0_LeftSquareBracketKeyword_12_1_RightSquareBracketKeyword_12_3__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     ID | 'string' | 'int' | 'boolean'
+	 *     EInt | EBoolean | EString
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) ('[' ']')? (rule start)
+	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Atributo2_BooleanKeyword_0_3_or_IDTerminalRuleCall_0_0_or_IntKeyword_0_2_or_StringKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -120,9 +149,22 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('[' ']')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ID | 'string' | 'int' | 'boolean') (ambiguity) (rule start)
+	 *     tipoEntidad=[Entidad|ID] (ambiguity) SEMICOLON '}' (rule end)
+	 *     tipoPrimitivo=TipoAtributo (ambiguity) SEMICOLON '}' (rule end)
 	 */
-	protected void emit_Atributo2___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('[' ']')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     tipoEntidad=[Entidad|ID] (ambiguity) SEMICOLON '}' (rule end)
+	 *     tipoPrimitivo=TipoAtributo (ambiguity) SEMICOLON '}' (rule end)
+	 */
+	protected void emit_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -144,15 +186,13 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('[' ']')?
+	 *     ('Mapping' '[' ']')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     nombre='boolean' (ambiguity) (rule end)
-	 *     nombre='int' (ambiguity) (rule end)
-	 *     nombre='string' (ambiguity) (rule end)
-	 *     nombre=EString (ambiguity) (rule end)
+	 *     descripcion=EString SEMICOLON (ambiguity) 'Assertions' '{' '}' '}' (rule end)
+	 *     descripcion=EString SEMICOLON (ambiguity) 'Assertions' '{' asertions+=Asercion
 	 */
-	protected void emit_Type___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Test___MappingKeyword_12_0_LeftSquareBracketKeyword_12_1_RightSquareBracketKeyword_12_3__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

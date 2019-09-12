@@ -12,38 +12,38 @@ package xSoftware;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.MyBoolean#isValor <em>Valor</em>}</li>
+ *   <li>{@link xSoftware.MyBoolean#isName <em>Name</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getMyBoolean()
  * @model
  * @generated
  */
-public interface MyBoolean extends PrimitiveType {
+public interface MyBoolean extends DatoPrimitivo {
 	/**
-	 * Returns the value of the '<em><b>Valor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Valor</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Valor</em>' attribute.
-	 * @see #setValor(boolean)
-	 * @see xSoftware.XSoftwarePackage#getMyBoolean_Valor()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(boolean)
+	 * @see xSoftware.XSoftwarePackage#getMyBoolean_Name()
 	 * @model
 	 * @generated
 	 */
-	boolean isValor();
+	boolean isName();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.MyBoolean#isValor <em>Valor</em>}' attribute.
+	 * Sets the value of the '{@link xSoftware.MyBoolean#isName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valor</em>' attribute.
-	 * @see #isValor()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #isName()
 	 * @generated
 	 */
-	void setValor(boolean value);
+	void setName(boolean value);
 
 } // MyBoolean

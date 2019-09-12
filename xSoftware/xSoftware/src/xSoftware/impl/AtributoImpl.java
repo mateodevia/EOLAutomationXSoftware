@@ -20,7 +20,7 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.AtributoImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link xSoftware.impl.AtributoImpl#getName <em>Name</em>}</li>
  *   <li>{@link xSoftware.impl.AtributoImpl#isPrimaryKey <em>Primary Key</em>}</li>
  *   <li>{@link xSoftware.impl.AtributoImpl#getTipo <em>Tipo</em>}</li>
  * </ul>
@@ -29,24 +29,24 @@ import xSoftware.XSoftwarePackage;
  */
 public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isPrimaryKey() <em>Primary Key</em>}' attribute.
@@ -112,8 +112,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -121,11 +121,11 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ATRIBUTO__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ATRIBUTO__NAME, oldName, name));
 	}
 
 	/**
@@ -178,8 +178,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.ATRIBUTO__NOMBRE:
-				return getNombre();
+			case XSoftwarePackage.ATRIBUTO__NAME:
+				return getName();
 			case XSoftwarePackage.ATRIBUTO__PRIMARY_KEY:
 				return isPrimaryKey();
 			case XSoftwarePackage.ATRIBUTO__TIPO:
@@ -196,8 +196,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.ATRIBUTO__NOMBRE:
-				setNombre((String)newValue);
+			case XSoftwarePackage.ATRIBUTO__NAME:
+				setName((String)newValue);
 				return;
 			case XSoftwarePackage.ATRIBUTO__PRIMARY_KEY:
 				setPrimaryKey((Boolean)newValue);
@@ -217,8 +217,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.ATRIBUTO__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case XSoftwarePackage.ATRIBUTO__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case XSoftwarePackage.ATRIBUTO__PRIMARY_KEY:
 				setPrimaryKey(PRIMARY_KEY_EDEFAULT);
@@ -238,8 +238,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.ATRIBUTO__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case XSoftwarePackage.ATRIBUTO__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case XSoftwarePackage.ATRIBUTO__PRIMARY_KEY:
 				return primaryKey != PRIMARY_KEY_EDEFAULT;
 			case XSoftwarePackage.ATRIBUTO__TIPO:
@@ -258,8 +258,8 @@ public abstract class AtributoImpl extends ElementoImpl implements Atributo {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(", primaryKey: ");
 		result.append(primaryKey);
 		result.append(", tipo: ");

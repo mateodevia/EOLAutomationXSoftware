@@ -19,31 +19,31 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.MyBooleanImpl#isValor <em>Valor</em>}</li>
+ *   <li>{@link xSoftware.impl.MyBooleanImpl#isName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
+public class MyBooleanImpl extends DatoPrimitivoImpl implements MyBoolean {
 	/**
-	 * The default value of the '{@link #isValor() <em>Valor</em>}' attribute.
+	 * The default value of the '{@link #isName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValor()
+	 * @see #isName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALOR_EDEFAULT = false;
+	protected static final boolean NAME_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isValor() <em>Valor</em>}' attribute.
+	 * The cached value of the '{@link #isName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValor()
+	 * @see #isName()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean valor = VALOR_EDEFAULT;
+	protected boolean name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValor() {
-		return valor;
+	public boolean isName() {
+		return name;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValor(boolean newValor) {
-		boolean oldValor = valor;
-		valor = newValor;
+	public void setName(boolean newName) {
+		boolean oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MY_BOOLEAN__VALOR, oldValor, valor));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MY_BOOLEAN__NAME, oldName, name));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_BOOLEAN__VALOR:
-				return isValor();
+			case XSoftwarePackage.MY_BOOLEAN__NAME:
+				return isName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_BOOLEAN__VALOR:
-				setValor((Boolean)newValue);
+			case XSoftwarePackage.MY_BOOLEAN__NAME:
+				setName((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_BOOLEAN__VALOR:
-				setValor(VALOR_EDEFAULT);
+			case XSoftwarePackage.MY_BOOLEAN__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_BOOLEAN__VALOR:
-				return valor != VALOR_EDEFAULT;
+			case XSoftwarePackage.MY_BOOLEAN__NAME:
+				return name != NAME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class MyBooleanImpl extends PrimitiveTypeImpl implements MyBoolean {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (valor: ");
-		result.append(valor);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

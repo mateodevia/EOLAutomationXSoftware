@@ -12,38 +12,38 @@ package xSoftware;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.MyNumeric#getValor <em>Valor</em>}</li>
+ *   <li>{@link xSoftware.MyNumeric#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getMyNumeric()
  * @model
  * @generated
  */
-public interface MyNumeric extends PrimitiveType {
+public interface MyNumeric extends DatoPrimitivo {
 	/**
-	 * Returns the value of the '<em><b>Valor</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Valor</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Valor</em>' attribute.
-	 * @see #setValor(double)
-	 * @see xSoftware.XSoftwarePackage#getMyNumeric_Valor()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(int)
+	 * @see xSoftware.XSoftwarePackage#getMyNumeric_Name()
 	 * @model
 	 * @generated
 	 */
-	double getValor();
+	int getName();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.MyNumeric#getValor <em>Valor</em>}' attribute.
+	 * Sets the value of the '{@link xSoftware.MyNumeric#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valor</em>' attribute.
-	 * @see #getValor()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setValor(double value);
+	void setName(int value);
 
 } // MyNumeric

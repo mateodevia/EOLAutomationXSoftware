@@ -13,7 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Response#getType <em>Type</em>}</li>
+ *   <li>{@link xSoftware.Response#getStatus <em>Status</em>}</li>
+ *   <li>{@link xSoftware.Response#getTipoEntidad <em>Tipo Entidad</em>}</li>
+ *   <li>{@link xSoftware.Response#getTipoPrimitivo <em>Tipo Primitivo</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getResponse()
@@ -22,29 +24,84 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Response extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference.
-	 * @see #setType(Type)
-	 * @see xSoftware.XSoftwarePackage#getResponse_Type()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Status</em>' attribute.
+	 * @see #setStatus(int)
+	 * @see xSoftware.XSoftwarePackage#getResponse_Status()
+	 * @model
 	 * @generated
 	 */
-	Type getType();
+	int getStatus();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.Response#getType <em>Type</em>}' containment reference.
+	 * Sets the value of the '{@link xSoftware.Response#getStatus <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' containment reference.
-	 * @see #getType()
+	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @see #getStatus()
 	 * @generated
 	 */
-	void setType(Type value);
+	void setStatus(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Tipo Entidad</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tipo Entidad</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tipo Entidad</em>' reference.
+	 * @see #setTipoEntidad(Entidad)
+	 * @see xSoftware.XSoftwarePackage#getResponse_TipoEntidad()
+	 * @model
+	 * @generated
+	 */
+	Entidad getTipoEntidad();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.Response#getTipoEntidad <em>Tipo Entidad</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tipo Entidad</em>' reference.
+	 * @see #getTipoEntidad()
+	 * @generated
+	 */
+	void setTipoEntidad(Entidad value);
+
+	/**
+	 * Returns the value of the '<em><b>Tipo Primitivo</b></em>' attribute.
+	 * The literals are from the enumeration {@link xSoftware.TipoAtributo}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tipo Primitivo</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tipo Primitivo</em>' attribute.
+	 * @see xSoftware.TipoAtributo
+	 * @see #setTipoPrimitivo(TipoAtributo)
+	 * @see xSoftware.XSoftwarePackage#getResponse_TipoPrimitivo()
+	 * @model
+	 * @generated
+	 */
+	TipoAtributo getTipoPrimitivo();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.Response#getTipoPrimitivo <em>Tipo Primitivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tipo Primitivo</em>' attribute.
+	 * @see xSoftware.TipoAtributo
+	 * @see #getTipoPrimitivo()
+	 * @generated
+	 */
+	void setTipoPrimitivo(TipoAtributo value);
 
 } // Response

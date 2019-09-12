@@ -37,7 +37,7 @@ import xSoftware.XSoftwarePackage;
  * <ul>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getEntidades <em>Entidades</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getMetodo <em>Metodo</em>}</li>
- *   <li>{@link xSoftware.impl.ServicioRestImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link xSoftware.impl.ServicioRestImpl#getName <em>Name</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getResponse <em>Response</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link xSoftware.impl.ServicioRestImpl#getRequest <em>Request</em>}</li>
@@ -78,24 +78,24 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 	protected TipoMetodoRest metodo = METODO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getResponse() <em>Response</em>}' containment reference.
@@ -204,8 +204,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -213,11 +213,11 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.SERVICIO_REST__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.SERVICIO_REST__NAME, oldName, name));
 	}
 
 	/**
@@ -369,8 +369,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 				return getEntidades();
 			case XSoftwarePackage.SERVICIO_REST__METODO:
 				return getMetodo();
-			case XSoftwarePackage.SERVICIO_REST__NOMBRE:
-				return getNombre();
+			case XSoftwarePackage.SERVICIO_REST__NAME:
+				return getName();
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				return getResponse();
 			case XSoftwarePackage.SERVICIO_REST__URL:
@@ -399,8 +399,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 			case XSoftwarePackage.SERVICIO_REST__METODO:
 				setMetodo((TipoMetodoRest)newValue);
 				return;
-			case XSoftwarePackage.SERVICIO_REST__NOMBRE:
-				setNombre((String)newValue);
+			case XSoftwarePackage.SERVICIO_REST__NAME:
+				setName((String)newValue);
 				return;
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				setResponse((Response)newValue);
@@ -433,8 +433,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 			case XSoftwarePackage.SERVICIO_REST__METODO:
 				setMetodo(METODO_EDEFAULT);
 				return;
-			case XSoftwarePackage.SERVICIO_REST__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case XSoftwarePackage.SERVICIO_REST__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				setResponse((Response)null);
@@ -464,8 +464,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 				return entidades != null && !entidades.isEmpty();
 			case XSoftwarePackage.SERVICIO_REST__METODO:
 				return metodo != METODO_EDEFAULT;
-			case XSoftwarePackage.SERVICIO_REST__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case XSoftwarePackage.SERVICIO_REST__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case XSoftwarePackage.SERVICIO_REST__RESPONSE:
 				return response != null;
 			case XSoftwarePackage.SERVICIO_REST__URL:
@@ -490,8 +490,8 @@ public class ServicioRestImpl extends MinimalEObjectImpl.Container implements Se
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (metodo: ");
 		result.append(metodo);
-		result.append(", nombre: ");
-		result.append(nombre);
+		result.append(", name: ");
+		result.append(name);
 		result.append(", url: ");
 		result.append(url);
 		result.append(')');

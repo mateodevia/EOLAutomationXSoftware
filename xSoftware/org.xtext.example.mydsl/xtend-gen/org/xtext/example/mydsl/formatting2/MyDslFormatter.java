@@ -18,6 +18,7 @@ import xSoftware.Entidad;
 import xSoftware.MockarooEntity;
 import xSoftware.PrimitiveType;
 import xSoftware.ServicioRest;
+import xSoftware.Test;
 
 @SuppressWarnings("all")
 public class MyDslFormatter extends AbstractFormatter2 {
@@ -37,6 +38,10 @@ public class MyDslFormatter extends AbstractFormatter2 {
     EList<ServicioRest> _serviciosRest = api.getServiciosRest();
     for (final ServicioRest servicioRest : _serviciosRest) {
       document.<ServicioRest>format(servicioRest);
+    }
+    EList<Test> _tests = api.getTests();
+    for (final Test test : _tests) {
+      document.<Test>format(test);
     }
   }
   

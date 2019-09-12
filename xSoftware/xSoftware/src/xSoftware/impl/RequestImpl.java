@@ -3,7 +3,6 @@
 package xSoftware.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,8 +10,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import xSoftware.Entidad;
 import xSoftware.Request;
-import xSoftware.Type;
+import xSoftware.TipoAtributo;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -23,21 +23,42 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.RequestImpl#getType <em>Type</em>}</li>
+ *   <li>{@link xSoftware.impl.RequestImpl#getTipoEntidad <em>Tipo Entidad</em>}</li>
+ *   <li>{@link xSoftware.impl.RequestImpl#getTipoPrimitivo <em>Tipo Primitivo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RequestImpl extends MinimalEObjectImpl.Container implements Request {
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+	 * The cached value of the '{@link #getTipoEntidad() <em>Tipo Entidad</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getTipoEntidad()
 	 * @generated
 	 * @ordered
 	 */
-	protected Type type;
+	protected Entidad tipoEntidad;
+
+	/**
+	 * The default value of the '{@link #getTipoPrimitivo() <em>Tipo Primitivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTipoPrimitivo()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final TipoAtributo TIPO_PRIMITIVO_EDEFAULT = TipoAtributo.STRING;
+
+	/**
+	 * The cached value of the '{@link #getTipoPrimitivo() <em>Tipo Primitivo</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTipoPrimitivo()
+	 * @generated
+	 * @ordered
+	 */
+	protected TipoAtributo tipoPrimitivo = TIPO_PRIMITIVO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,8 +84,16 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Type getType() {
-		return type;
+	public Entidad getTipoEntidad() {
+		if (tipoEntidad != null && tipoEntidad.eIsProxy()) {
+			InternalEObject oldTipoEntidad = (InternalEObject)tipoEntidad;
+			tipoEntidad = (Entidad)eResolveProxy(oldTipoEntidad);
+			if (tipoEntidad != oldTipoEntidad) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.REQUEST__TIPO_ENTIDAD, oldTipoEntidad, tipoEntidad));
+			}
+		}
+		return tipoEntidad;
 	}
 
 	/**
@@ -72,14 +101,8 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(Type newType, NotificationChain msgs) {
-		Type oldType = type;
-		type = newType;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.REQUEST__TYPE, oldType, newType);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public Entidad basicGetTipoEntidad() {
+		return tipoEntidad;
 	}
 
 	/**
@@ -87,18 +110,11 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(Type newType) {
-		if (newType != type) {
-			NotificationChain msgs = null;
-			if (type != null)
-				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.REQUEST__TYPE, null, msgs);
-			if (newType != null)
-				msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.REQUEST__TYPE, null, msgs);
-			msgs = basicSetType(newType, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.REQUEST__TYPE, newType, newType));
+	public void setTipoEntidad(Entidad newTipoEntidad) {
+		Entidad oldTipoEntidad = tipoEntidad;
+		tipoEntidad = newTipoEntidad;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.REQUEST__TIPO_ENTIDAD, oldTipoEntidad, tipoEntidad));
 	}
 
 	/**
@@ -106,13 +122,20 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case XSoftwarePackage.REQUEST__TYPE:
-				return basicSetType(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public TipoAtributo getTipoPrimitivo() {
+		return tipoPrimitivo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTipoPrimitivo(TipoAtributo newTipoPrimitivo) {
+		TipoAtributo oldTipoPrimitivo = tipoPrimitivo;
+		tipoPrimitivo = newTipoPrimitivo == null ? TIPO_PRIMITIVO_EDEFAULT : newTipoPrimitivo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.REQUEST__TIPO_PRIMITIVO, oldTipoPrimitivo, tipoPrimitivo));
 	}
 
 	/**
@@ -123,8 +146,11 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.REQUEST__TYPE:
-				return getType();
+			case XSoftwarePackage.REQUEST__TIPO_ENTIDAD:
+				if (resolve) return getTipoEntidad();
+				return basicGetTipoEntidad();
+			case XSoftwarePackage.REQUEST__TIPO_PRIMITIVO:
+				return getTipoPrimitivo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -137,8 +163,11 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.REQUEST__TYPE:
-				setType((Type)newValue);
+			case XSoftwarePackage.REQUEST__TIPO_ENTIDAD:
+				setTipoEntidad((Entidad)newValue);
+				return;
+			case XSoftwarePackage.REQUEST__TIPO_PRIMITIVO:
+				setTipoPrimitivo((TipoAtributo)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -152,8 +181,11 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.REQUEST__TYPE:
-				setType((Type)null);
+			case XSoftwarePackage.REQUEST__TIPO_ENTIDAD:
+				setTipoEntidad((Entidad)null);
+				return;
+			case XSoftwarePackage.REQUEST__TIPO_PRIMITIVO:
+				setTipoPrimitivo(TIPO_PRIMITIVO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -167,10 +199,28 @@ public class RequestImpl extends MinimalEObjectImpl.Container implements Request
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.REQUEST__TYPE:
-				return type != null;
+			case XSoftwarePackage.REQUEST__TIPO_ENTIDAD:
+				return tipoEntidad != null;
+			case XSoftwarePackage.REQUEST__TIPO_PRIMITIVO:
+				return tipoPrimitivo != TIPO_PRIMITIVO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (tipoPrimitivo: ");
+		result.append(tipoPrimitivo);
+		result.append(')');
+		return result.toString();
 	}
 
 } //RequestImpl

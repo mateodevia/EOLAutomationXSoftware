@@ -59,11 +59,11 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 		switch (eClass.getClassifierID()) {
 			case XSoftwarePackage.API: return createApi();
 			case XSoftwarePackage.SERVICIO_REST: return createServicioRest();
-			case XSoftwarePackage.ENTIDAD: return createEntidad();
 			case XSoftwarePackage.ATRIBUTO_MOCKA: return createAtributoMocka();
 			case XSoftwarePackage.RESPONSE: return createResponse();
 			case XSoftwarePackage.TEST: return createTest();
 			case XSoftwarePackage.ASERCION: return createAsercion();
+			case XSoftwarePackage.PRIMITIVE_TYPE: return createPrimitiveType();
 			case XSoftwarePackage.MY_NUMERIC: return createMyNumeric();
 			case XSoftwarePackage.MY_STRING: return createMyString();
 			case XSoftwarePackage.MY_BOOLEAN: return createMyBoolean();
@@ -144,16 +144,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad createEntidad() {
-		EntidadImpl entidad = new EntidadImpl();
-		return entidad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AtributoMocka createAtributoMocka() {
 		AtributoMockaImpl atributoMocka = new AtributoMockaImpl();
 		return atributoMocka;
@@ -187,6 +177,16 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	public Asercion createAsercion() {
 		AsercionImpl asercion = new AsercionImpl();
 		return asercion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrimitiveType createPrimitiveType() {
+		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
+		return primitiveType;
 	}
 
 	/**

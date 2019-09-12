@@ -42,20 +42,22 @@
     <genClasses ecoreClass="xSoftware.ecore#//ServicioRest">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/entidades"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/metodo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/response"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/request"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/parametros"/>
     </genClasses>
-    <genClasses ecoreClass="xSoftware.ecore#//Entidad">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/nombre"/>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//Entidad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/name"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//AtributoMocka">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//AtributoMocka/mockType"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Response">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Response/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/tipoEntidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Response/tipoPrimitivo"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Test">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Test/descripcion"/>
@@ -67,24 +69,28 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento1"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento2"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="xSoftware.ecore#//PrimitiveType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//PrimitiveType/nombre"/>
+    <genClasses ecoreClass="xSoftware.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//PrimitiveType/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//Elemento"/>
     <genClasses ecoreClass="xSoftware.ecore#//MyNumeric">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyNumeric/valor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyNumeric/name"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//MyString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyString/valor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyString/name"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//MyBoolean">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyBoolean/valor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//MyBoolean/name"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//AtributoArreglo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//AtributoArreglo/elementos"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Mapping">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/referencia"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/servicio"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/parametro"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/datoprimitivo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/referenciaEntidad"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//SimpleEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//SimpleEntity/atributos"/>
@@ -93,20 +99,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//MockarooEntity/atributos"/>
     </genClasses>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//Atributo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/primaryKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Atributo/tipo"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//AtributoSimple"/>
     <genClasses ecoreClass="xSoftware.ecore#//Request">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Request/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Request/tipoEntidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Request/tipoPrimitivo"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="xSoftware.ecore#//Type"/>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//Parametro">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Parametro/name"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//BodyParam"/>
     <genClasses ecoreClass="xSoftware.ecore#//PathParam"/>
     <genClasses ecoreClass="xSoftware.ecore#//QueryParam"/>
+    <genClasses image="false" ecoreClass="xSoftware.ecore#//DatoPrimitivo"/>
   </genPackages>
 </genmodel:GenModel>

@@ -6,23 +6,23 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import xSoftware.Type;
+import xSoftware.DatoPrimitivo;
 import xSoftware.XSoftwarePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Type</b></em>'.
+ * An implementation of the model object '<em><b>Dato Primitivo</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class TypeImpl extends MinimalEObjectImpl.Container implements Type {
+public abstract class DatoPrimitivoImpl extends MinimalEObjectImpl.Container implements DatoPrimitivo {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TypeImpl() {
+	protected DatoPrimitivoImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public abstract class TypeImpl extends MinimalEObjectImpl.Container implements T
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return XSoftwarePackage.Literals.TYPE;
+		return XSoftwarePackage.Literals.DATO_PRIMITIVO;
 	}
 
-} //TypeImpl
+} //DatoPrimitivoImpl

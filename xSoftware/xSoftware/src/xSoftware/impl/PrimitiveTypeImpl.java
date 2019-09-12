@@ -7,8 +7,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.PrimitiveType;
+import xSoftware.TipoAtributo;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -19,31 +21,31 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.PrimitiveTypeImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link xSoftware.impl.PrimitiveTypeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class PrimitiveTypeImpl extends ElementoImpl implements PrimitiveType {
+public class PrimitiveTypeImpl extends MinimalEObjectImpl.Container implements PrimitiveType {
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final TipoAtributo NAME_EDEFAULT = TipoAtributo.STRING;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected TipoAtributo name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +71,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public TipoAtributo getName() {
+		return name;
 	}
 
 	/**
@@ -78,11 +80,11 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setName(TipoAtributo newName) {
+		TipoAtributo oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.PRIMITIVE_TYPE__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.PRIMITIVE_TYPE__NAME, oldName, name));
 	}
 
 	/**
@@ -93,8 +95,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.PRIMITIVE_TYPE__NOMBRE:
-				return getNombre();
+			case XSoftwarePackage.PRIMITIVE_TYPE__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +109,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.PRIMITIVE_TYPE__NOMBRE:
-				setNombre((String)newValue);
+			case XSoftwarePackage.PRIMITIVE_TYPE__NAME:
+				setName((TipoAtributo)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +124,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.PRIMITIVE_TYPE__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case XSoftwarePackage.PRIMITIVE_TYPE__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +139,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.PRIMITIVE_TYPE__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case XSoftwarePackage.PRIMITIVE_TYPE__NAME:
+				return name != NAME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +155,8 @@ public abstract class PrimitiveTypeImpl extends ElementoImpl implements Primitiv
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

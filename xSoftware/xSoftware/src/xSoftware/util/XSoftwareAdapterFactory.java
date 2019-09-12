@@ -144,10 +144,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createRequestAdapter();
 			}
 			@Override
-			public Adapter caseType(Type object) {
-				return createTypeAdapter();
-			}
-			@Override
 			public Adapter caseParametro(Parametro object) {
 				return createParametroAdapter();
 			}
@@ -162,6 +158,10 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseQueryParam(QueryParam object) {
 				return createQueryParamAdapter();
+			}
+			@Override
+			public Adapter caseDatoPrimitivo(DatoPrimitivo object) {
+				return createDatoPrimitivoAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -450,20 +450,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link xSoftware.Type <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xSoftware.Type
-	 * @generated
-	 */
-	public Adapter createTypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link xSoftware.Parametro <em>Parametro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -516,6 +502,20 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQueryParamAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.DatoPrimitivo <em>Dato Primitivo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.DatoPrimitivo
+	 * @generated
+	 */
+	public Adapter createDatoPrimitivoAdapter() {
 		return null;
 	}
 

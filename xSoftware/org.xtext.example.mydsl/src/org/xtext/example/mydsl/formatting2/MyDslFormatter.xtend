@@ -13,6 +13,7 @@ import xSoftware.Entidad
 import xSoftware.MockarooEntity
 import xSoftware.PrimitiveType
 import xSoftware.ServicioRest
+import xSoftware.Test
 
 class MyDslFormatter extends AbstractFormatter2 {
 	
@@ -29,6 +30,9 @@ class MyDslFormatter extends AbstractFormatter2 {
 		for (ServicioRest servicioRest : api.getServiciosRest()) {
 			servicioRest.format;
 		}
+		for (Test test : api.getTests()) {
+			test.format;
+		}
 	}
 
 	def dispatch void format(MockarooEntity mockarooEntity, extension IFormattableDocument document) {
@@ -38,5 +42,5 @@ class MyDslFormatter extends AbstractFormatter2 {
 		}
 	}
 	
-	// TODO: implement for ServicioRest, Test, SimpleEntity, Response, Request, Mapping
+	// TODO: implement for ServicioRest, SimpleEntity, Response, Request
 }

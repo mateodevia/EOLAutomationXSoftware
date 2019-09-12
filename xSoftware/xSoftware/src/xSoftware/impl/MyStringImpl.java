@@ -19,31 +19,31 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.MyStringImpl#getValor <em>Valor</em>}</li>
+ *   <li>{@link xSoftware.impl.MyStringImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
+public class MyStringImpl extends DatoPrimitivoImpl implements MyString {
 	/**
-	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValor()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALOR_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValor()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String valor = VALOR_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValor() {
-		return valor;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValor(String newValor) {
-		String oldValor = valor;
-		valor = newValor;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MY_STRING__VALOR, oldValor, valor));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MY_STRING__NAME, oldName, name));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_STRING__VALOR:
-				return getValor();
+			case XSoftwarePackage.MY_STRING__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_STRING__VALOR:
-				setValor((String)newValue);
+			case XSoftwarePackage.MY_STRING__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_STRING__VALOR:
-				setValor(VALOR_EDEFAULT);
+			case XSoftwarePackage.MY_STRING__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MY_STRING__VALOR:
-				return VALOR_EDEFAULT == null ? valor != null : !VALOR_EDEFAULT.equals(valor);
+			case XSoftwarePackage.MY_STRING__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,8 +153,8 @@ public class MyStringImpl extends PrimitiveTypeImpl implements MyString {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (valor: ");
-		result.append(valor);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

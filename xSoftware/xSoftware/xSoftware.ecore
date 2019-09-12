@@ -16,7 +16,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidades" upperBound="-1"
         eType="#//Entidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metodo" eType="#//TipoMetodoRest"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"
         eType="#//Response" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -25,15 +25,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
         eType="#//Parametro" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entidad" eSuperTypes="#//Type">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entidad" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoMocka" eSuperTypes="#//Atributo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mockType" eType="#//Mockaroo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Response">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoEntidad" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoPrimitivo" eType="#//TipoAtributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Test">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -56,18 +57,18 @@
     <eLiterals name="PUT" value="2"/>
     <eLiterals name="DELETE" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" abstract="true" eSuperTypes="#//Elemento #//Type">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//TipoAtributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Elemento" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MyNumeric" eSuperTypes="#//PrimitiveType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MyNumeric" eSuperTypes="#//DatoPrimitivo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MyString" eSuperTypes="#//PrimitiveType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MyString" eSuperTypes="#//DatoPrimitivo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MyBoolean" eSuperTypes="#//PrimitiveType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MyBoolean" eSuperTypes="#//DatoPrimitivo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Mockaroo">
     <eLiterals name="FirstNameType"/>
@@ -90,7 +91,13 @@
         eType="#//Elemento"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Mapping">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Elemento"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referencia" eType="#//Atributo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servicio" lowerBound="1"
+        eType="#//ServicioRest"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" eType="#//Parametro"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datoprimitivo" eType="#//DatoPrimitivo"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenciaEntidad" eType="#//Entidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoAtributo">
     <eLiterals name="string"/>
@@ -106,20 +113,20 @@
         eType="#//Atributo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Atributo" abstract="true" eSuperTypes="#//Elemento">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaryKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoAtributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoSimple" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="Request">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipoEntidad" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoPrimitivo" eType="#//TipoAtributo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BodyParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="PathParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="QueryParam" eSuperTypes="#//Parametro"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DatoPrimitivo" abstract="true"/>
 </ecore:EPackage>

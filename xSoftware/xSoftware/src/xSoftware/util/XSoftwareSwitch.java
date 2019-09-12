@@ -81,7 +81,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.ENTIDAD: {
 				Entidad entidad = (Entidad)theEObject;
 				T result = caseEntidad(entidad);
-				if (result == null) result = caseType(entidad);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -114,8 +113,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.PRIMITIVE_TYPE: {
 				PrimitiveType primitiveType = (PrimitiveType)theEObject;
 				T result = casePrimitiveType(primitiveType);
-				if (result == null) result = caseElemento(primitiveType);
-				if (result == null) result = caseType(primitiveType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,27 +125,21 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.MY_NUMERIC: {
 				MyNumeric myNumeric = (MyNumeric)theEObject;
 				T result = caseMyNumeric(myNumeric);
-				if (result == null) result = casePrimitiveType(myNumeric);
-				if (result == null) result = caseElemento(myNumeric);
-				if (result == null) result = caseType(myNumeric);
+				if (result == null) result = caseDatoPrimitivo(myNumeric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case XSoftwarePackage.MY_STRING: {
 				MyString myString = (MyString)theEObject;
 				T result = caseMyString(myString);
-				if (result == null) result = casePrimitiveType(myString);
-				if (result == null) result = caseElemento(myString);
-				if (result == null) result = caseType(myString);
+				if (result == null) result = caseDatoPrimitivo(myString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case XSoftwarePackage.MY_BOOLEAN: {
 				MyBoolean myBoolean = (MyBoolean)theEObject;
 				T result = caseMyBoolean(myBoolean);
-				if (result == null) result = casePrimitiveType(myBoolean);
-				if (result == null) result = caseElemento(myBoolean);
-				if (result == null) result = caseType(myBoolean);
+				if (result == null) result = caseDatoPrimitivo(myBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -170,7 +161,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				SimpleEntity simpleEntity = (SimpleEntity)theEObject;
 				T result = caseSimpleEntity(simpleEntity);
 				if (result == null) result = caseEntidad(simpleEntity);
-				if (result == null) result = caseType(simpleEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -178,7 +168,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				MockarooEntity mockarooEntity = (MockarooEntity)theEObject;
 				T result = caseMockarooEntity(mockarooEntity);
 				if (result == null) result = caseEntidad(mockarooEntity);
-				if (result == null) result = caseType(mockarooEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -200,12 +189,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.REQUEST: {
 				Request request = (Request)theEObject;
 				T result = caseRequest(request);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XSoftwarePackage.TYPE: {
-				Type type = (Type)theEObject;
-				T result = caseType(type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -233,6 +216,12 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				QueryParam queryParam = (QueryParam)theEObject;
 				T result = caseQueryParam(queryParam);
 				if (result == null) result = caseParametro(queryParam);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.DATO_PRIMITIVO: {
+				DatoPrimitivo datoPrimitivo = (DatoPrimitivo)theEObject;
+				T result = caseDatoPrimitivo(datoPrimitivo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -526,21 +515,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseType(Type object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Parametro</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -597,6 +571,21 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseQueryParam(QueryParam object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dato Primitivo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dato Primitivo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDatoPrimitivo(DatoPrimitivo object) {
 		return null;
 	}
 

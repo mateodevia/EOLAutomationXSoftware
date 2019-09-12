@@ -40,15 +40,6 @@ public interface XSoftwareFactory extends EFactory {
 	ServicioRest createServicioRest();
 
 	/**
-	 * Returns a new object of class '<em>Entidad</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entidad</em>'.
-	 * @generated
-	 */
-	Entidad createEntidad();
-
-	/**
 	 * Returns a new object of class '<em>Atributo Mocka</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +74,15 @@ public interface XSoftwareFactory extends EFactory {
 	 * @generated
 	 */
 	Asercion createAsercion();
+
+	/**
+	 * Returns a new object of class '<em>Primitive Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Primitive Type</em>'.
+	 * @generated
+	 */
+	PrimitiveType createPrimitiveType();
 
 	/**
 	 * Returns a new object of class '<em>My Numeric</em>'.

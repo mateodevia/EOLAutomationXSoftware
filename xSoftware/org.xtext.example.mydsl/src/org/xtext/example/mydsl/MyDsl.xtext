@@ -4,47 +4,53 @@ grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
 import "http://www.uniandes.edu.co/xsoftware" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
+
+
 Api returns Api:
 	{Api}
 	'apiURL' EQUAL (url=EString) SEMICOLON
 		entidades+=Entidad*
 		primitivetypes+=PrimitiveType*
 		serviciosRest+=ServicioRest*
-		/*tests+=Test**/;
+		tests+=Test*;
 
 Entidad returns Entidad:
 	SimpleEntity | MockarooEntity;
-
-PrimitiveType returns PrimitiveType:
-	MyNumeric | MyString | MyBoolean;
-
-
+	
+SimpleEntity returns SimpleEntity:
+	'SimpleEntity' (name=ID) '{'
+		atributos+=(AtributoSimple)*
+	'}';
+	
 Atributo returns Atributo:
 	AtributoMocka | AtributoArreglo | AtributoSimple;
 	
-Atributo2 returns Atributo:
-	(ID |'string' | 'int' | 'boolean') ('[' ']')?;
-	
 AtributoMocka returns AtributoMocka:
-	(tipo=TipoAtributo) (nombre=EString) ('(' ((primaryKey?='PK,mockType' EQUAL (mockType=Mockaroo))|('mockType' EQUAL (mockType=Mockaroo))) ')') SEMICOLON;
+	(tipo=TipoAtributo) (name=ID) ('(' ((primaryKey?='PK,mockType' EQUAL (mockType=Mockaroo))|('mockType' EQUAL (mockType=Mockaroo))) ')') SEMICOLON;
 	
 AtributoArreglo returns AtributoArreglo:
-	(tipo=TipoAtributo)'[' ']' (nombre=EString) SEMICOLON;
+	(tipo=TipoAtributo)'[' ']' (name=ID) SEMICOLON;
 	
 AtributoSimple returns AtributoSimple:
-	(tipo=TipoAtributo) (nombre=EString) SEMICOLON;
-
-
-EString returns ecore::EString:
-	STRING | ID;
+	(tipo=TipoAtributo) (name=ID) SEMICOLON;
+	
+	
+MyString returns MyString:
+	name=EString;
+	
+MyNumeric returns MyNumeric:
+	name=EInt;
+	
+MyBoolean returns MyBoolean:
+	name=EBoolean;	
 
 MockarooEntity returns MockarooEntity:
-	'Entity' nombre=EString '{'
+	'Entity' name=ID '{'
 		atributos+=(Atributo)*
 	'}';
 
 ServicioRest returns ServicioRest:
-	(metodo=TipoMetodoRest) (nombre=EString) '{'
+	(metodo=TipoMetodoRest) (name=EString) '{'
 	
 		'URL' EQUAL '/' (url=EString) ((parametros+=(Parametro) | "/"EString))* SEMICOLON
 		
@@ -57,77 +63,51 @@ Parametro returns Parametro:
 	(QueryParam | PathParam );
 	
 QueryParam returns QueryParam:
-	"?${" nombre=EString "}";
+	"?${" name=ID "}";
 	
 PathParam returns PathParam:
-	"/:{" nombre=EString "}";
+	"/:{" name=ID "}";
 	
 BodyParam returns BodyParam:
-	"?${" nombre=EString "}";
-
-Test returns Test:
-	'Test'
-	'{'
-		('descripcion' descripcion=EString)?
-		'service' service=[ServicioRest|EString]
-		('mappings' '{' mappings+=Mapping ( "," mappings+=Mapping)* '}' )?
-		('asertions' '{' asertions+=Asercion ( "," asertions+=Asercion)* '}' )?
-	'}';
-
-SimpleEntity returns SimpleEntity:
-	'SimpleEntity' (nombre=EString) '{'
-		atributos+=(AtributoSimple)*
-	'}';
-
-EBoolean returns ecore::EBoolean:
-	'true' | 'false';
-
-enum TipoAtributo returns TipoAtributo:
-	string = 'string' | int = 'int' | boolean = 'boolean';
-
-enum Mockaroo returns Mockaroo:
-				FirstNameType = 'FirstNameType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CityType = 'CityType' | CountryCodeType = 'CountryCodeType' | LatitudeType = 'LatitudeType' | LongitudType = 'LongitudType' | RowNumberType = 'RowNumberType' | BooleanType = 'BooleanType';
-
-EDouble returns ecore::EDouble:
-	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;
-
-enum TipoMetodoRest returns TipoMetodoRest:
-				GET = 'GET' | POST = 'POST' | PUT = 'PUT' | DELETE = 'DELETE';
+	"?${" name=ID "}";
 
 Response returns Response:
 	'Response'
 	'{'
-		'Type' EQUAL type=Type SEMICOLON
+		'Type' EQUAL ((tipoEntidad=[Entidad])|(tipoPrimitivo=TipoAtributo)) ('[' ']')? SEMICOLON
 	'}';
 	
 Request returns Request:
 	'Request'
 	'{'
-		'Type' EQUAL type=Type SEMICOLON
+		'Type' EQUAL ((tipoEntidad=[Entidad])|(tipoPrimitivo=TipoAtributo)) ('[' ']')? SEMICOLON
 	'}';
-	
-	
-Type returns Type:
-	(TipoEntidad | PrimitiveType) ('[' ']')?;
+
 	
 TipoEntidad returns Entidad:
-	nombre=EString;
+	(MockarooEntity | SimpleEntity);
 	
+PrimitiveType returns PrimitiveType:
+	name=TipoAtributo;
 	
-MyString returns MyString:
-	nombre='string';
-	
-MyNumeric returns MyNumeric:
-	nombre='int';
-	
-MyBoolean returns MyBoolean:
-	nombre='boolean';	
-		
-Mapping returns Mapping:
-	'Mapping'
-	'{'
-		'value' value=[Elemento|EString]
+DatoPrimitivo returns DatoPrimitivo:
+	MyNumeric | MyString | MyBoolean;
+
+Test returns Test:
+	{Test}
+	'Test' ID '{'
+		'service' EQUAL service=[ServicioRest] SEMICOLON
+		'description' EQUAL  descripcion=EString   SEMICOLON
+		('Mapping' '['
+			mappings+=Mapping*
+		']')?
+		'Assertions' '{'
+			asertions+=Asercion*
+		'}'
 	'}';
+	
+Mapping returns Mapping:
+	'{parameter' EQUAL servicio=[ServicioRest] '.' parametro=[Parametro] ',' 'value' EQUAL (('request->'referenciaEntidad=[Entidad] '.'referencia=[Atributo])|datoprimitivo=(DatoPrimitivo)) '}';
 
 Asercion returns Asercion:
 	'Asercion'
@@ -135,6 +115,31 @@ Asercion returns Asercion:
 		'elemento1' elemento1=[Elemento|EString]
 		'elemento2' elemento2=[Elemento|EString]
 	'}';		
+	
+Elemento returns Elemento:
+	(Atributo|EString|EInt|EBoolean);
+
+EBoolean returns ecore::EBoolean:
+	'true' | 'false';
+	
+EDouble returns ecore::EDouble:
+	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;
+
+EInt returns ecore::EInt: 
+	INT
+;
+	
+EString returns ecore::EString:
+	STRING | ID;
+
+enum TipoAtributo returns TipoAtributo:
+	string = 'string' | int = 'int' | boolean = 'boolean';
+
+enum Mockaroo returns Mockaroo:
+				FirstNameType = 'FirstNameType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CityType = 'CityType' | CountryCodeType = 'CountryCodeType' | LatitudeType = 'LatitudeType' | LongitudType = 'LongitudType' | RowNumberType = 'RowNumberType' | BooleanType = 'BooleanType';
+
+enum TipoMetodoRest returns TipoMetodoRest:
+				GET = 'GET' | POST = 'POST' | PUT = 'PUT' | DELETE = 'DELETE';	
 
 terminal EQUAL : "=";
 terminal SEMICOLON : ";";

@@ -2,6 +2,7 @@
  */
 package xSoftware;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,38 +13,38 @@ package xSoftware;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Entidad#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link xSoftware.Entidad#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getEntidad()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface Entidad extends Type {
+public interface Entidad extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see xSoftware.XSoftwarePackage#getEntidad_Nombre()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see xSoftware.XSoftwarePackage#getEntidad_Name()
 	 * @model
 	 * @generated
 	 */
-	String getNombre();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.Entidad#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link xSoftware.Entidad#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setName(String value);
 
 } // Entidad

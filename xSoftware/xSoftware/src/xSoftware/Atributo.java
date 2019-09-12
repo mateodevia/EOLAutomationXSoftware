@@ -12,7 +12,7 @@ package xSoftware;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Atributo#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link xSoftware.Atributo#getName <em>Name</em>}</li>
  *   <li>{@link xSoftware.Atributo#isPrimaryKey <em>Primary Key</em>}</li>
  *   <li>{@link xSoftware.Atributo#getTipo <em>Tipo</em>}</li>
  * </ul>
@@ -23,30 +23,30 @@ package xSoftware;
  */
 public interface Atributo extends Elemento {
 	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see xSoftware.XSoftwarePackage#getAtributo_Nombre()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see xSoftware.XSoftwarePackage#getAtributo_Name()
 	 * @model
 	 * @generated
 	 */
-	String getNombre();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.Atributo#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link xSoftware.Atributo#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Primary Key</b></em>' attribute.
