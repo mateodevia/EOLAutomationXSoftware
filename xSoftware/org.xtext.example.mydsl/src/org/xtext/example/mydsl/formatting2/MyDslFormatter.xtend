@@ -8,9 +8,8 @@ import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
 import org.xtext.example.mydsl.services.MyDslGrammarAccess
 import xSoftware.Api
-import xSoftware.Atributo
 import xSoftware.Entidad
-import xSoftware.MockarooEntity
+import xSoftware.Parametro
 import xSoftware.PrimitiveType
 import xSoftware.ServicioRest
 import xSoftware.Test
@@ -35,12 +34,14 @@ class MyDslFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(MockarooEntity mockarooEntity, extension IFormattableDocument document) {
+	def dispatch void format(ServicioRest servicioRest, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
-		for (Atributo atributo : mockarooEntity.getAtributos()) {
-			atributo.format;
+		servicioRest.getResponse.format;
+		servicioRest.getRequest.format;
+		for (Parametro parametro : servicioRest.getParametros()) {
+			parametro.format;
 		}
 	}
 	
-	// TODO: implement for ServicioRest, SimpleEntity, Response, Request
+	// TODO: implement for Test, SimpleEntity, MockarooEntity, Response, Mapping, Asercion
 }

@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Atributo;
 import xSoftware.TipoAtributo;
@@ -27,7 +28,7 @@ import xSoftware.XSoftwarePackage;
  *
  * @generated
  */
-public abstract class AtributoImpl extends ElementoImpl implements Atributo {
+public abstract class AtributoImpl extends MinimalEObjectImpl.Container implements Atributo {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

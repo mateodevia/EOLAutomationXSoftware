@@ -76,6 +76,7 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.BODY_PARAM: return createBodyParam();
 			case XSoftwarePackage.PATH_PARAM: return createPathParam();
 			case XSoftwarePackage.QUERY_PARAM: return createQueryParam();
+			case XSoftwarePackage.STATUS: return createStatus();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -95,6 +96,8 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 				return createMockarooFromString(eDataType, initialValue);
 			case XSoftwarePackage.TIPO_ATRIBUTO:
 				return createTipoAtributoFromString(eDataType, initialValue);
+			case XSoftwarePackage.OPERADOR:
+				return createOperadorFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -114,6 +117,8 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 				return convertMockarooToString(eDataType, instanceValue);
 			case XSoftwarePackage.TIPO_ATRIBUTO:
 				return convertTipoAtributoToString(eDataType, instanceValue);
+			case XSoftwarePackage.OPERADOR:
+				return convertOperadorToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -314,6 +319,16 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Status createStatus() {
+		StatusImpl status = new StatusImpl();
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public TipoMetodoRest createTipoMetodoRestFromString(EDataType eDataType, String initialValue) {
 		TipoMetodoRest result = TipoMetodoRest.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -366,6 +381,26 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * @generated
 	 */
 	public String convertTipoAtributoToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Operador createOperadorFromString(EDataType eDataType, String initialValue) {
+		Operador result = Operador.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOperadorToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

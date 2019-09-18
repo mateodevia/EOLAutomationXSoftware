@@ -88,7 +88,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoMocka atributoMocka = (AtributoMocka)theEObject;
 				T result = caseAtributoMocka(atributoMocka);
 				if (result == null) result = caseAtributo(atributoMocka);
-				if (result == null) result = caseElemento(atributoMocka);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,12 +112,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.PRIMITIVE_TYPE: {
 				PrimitiveType primitiveType = (PrimitiveType)theEObject;
 				T result = casePrimitiveType(primitiveType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case XSoftwarePackage.ELEMENTO: {
-				Elemento elemento = (Elemento)theEObject;
-				T result = caseElemento(elemento);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,7 +140,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoArreglo atributoArreglo = (AtributoArreglo)theEObject;
 				T result = caseAtributoArreglo(atributoArreglo);
 				if (result == null) result = caseAtributo(atributoArreglo);
-				if (result == null) result = caseElemento(atributoArreglo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,7 +166,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.ATRIBUTO: {
 				Atributo atributo = (Atributo)theEObject;
 				T result = caseAtributo(atributo);
-				if (result == null) result = caseElemento(atributo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -182,7 +173,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoSimple atributoSimple = (AtributoSimple)theEObject;
 				T result = caseAtributoSimple(atributoSimple);
 				if (result == null) result = caseAtributo(atributoSimple);
-				if (result == null) result = caseElemento(atributoSimple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -222,6 +212,12 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.DATO_PRIMITIVO: {
 				DatoPrimitivo datoPrimitivo = (DatoPrimitivo)theEObject;
 				T result = caseDatoPrimitivo(datoPrimitivo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.STATUS: {
+				Status status = (Status)theEObject;
+				T result = caseStatus(status);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -346,21 +342,6 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrimitiveType(PrimitiveType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Elemento</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Elemento</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseElemento(Elemento object) {
 		return null;
 	}
 
@@ -586,6 +567,21 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDatoPrimitivo(DatoPrimitivo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStatus(Status object) {
 		return null;
 	}
 

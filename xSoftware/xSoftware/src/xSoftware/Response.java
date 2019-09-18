@@ -2,6 +2,8 @@
  */
 package xSoftware;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,9 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Response#getStatus <em>Status</em>}</li>
  *   <li>{@link xSoftware.Response#getTipoEntidad <em>Tipo Entidad</em>}</li>
  *   <li>{@link xSoftware.Response#getTipoPrimitivo <em>Tipo Primitivo</em>}</li>
+ *   <li>{@link xSoftware.Response#getMynumeric <em>Mynumeric</em>}</li>
+ *   <li>{@link xSoftware.Response#getStatus <em>Status</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getResponse()
@@ -23,32 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Response extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see #setStatus(int)
-	 * @see xSoftware.XSoftwarePackage#getResponse_Status()
-	 * @model
-	 * @generated
-	 */
-	int getStatus();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.Response#getStatus <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see #getStatus()
-	 * @generated
-	 */
-	void setStatus(int value);
-
 	/**
 	 * Returns the value of the '<em><b>Tipo Entidad</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -103,5 +80,37 @@ public interface Response extends EObject {
 	 * @generated
 	 */
 	void setTipoPrimitivo(TipoAtributo value);
+
+	/**
+	 * Returns the value of the '<em><b>Mynumeric</b></em>' containment reference list.
+	 * The list contents are of type {@link xSoftware.MyNumeric}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Mynumeric</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mynumeric</em>' containment reference list.
+	 * @see xSoftware.XSoftwarePackage#getResponse_Mynumeric()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<MyNumeric> getMynumeric();
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' containment reference list.
+	 * The list contents are of type {@link xSoftware.Status}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Status</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Status</em>' containment reference list.
+	 * @see xSoftware.XSoftwarePackage#getResponse_Status()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Status> getStatus();
 
 } // Response

@@ -100,10 +100,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createPrimitiveTypeAdapter();
 			}
 			@Override
-			public Adapter caseElemento(Elemento object) {
-				return createElementoAdapter();
-			}
-			@Override
 			public Adapter caseMyNumeric(MyNumeric object) {
 				return createMyNumericAdapter();
 			}
@@ -162,6 +158,10 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDatoPrimitivo(DatoPrimitivo object) {
 				return createDatoPrimitivoAdapter();
+			}
+			@Override
+			public Adapter caseStatus(Status object) {
+				return createStatusAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -292,20 +292,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link xSoftware.Elemento <em>Elemento</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xSoftware.Elemento
-	 * @generated
-	 */
-	public Adapter createElementoAdapter() {
 		return null;
 	}
 
@@ -516,6 +502,20 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDatoPrimitivoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.Status <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.Status
+	 * @generated
+	 */
+	public Adapter createStatusAdapter() {
 		return null;
 	}
 

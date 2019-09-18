@@ -112,12 +112,8 @@ Mapping returns Mapping:
 Asercion returns Asercion:
 	'Asercion'
 	'{'
-		'elemento1' elemento1=[Elemento|EString]
-		'elemento2' elemento2=[Elemento|EString]
 	'}';		
 	
-Elemento returns Elemento:
-	(Atributo|EString|EInt|EBoolean);
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';

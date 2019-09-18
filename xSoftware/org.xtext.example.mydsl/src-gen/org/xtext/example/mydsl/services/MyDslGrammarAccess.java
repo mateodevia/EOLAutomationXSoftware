@@ -1088,25 +1088,15 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAsercionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cElemento1Keyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cElemento1Assignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cElemento1ElementoCrossReference_3_0 = (CrossReference)cElemento1Assignment_3.eContents().get(0);
-		private final RuleCall cElemento1ElementoEStringParserRuleCall_3_0_1 = (RuleCall)cElemento1ElementoCrossReference_3_0.eContents().get(1);
-		private final Keyword cElemento2Keyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cElemento2Assignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cElemento2ElementoCrossReference_5_0 = (CrossReference)cElemento2Assignment_5.eContents().get(0);
-		private final RuleCall cElemento2ElementoEStringParserRuleCall_5_0_1 = (RuleCall)cElemento2ElementoCrossReference_5_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Asercion:
 		//	'Asercion'
 		//	'{'
-		//	'elemento1' elemento1=[Elemento|EString]
-		//	'elemento2' elemento2=[Elemento|EString]
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Asercion' '{' 'elemento1' elemento1=[Elemento|EString] 'elemento2' elemento2=[Elemento|EString] '}'
+		//'Asercion' '{' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Asercion'
@@ -1115,59 +1105,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//'elemento1'
-		public Keyword getElemento1Keyword_2() { return cElemento1Keyword_2; }
-		
-		//elemento1=[Elemento|EString]
-		public Assignment getElemento1Assignment_3() { return cElemento1Assignment_3; }
-		
-		//[Elemento|EString]
-		public CrossReference getElemento1ElementoCrossReference_3_0() { return cElemento1ElementoCrossReference_3_0; }
-		
-		//EString
-		public RuleCall getElemento1ElementoEStringParserRuleCall_3_0_1() { return cElemento1ElementoEStringParserRuleCall_3_0_1; }
-		
-		//'elemento2'
-		public Keyword getElemento2Keyword_4() { return cElemento2Keyword_4; }
-		
-		//elemento2=[Elemento|EString]
-		public Assignment getElemento2Assignment_5() { return cElemento2Assignment_5; }
-		
-		//[Elemento|EString]
-		public CrossReference getElemento2ElementoCrossReference_5_0() { return cElemento2ElementoCrossReference_5_0; }
-		
-		//EString
-		public RuleCall getElemento2ElementoEStringParserRuleCall_5_0_1() { return cElemento2ElementoEStringParserRuleCall_5_0_1; }
-		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-	public class ElementoElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Elemento");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAtributoParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cEStringParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cEIntParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cEBooleanParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//Elemento:
-		//	Atributo | EString | EInt | EBoolean;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//Atributo | EString | EInt | EBoolean
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//Atributo
-		public RuleCall getAtributoParserRuleCall_0() { return cAtributoParserRuleCall_0; }
-		
-		//EString
-		public RuleCall getEStringParserRuleCall_1() { return cEStringParserRuleCall_1; }
-		
-		//EInt
-		public RuleCall getEIntParserRuleCall_2() { return cEIntParserRuleCall_2; }
-		
-		//EBoolean
-		public RuleCall getEBooleanParserRuleCall_3() { return cEBooleanParserRuleCall_3; }
+		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.EBoolean");
@@ -1498,7 +1437,6 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TestElements pTest;
 	private final MappingElements pMapping;
 	private final AsercionElements pAsercion;
-	private final ElementoElements pElemento;
 	private final EBooleanElements pEBoolean;
 	private final EDoubleElements pEDouble;
 	private final EIntElements pEInt;
@@ -1542,7 +1480,6 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTest = new TestElements();
 		this.pMapping = new MappingElements();
 		this.pAsercion = new AsercionElements();
-		this.pElemento = new ElementoElements();
 		this.pEBoolean = new EBooleanElements();
 		this.pEDouble = new EDoubleElements();
 		this.pEInt = new EIntElements();
@@ -1844,8 +1781,6 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//Asercion:
 	//	'Asercion'
 	//	'{'
-	//	'elemento1' elemento1=[Elemento|EString]
-	//	'elemento2' elemento2=[Elemento|EString]
 	//	'}';
 	public AsercionElements getAsercionAccess() {
 		return pAsercion;
@@ -1853,16 +1788,6 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAsercionRule() {
 		return getAsercionAccess().getRule();
-	}
-	
-	//Elemento:
-	//	Atributo | EString | EInt | EBoolean;
-	public ElementoElements getElementoAccess() {
-		return pElemento;
-	}
-	
-	public ParserRule getElementoRule() {
-		return getElementoAccess().getRule();
 	}
 	
 	//EBoolean ecore::EBoolean:

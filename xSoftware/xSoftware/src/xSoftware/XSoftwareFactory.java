@@ -193,6 +193,15 @@ public interface XSoftwareFactory extends EFactory {
 	QueryParam createQueryParam();
 
 	/**
+	 * Returns a new object of class '<em>Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Status</em>'.
+	 * @generated
+	 */
+	Status createStatus();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

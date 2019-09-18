@@ -41,7 +41,6 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTipoEntidadAccess().getAlternatives(), "rule__TipoEntidad__Alternatives");
 					put(grammarAccess.getDatoPrimitivoAccess().getAlternatives(), "rule__DatoPrimitivo__Alternatives");
 					put(grammarAccess.getMappingAccess().getAlternatives_8(), "rule__Mapping__Alternatives_8");
-					put(grammarAccess.getElementoAccess().getAlternatives(), "rule__Elemento__Alternatives");
 					put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 					put(grammarAccess.getEDoubleAccess().getAlternatives_4_0(), "rule__EDouble__Alternatives_4_0");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
@@ -117,8 +116,6 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMappingAccess().getReferenciaEntidadAssignment_8_0_1(), "rule__Mapping__ReferenciaEntidadAssignment_8_0_1");
 					put(grammarAccess.getMappingAccess().getReferenciaAssignment_8_0_3(), "rule__Mapping__ReferenciaAssignment_8_0_3");
 					put(grammarAccess.getMappingAccess().getDatoprimitivoAssignment_8_1(), "rule__Mapping__DatoprimitivoAssignment_8_1");
-					put(grammarAccess.getAsercionAccess().getElemento1Assignment_3(), "rule__Asercion__Elemento1Assignment_3");
-					put(grammarAccess.getAsercionAccess().getElemento2Assignment_5(), "rule__Asercion__Elemento2Assignment_5");
 				}
 			};
 		}

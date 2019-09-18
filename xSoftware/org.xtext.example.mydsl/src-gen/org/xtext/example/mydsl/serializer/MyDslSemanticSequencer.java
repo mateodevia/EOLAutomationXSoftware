@@ -16,7 +16,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.mydsl.services.MyDslGrammarAccess;
 import xSoftware.Api;
-import xSoftware.Asercion;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
@@ -52,9 +51,6 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			switch (semanticObject.eClass().getClassifierID()) {
 			case XSoftwarePackage.API:
 				sequence_Api(context, (Api) semanticObject); 
-				return; 
-			case XSoftwarePackage.ASERCION:
-				sequence_Asercion(context, (Asercion) semanticObject); 
 				return; 
 			case XSoftwarePackage.ATRIBUTO_ARREGLO:
 				sequence_AtributoArreglo(context, (AtributoArreglo) semanticObject); 
@@ -126,30 +122,8 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     Asercion returns Asercion
-	 *
-	 * Constraint:
-	 *     (elemento1=[Elemento|EString] elemento2=[Elemento|EString])
-	 */
-	protected void sequence_Asercion(ISerializationContext context, Asercion semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ASERCION__ELEMENTO1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ASERCION__ELEMENTO1));
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ASERCION__ELEMENTO2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ASERCION__ELEMENTO2));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAsercionAccess().getElemento1ElementoEStringParserRuleCall_3_0_1(), semanticObject.eGet(XSoftwarePackage.Literals.ASERCION__ELEMENTO1, false));
-		feeder.accept(grammarAccess.getAsercionAccess().getElemento2ElementoEStringParserRuleCall_5_0_1(), semanticObject.eGet(XSoftwarePackage.Literals.ASERCION__ELEMENTO2, false));
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Atributo returns AtributoArreglo
 	 *     AtributoArreglo returns AtributoArreglo
-	 *     Elemento returns AtributoArreglo
 	 *
 	 * Constraint:
 	 *     (tipo=TipoAtributo name=ID)
@@ -172,7 +146,6 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     Atributo returns AtributoMocka
 	 *     AtributoMocka returns AtributoMocka
-	 *     Elemento returns AtributoMocka
 	 *
 	 * Constraint:
 	 *     (tipo=TipoAtributo name=ID ((primaryKey?='PK,mockType' mockType=Mockaroo) | mockType=Mockaroo))
@@ -186,7 +159,6 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Contexts:
 	 *     Atributo returns AtributoSimple
 	 *     AtributoSimple returns AtributoSimple
-	 *     Elemento returns AtributoSimple
 	 *
 	 * Constraint:
 	 *     (tipo=TipoAtributo name=ID)

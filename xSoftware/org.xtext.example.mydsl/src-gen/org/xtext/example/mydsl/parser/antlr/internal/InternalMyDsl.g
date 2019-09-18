@@ -1661,49 +1661,9 @@ ruleAsercion returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getAsercionAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_2='elemento1'
+		otherlv_2='}'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getAsercionAccess().getElemento1Keyword_2());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAsercionRule());
-					}
-				}
-				{
-					newCompositeNode(grammarAccess.getAsercionAccess().getElemento1ElementoCrossReference_3_0());
-				}
-				ruleEString
-				{
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_4='elemento2'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getAsercionAccess().getElemento2Keyword_4());
-		}
-		(
-			(
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAsercionRule());
-					}
-				}
-				{
-					newCompositeNode(grammarAccess.getAsercionAccess().getElemento2ElementoCrossReference_5_0());
-				}
-				ruleEString
-				{
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_6='}'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getAsercionAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_2, grammarAccess.getAsercionAccess().getRightCurlyBracketKeyword_2());
 		}
 	)
 ;

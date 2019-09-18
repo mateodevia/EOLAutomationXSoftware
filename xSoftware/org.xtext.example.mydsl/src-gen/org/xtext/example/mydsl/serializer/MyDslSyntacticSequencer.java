@@ -10,7 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
@@ -22,7 +21,6 @@ import org.xtext.example.mydsl.services.MyDslGrammarAccess;
 public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MyDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1;
 	protected AbstractElementAlias match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
 	protected AbstractElementAlias match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
 	protected AbstractElementAlias match_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a;
@@ -31,7 +29,6 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MyDslGrammarAccess) access;
-		match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getElementoAccess().getEBooleanParserRuleCall_3()), new TokenAlias(false, false, grammarAccess.getElementoAccess().getEIntParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getElementoAccess().getEStringParserRuleCall_1()));
 		match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRequestAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getRequestAccess().getRightSquareBracketKeyword_5_1()));
 		match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getResponseAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getResponseAccess().getRightSquareBracketKeyword_5_1()));
 		match_ServicioRest___SolidusKeyword_7_1_0_EStringParserRuleCall_7_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getSolidusKeyword_7_1_0()), new TokenAlias(false, false, grammarAccess.getServicioRestAccess().getEStringParserRuleCall_7_1_1()));
@@ -40,11 +37,7 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getEBooleanRule())
-			return getEBooleanToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getEIntRule())
-			return getEIntToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getEQUALRule())
+		if (ruleCall.getRule() == grammarAccess.getEQUALRule())
 			return getEQUALToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getEStringRule())
 			return getEStringToken(semanticObject, ruleCall, node);
@@ -52,27 +45,6 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 			return getIDToken(semanticObject, ruleCall, node);
 		else if (ruleCall.getRule() == grammarAccess.getSEMICOLONRule())
 			return getSEMICOLONToken(semanticObject, ruleCall, node);
-		return "";
-	}
-	
-	/**
-	 * EBoolean returns ecore::EBoolean:
-	 * 	'true' | 'false';
-	 */
-	protected String getEBooleanToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "true";
-	}
-	
-	/**
-	 * EInt returns ecore::EInt: 
-	 * 	INT
-	 * ;
-	 */
-	protected String getEIntToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
 		return "";
 	}
 	
@@ -119,9 +91,7 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1.equals(syntax))
-				emit_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
+			if (match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
 				emit_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
 				emit_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -133,17 +103,6 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     EInt | EBoolean | EString
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_Elemento_EBooleanParserRuleCall_3_or_EIntParserRuleCall_2_or_EStringParserRuleCall_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     ('[' ']')?

@@ -5,20 +5,12 @@ package org.xtext.example.mydsl.formatting2;
 
 import com.google.inject.Inject;
 import java.util.Arrays;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.xtext.example.mydsl.services.MyDslGrammarAccess;
-import xSoftware.Api;
-import xSoftware.Atributo;
-import xSoftware.Entidad;
-import xSoftware.MockarooEntity;
-import xSoftware.PrimitiveType;
-import xSoftware.ServicioRest;
-import xSoftware.Test;
 
 @SuppressWarnings("all")
 public class MyDslFormatter extends AbstractFormatter2 {
@@ -26,54 +18,52 @@ public class MyDslFormatter extends AbstractFormatter2 {
   @Extension
   private MyDslGrammarAccess _myDslGrammarAccess;
   
-  protected void _format(final Api api, @Extension final IFormattableDocument document) {
-    EList<Entidad> _entidades = api.getEntidades();
-    for (final Entidad entidad : _entidades) {
-      document.<Entidad>format(entidad);
-    }
-    EList<PrimitiveType> _primitivetypes = api.getPrimitivetypes();
-    for (final PrimitiveType primitiveType : _primitivetypes) {
-      document.<PrimitiveType>format(primitiveType);
-    }
-    EList<ServicioRest> _serviciosRest = api.getServiciosRest();
-    for (final ServicioRest servicioRest : _serviciosRest) {
-      document.<ServicioRest>format(servicioRest);
-    }
-    EList<Test> _tests = api.getTests();
-    for (final Test test : _tests) {
-      document.<Test>format(test);
-    }
+  protected void _format(final /* Api */Object api, @Extension final IFormattableDocument document) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nEntidad cannot be resolved to a type."
+      + "\nPrimitiveType cannot be resolved to a type."
+      + "\nServicioRest cannot be resolved to a type."
+      + "\nTest cannot be resolved to a type."
+      + "\ngetEntidades cannot be resolved"
+      + "\nformat cannot be resolved"
+      + "\ngetPrimitivetypes cannot be resolved"
+      + "\nformat cannot be resolved"
+      + "\ngetServiciosRest cannot be resolved"
+      + "\nformat cannot be resolved"
+      + "\ngetTests cannot be resolved"
+      + "\nformat cannot be resolved");
   }
   
-  protected void _format(final MockarooEntity mockarooEntity, @Extension final IFormattableDocument document) {
-    EList<Atributo> _atributos = mockarooEntity.getAtributos();
-    for (final Atributo atributo : _atributos) {
-      document.<Atributo>format(atributo);
-    }
+  protected void _format(final /* ServicioRest */Object servicioRest, @Extension final IFormattableDocument document) {
+    throw new Error("Unresolved compilation problems:"
+      + "\nParametro cannot be resolved to a type."
+      + "\ngetResponse cannot be resolved"
+      + "\nformat cannot be resolved"
+      + "\ngetRequest cannot be resolved"
+      + "\nformat cannot be resolved"
+      + "\ngetParametros cannot be resolved"
+      + "\nformat cannot be resolved");
   }
   
-  public void format(final Object mockarooEntity, final IFormattableDocument document) {
-    if (mockarooEntity instanceof XtextResource) {
-      _format((XtextResource)mockarooEntity, document);
+  public void format(final Object api, final IFormattableDocument document) {
+    if (api instanceof XtextResource) {
+      _format((XtextResource)api, document);
       return;
-    } else if (mockarooEntity instanceof MockarooEntity) {
-      _format((MockarooEntity)mockarooEntity, document);
+    } else if (api instanceof EObject) {
+      _format((EObject)api, document);
       return;
-    } else if (mockarooEntity instanceof Api) {
-      _format((Api)mockarooEntity, document);
-      return;
-    } else if (mockarooEntity instanceof EObject) {
-      _format((EObject)mockarooEntity, document);
-      return;
-    } else if (mockarooEntity == null) {
+    } else if (api == null) {
       _format((Void)null, document);
       return;
-    } else if (mockarooEntity != null) {
-      _format(mockarooEntity, document);
+    } else if (api != null) {
+      _format(api, document);
+      return;
+    } else if (api != null) {
+      _format(api, document);
       return;
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
-        Arrays.<Object>asList(mockarooEntity, document).toString());
+        Arrays.<Object>asList(api, document).toString());
     }
   }
 }

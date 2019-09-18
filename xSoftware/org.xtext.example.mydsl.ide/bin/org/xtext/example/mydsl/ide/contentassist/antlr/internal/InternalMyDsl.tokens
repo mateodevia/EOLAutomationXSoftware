@@ -23,7 +23,7 @@
 'LatitudeType'=28
 'LongitudType'=29
 'Mapping'=57
-'PK,mockType'=66
+'PK,mockType'=64
 'POST'=33
 'PUT'=34
 'PhoneType'=24
@@ -39,8 +39,6 @@
 'apiURL'=36
 'boolean'=17
 'description'=55
-'elemento1'=64
-'elemento2'=65
 'false'=14
 'int'=16
 'mockType'=42
@@ -113,5 +111,3 @@ T__61=61
 T__62=62
 T__63=63
 T__64=64
-T__65=65
-T__66=66
