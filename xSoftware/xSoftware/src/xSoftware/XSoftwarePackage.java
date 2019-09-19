@@ -516,22 +516,13 @@ public interface XSoftwarePackage extends EPackage {
 	int ASERCION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Response</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASERCION__RESPONSE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Elemento Primitivo2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ELEMENTO_PRIMITIVO2 = 1;
+	int ASERCION__ELEMENTO_PRIMITIVO2 = 0;
 
 	/**
 	 * The feature id for the '<em><b>Operador</b></em>' attribute.
@@ -540,7 +531,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__OPERADOR = 2;
+	int ASERCION__OPERADOR = 1;
 
 	/**
 	 * The feature id for the '<em><b>Parametro</b></em>' reference.
@@ -549,7 +540,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__PARAMETRO = 3;
+	int ASERCION__PARAMETRO = 2;
 
 	/**
 	 * The feature id for the '<em><b>Entidad</b></em>' reference.
@@ -558,7 +549,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ENTIDAD = 4;
+	int ASERCION__ENTIDAD = 3;
 
 	/**
 	 * The feature id for the '<em><b>Atributo</b></em>' reference.
@@ -567,7 +558,16 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ATRIBUTO = 5;
+	int ASERCION__ATRIBUTO = 4;
+
+	/**
+	 * The feature id for the '<em><b>Servicio</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION__SERVICIO = 5;
 
 	/**
 	 * The number of structural features of the '<em>Asercion</em>' class.
@@ -1623,17 +1623,6 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getAsercion();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getResponse <em>Response</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Response</em>'.
-	 * @see xSoftware.Asercion#getResponse()
-	 * @see #getAsercion()
-	 * @generated
-	 */
-	EReference getAsercion_Response();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link xSoftware.Asercion#getElementoPrimitivo2 <em>Elemento Primitivo2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1687,6 +1676,17 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAsercion_Atributo();
+
+	/**
+	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getServicio <em>Servicio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Servicio</em>'.
+	 * @see xSoftware.Asercion#getServicio()
+	 * @see #getAsercion()
+	 * @generated
+	 */
+	EReference getAsercion_Servicio();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.PrimitiveType <em>Primitive Type</em>}'.
@@ -2366,14 +2366,6 @@ public interface XSoftwarePackage extends EPackage {
 		EClass ASERCION = eINSTANCE.getAsercion();
 
 		/**
-		 * The meta object literal for the '<em><b>Response</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASERCION__RESPONSE = eINSTANCE.getAsercion_Response();
-
-		/**
 		 * The meta object literal for the '<em><b>Elemento Primitivo2</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2412,6 +2404,14 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASERCION__ATRIBUTO = eINSTANCE.getAsercion_Atributo();
+
+		/**
+		 * The meta object literal for the '<em><b>Servicio</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASERCION__SERVICIO = eINSTANCE.getAsercion_Servicio();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.

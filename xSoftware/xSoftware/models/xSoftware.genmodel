@@ -74,12 +74,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Test/asertions"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Asercion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/response"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elementoPrimitivo2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Asercion/operador"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/parametro"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/entidad"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/atributo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/servicio"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//PrimitiveType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//PrimitiveType/name"/>

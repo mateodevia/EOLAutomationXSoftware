@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Asercion#getResponse <em>Response</em>}</li>
  *   <li>{@link xSoftware.Asercion#getElementoPrimitivo2 <em>Elemento Primitivo2</em>}</li>
  *   <li>{@link xSoftware.Asercion#getOperador <em>Operador</em>}</li>
  *   <li>{@link xSoftware.Asercion#getParametro <em>Parametro</em>}</li>
  *   <li>{@link xSoftware.Asercion#getEntidad <em>Entidad</em>}</li>
  *   <li>{@link xSoftware.Asercion#getAtributo <em>Atributo</em>}</li>
+ *   <li>{@link xSoftware.Asercion#getServicio <em>Servicio</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getAsercion()
@@ -26,32 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Asercion extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Response</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Response</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Response</em>' reference.
-	 * @see #setResponse(Response)
-	 * @see xSoftware.XSoftwarePackage#getAsercion_Response()
-	 * @model required="true"
-	 * @generated
-	 */
-	Response getResponse();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.Asercion#getResponse <em>Response</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Response</em>' reference.
-	 * @see #getResponse()
-	 * @generated
-	 */
-	void setResponse(Response value);
-
 	/**
 	 * Returns the value of the '<em><b>Elemento Primitivo2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -184,5 +158,31 @@ public interface Asercion extends EObject {
 	 * @generated
 	 */
 	void setAtributo(Atributo value);
+
+	/**
+	 * Returns the value of the '<em><b>Servicio</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Servicio</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Servicio</em>' reference.
+	 * @see #setServicio(ServicioRest)
+	 * @see xSoftware.XSoftwarePackage#getAsercion_Servicio()
+	 * @model
+	 * @generated
+	 */
+	ServicioRest getServicio();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.Asercion#getServicio <em>Servicio</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Servicio</em>' reference.
+	 * @see #getServicio()
+	 * @generated
+	 */
+	void setServicio(ServicioRest value);
 
 } // Asercion

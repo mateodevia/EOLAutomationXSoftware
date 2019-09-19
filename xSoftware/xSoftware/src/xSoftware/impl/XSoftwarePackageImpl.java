@@ -571,7 +571,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAsercion_Response() {
+	public EReference getAsercion_ElementoPrimitivo2() {
 		return (EReference)asercionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -580,17 +580,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAsercion_ElementoPrimitivo2() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getAsercion_Operador() {
-		return (EAttribute)asercionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)asercionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -599,7 +590,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	public EReference getAsercion_Parametro() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(3);
+		return (EReference)asercionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -608,7 +599,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	public EReference getAsercion_Entidad() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(4);
+		return (EReference)asercionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -617,6 +608,15 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	public EReference getAsercion_Atributo() {
+		return (EReference)asercionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAsercion_Servicio() {
 		return (EReference)asercionEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1034,12 +1034,12 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(testEClass, TEST__ASERTIONS);
 
 		asercionEClass = createEClass(ASERCION);
-		createEReference(asercionEClass, ASERCION__RESPONSE);
 		createEReference(asercionEClass, ASERCION__ELEMENTO_PRIMITIVO2);
 		createEAttribute(asercionEClass, ASERCION__OPERADOR);
 		createEReference(asercionEClass, ASERCION__PARAMETRO);
 		createEReference(asercionEClass, ASERCION__ENTIDAD);
 		createEReference(asercionEClass, ASERCION__ATRIBUTO);
+		createEReference(asercionEClass, ASERCION__SERVICIO);
 
 		primitiveTypeEClass = createEClass(PRIMITIVE_TYPE);
 		createEAttribute(primitiveTypeEClass, PRIMITIVE_TYPE__NAME);
@@ -1176,12 +1176,12 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getTest_Asertions(), this.getAsercion(), null, "asertions", null, 0, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(asercionEClass, Asercion.class, "Asercion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAsercion_Response(), this.getResponse(), null, "response", null, 1, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsercion_ElementoPrimitivo2(), this.getDatoPrimitivo(), null, "elementoPrimitivo2", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsercion_Operador(), this.getOperador(), "operador", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsercion_Parametro(), this.getParametro(), null, "parametro", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsercion_Entidad(), this.getEntidad(), null, "entidad", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAsercion_Atributo(), this.getAtributo(), null, "atributo", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsercion_Servicio(), this.getServicioRest(), null, "servicio", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrimitiveType_Name(), this.getTipoAtributo(), "name", null, 0, 1, PrimitiveType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
