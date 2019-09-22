@@ -193,13 +193,13 @@ public interface XSoftwareFactory extends EFactory {
 	QueryParam createQueryParam();
 
 	/**
-	 * Returns a new object of class '<em>Status</em>'.
+	 * Returns a new object of class '<em>Elemento Asersion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Status</em>'.
+	 * @return a new object of class '<em>Elemento Asersion</em>'.
 	 * @generated
 	 */
-	Status createStatus();
+	ElementoAsersion createElementoAsersion();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -12,12 +12,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Asercion;
-import xSoftware.Atributo;
 import xSoftware.DatoPrimitivo;
-import xSoftware.Entidad;
+import xSoftware.ElementoAsersion;
 import xSoftware.Operador;
-import xSoftware.Parametro;
-import xSoftware.ServicioRest;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -30,10 +27,8 @@ import xSoftware.XSoftwarePackage;
  * <ul>
  *   <li>{@link xSoftware.impl.AsercionImpl#getElementoPrimitivo2 <em>Elemento Primitivo2</em>}</li>
  *   <li>{@link xSoftware.impl.AsercionImpl#getOperador <em>Operador</em>}</li>
- *   <li>{@link xSoftware.impl.AsercionImpl#getParametro <em>Parametro</em>}</li>
- *   <li>{@link xSoftware.impl.AsercionImpl#getEntidad <em>Entidad</em>}</li>
- *   <li>{@link xSoftware.impl.AsercionImpl#getAtributo <em>Atributo</em>}</li>
- *   <li>{@link xSoftware.impl.AsercionImpl#getServicio <em>Servicio</em>}</li>
+ *   <li>{@link xSoftware.impl.AsercionImpl#getElemento1 <em>Elemento1</em>}</li>
+ *   <li>{@link xSoftware.impl.AsercionImpl#getElemento2 <em>Elemento2</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,44 +65,24 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	protected Operador operador = OPERADOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' reference.
+	 * The cached value of the '{@link #getElemento1() <em>Elemento1</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParametro()
+	 * @see #getElemento1()
 	 * @generated
 	 * @ordered
 	 */
-	protected Parametro parametro;
+	protected ElementoAsersion elemento1;
 
 	/**
-	 * The cached value of the '{@link #getEntidad() <em>Entidad</em>}' reference.
+	 * The cached value of the '{@link #getElemento2() <em>Elemento2</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntidad()
+	 * @see #getElemento2()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entidad entidad;
-
-	/**
-	 * The cached value of the '{@link #getAtributo() <em>Atributo</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAtributo()
-	 * @generated
-	 * @ordered
-	 */
-	protected Atributo atributo;
-
-	/**
-	 * The cached value of the '{@link #getServicio() <em>Servicio</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServicio()
-	 * @generated
-	 * @ordered
-	 */
-	protected ServicioRest servicio;
+	protected ElementoAsersion elemento2;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,16 +172,16 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro getParametro() {
-		if (parametro != null && parametro.eIsProxy()) {
-			InternalEObject oldParametro = (InternalEObject)parametro;
-			parametro = (Parametro)eResolveProxy(oldParametro);
-			if (parametro != oldParametro) {
+	public ElementoAsersion getElemento1() {
+		if (elemento1 != null && elemento1.eIsProxy()) {
+			InternalEObject oldElemento1 = (InternalEObject)elemento1;
+			elemento1 = (ElementoAsersion)eResolveProxy(oldElemento1);
+			if (elemento1 != oldElemento1) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__PARAMETRO, oldParametro, parametro));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ELEMENTO1, oldElemento1, elemento1));
 			}
 		}
-		return parametro;
+		return elemento1;
 	}
 
 	/**
@@ -214,8 +189,8 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Parametro basicGetParametro() {
-		return parametro;
+	public ElementoAsersion basicGetElemento1() {
+		return elemento1;
 	}
 
 	/**
@@ -223,11 +198,11 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParametro(Parametro newParametro) {
-		Parametro oldParametro = parametro;
-		parametro = newParametro;
+	public void setElemento1(ElementoAsersion newElemento1) {
+		ElementoAsersion oldElemento1 = elemento1;
+		elemento1 = newElemento1;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__PARAMETRO, oldParametro, parametro));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO1, oldElemento1, elemento1));
 	}
 
 	/**
@@ -235,16 +210,16 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad getEntidad() {
-		if (entidad != null && entidad.eIsProxy()) {
-			InternalEObject oldEntidad = (InternalEObject)entidad;
-			entidad = (Entidad)eResolveProxy(oldEntidad);
-			if (entidad != oldEntidad) {
+	public ElementoAsersion getElemento2() {
+		if (elemento2 != null && elemento2.eIsProxy()) {
+			InternalEObject oldElemento2 = (InternalEObject)elemento2;
+			elemento2 = (ElementoAsersion)eResolveProxy(oldElemento2);
+			if (elemento2 != oldElemento2) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ENTIDAD, oldEntidad, entidad));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ELEMENTO2, oldElemento2, elemento2));
 			}
 		}
-		return entidad;
+		return elemento2;
 	}
 
 	/**
@@ -252,8 +227,8 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad basicGetEntidad() {
-		return entidad;
+	public ElementoAsersion basicGetElemento2() {
+		return elemento2;
 	}
 
 	/**
@@ -261,87 +236,11 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntidad(Entidad newEntidad) {
-		Entidad oldEntidad = entidad;
-		entidad = newEntidad;
+	public void setElemento2(ElementoAsersion newElemento2) {
+		ElementoAsersion oldElemento2 = elemento2;
+		elemento2 = newElemento2;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ENTIDAD, oldEntidad, entidad));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo getAtributo() {
-		if (atributo != null && atributo.eIsProxy()) {
-			InternalEObject oldAtributo = (InternalEObject)atributo;
-			atributo = (Atributo)eResolveProxy(oldAtributo);
-			if (atributo != oldAtributo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ATRIBUTO, oldAtributo, atributo));
-			}
-		}
-		return atributo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo basicGetAtributo() {
-		return atributo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAtributo(Atributo newAtributo) {
-		Atributo oldAtributo = atributo;
-		atributo = newAtributo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ATRIBUTO, oldAtributo, atributo));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServicioRest getServicio() {
-		if (servicio != null && servicio.eIsProxy()) {
-			InternalEObject oldServicio = (InternalEObject)servicio;
-			servicio = (ServicioRest)eResolveProxy(oldServicio);
-			if (servicio != oldServicio) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__SERVICIO, oldServicio, servicio));
-			}
-		}
-		return servicio;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServicioRest basicGetServicio() {
-		return servicio;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServicio(ServicioRest newServicio) {
-		ServicioRest oldServicio = servicio;
-		servicio = newServicio;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__SERVICIO, oldServicio, servicio));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO2, oldElemento2, elemento2));
 	}
 
 	/**
@@ -370,18 +269,12 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 				return getElementoPrimitivo2();
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				return getOperador();
-			case XSoftwarePackage.ASERCION__PARAMETRO:
-				if (resolve) return getParametro();
-				return basicGetParametro();
-			case XSoftwarePackage.ASERCION__ENTIDAD:
-				if (resolve) return getEntidad();
-				return basicGetEntidad();
-			case XSoftwarePackage.ASERCION__ATRIBUTO:
-				if (resolve) return getAtributo();
-				return basicGetAtributo();
-			case XSoftwarePackage.ASERCION__SERVICIO:
-				if (resolve) return getServicio();
-				return basicGetServicio();
+			case XSoftwarePackage.ASERCION__ELEMENTO1:
+				if (resolve) return getElemento1();
+				return basicGetElemento1();
+			case XSoftwarePackage.ASERCION__ELEMENTO2:
+				if (resolve) return getElemento2();
+				return basicGetElemento2();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -400,17 +293,11 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				setOperador((Operador)newValue);
 				return;
-			case XSoftwarePackage.ASERCION__PARAMETRO:
-				setParametro((Parametro)newValue);
+			case XSoftwarePackage.ASERCION__ELEMENTO1:
+				setElemento1((ElementoAsersion)newValue);
 				return;
-			case XSoftwarePackage.ASERCION__ENTIDAD:
-				setEntidad((Entidad)newValue);
-				return;
-			case XSoftwarePackage.ASERCION__ATRIBUTO:
-				setAtributo((Atributo)newValue);
-				return;
-			case XSoftwarePackage.ASERCION__SERVICIO:
-				setServicio((ServicioRest)newValue);
+			case XSoftwarePackage.ASERCION__ELEMENTO2:
+				setElemento2((ElementoAsersion)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -430,17 +317,11 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				setOperador(OPERADOR_EDEFAULT);
 				return;
-			case XSoftwarePackage.ASERCION__PARAMETRO:
-				setParametro((Parametro)null);
+			case XSoftwarePackage.ASERCION__ELEMENTO1:
+				setElemento1((ElementoAsersion)null);
 				return;
-			case XSoftwarePackage.ASERCION__ENTIDAD:
-				setEntidad((Entidad)null);
-				return;
-			case XSoftwarePackage.ASERCION__ATRIBUTO:
-				setAtributo((Atributo)null);
-				return;
-			case XSoftwarePackage.ASERCION__SERVICIO:
-				setServicio((ServicioRest)null);
+			case XSoftwarePackage.ASERCION__ELEMENTO2:
+				setElemento2((ElementoAsersion)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -458,14 +339,10 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 				return elementoPrimitivo2 != null;
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				return operador != OPERADOR_EDEFAULT;
-			case XSoftwarePackage.ASERCION__PARAMETRO:
-				return parametro != null;
-			case XSoftwarePackage.ASERCION__ENTIDAD:
-				return entidad != null;
-			case XSoftwarePackage.ASERCION__ATRIBUTO:
-				return atributo != null;
-			case XSoftwarePackage.ASERCION__SERVICIO:
-				return servicio != null;
+			case XSoftwarePackage.ASERCION__ELEMENTO1:
+				return elemento1 != null;
+			case XSoftwarePackage.ASERCION__ELEMENTO2:
+				return elemento2 != null;
 		}
 		return super.eIsSet(featureID);
 	}

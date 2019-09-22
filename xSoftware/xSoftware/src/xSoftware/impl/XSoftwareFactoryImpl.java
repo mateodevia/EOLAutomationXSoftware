@@ -76,7 +76,7 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.BODY_PARAM: return createBodyParam();
 			case XSoftwarePackage.PATH_PARAM: return createPathParam();
 			case XSoftwarePackage.QUERY_PARAM: return createQueryParam();
-			case XSoftwarePackage.STATUS: return createStatus();
+			case XSoftwarePackage.ELEMENTO_ASERSION: return createElementoAsersion();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -319,9 +319,9 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Status createStatus() {
-		StatusImpl status = new StatusImpl();
-		return status;
+	public ElementoAsersion createElementoAsersion() {
+		ElementoAsersionImpl elementoAsersion = new ElementoAsersionImpl();
+		return elementoAsersion;
 	}
 
 	/**

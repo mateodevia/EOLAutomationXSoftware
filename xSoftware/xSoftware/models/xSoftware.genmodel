@@ -65,7 +65,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/tipoEntidad"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Response/tipoPrimitivo"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/mynumeric"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Response/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Response/status"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//Test">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Test/descripcion"/>
@@ -76,10 +76,8 @@
     <genClasses ecoreClass="xSoftware.ecore#//Asercion">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elementoPrimitivo2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Asercion/operador"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/parametro"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/entidad"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/atributo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/servicio"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Asercion/elemento2"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//PrimitiveType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//PrimitiveType/name"/>
@@ -95,11 +93,9 @@
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//AtributoArreglo"/>
     <genClasses ecoreClass="xSoftware.ecore#//Mapping">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/referencia"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/servicio"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/parametro"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/datoprimitivo"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/referenciaEntidad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Mapping/atributo"/>
     </genClasses>
     <genClasses ecoreClass="xSoftware.ecore#//SimpleEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//SimpleEntity/atributos"/>
@@ -124,8 +120,6 @@
     <genClasses ecoreClass="xSoftware.ecore#//PathParam"/>
     <genClasses ecoreClass="xSoftware.ecore#//QueryParam"/>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//DatoPrimitivo"/>
-    <genClasses ecoreClass="xSoftware.ecore#//Status">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Status/valor"/>
-    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//ElementoAsersion"/>
   </genPackages>
 </genmodel:GenModel>

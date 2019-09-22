@@ -98,19 +98,29 @@ public interface Response extends EObject {
 	EList<MyNumeric> getMynumeric();
 
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' containment reference list.
-	 * The list contents are of type {@link xSoftware.Status}.
+	 * Returns the value of the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Status</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' containment reference list.
+	 * @return the value of the '<em>Status</em>' attribute.
+	 * @see #setStatus(int)
 	 * @see xSoftware.XSoftwarePackage#getResponse_Status()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Status> getStatus();
+	int getStatus();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.Response#getStatus <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(int value);
 
 } // Response

@@ -88,6 +88,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoMocka atributoMocka = (AtributoMocka)theEObject;
 				T result = caseAtributoMocka(atributoMocka);
 				if (result == null) result = caseAtributo(atributoMocka);
+				if (result == null) result = caseElementoAsersion(atributoMocka);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -140,6 +141,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoArreglo atributoArreglo = (AtributoArreglo)theEObject;
 				T result = caseAtributoArreglo(atributoArreglo);
 				if (result == null) result = caseAtributo(atributoArreglo);
+				if (result == null) result = caseElementoAsersion(atributoArreglo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -166,6 +168,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.ATRIBUTO: {
 				Atributo atributo = (Atributo)theEObject;
 				T result = caseAtributo(atributo);
+				if (result == null) result = caseElementoAsersion(atributo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -173,6 +176,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				AtributoSimple atributoSimple = (AtributoSimple)theEObject;
 				T result = caseAtributoSimple(atributoSimple);
 				if (result == null) result = caseAtributo(atributoSimple);
+				if (result == null) result = caseElementoAsersion(atributoSimple);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -185,6 +189,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.PARAMETRO: {
 				Parametro parametro = (Parametro)theEObject;
 				T result = caseParametro(parametro);
+				if (result == null) result = caseElementoAsersion(parametro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -192,6 +197,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				BodyParam bodyParam = (BodyParam)theEObject;
 				T result = caseBodyParam(bodyParam);
 				if (result == null) result = caseParametro(bodyParam);
+				if (result == null) result = caseElementoAsersion(bodyParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -199,6 +205,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				PathParam pathParam = (PathParam)theEObject;
 				T result = casePathParam(pathParam);
 				if (result == null) result = caseParametro(pathParam);
+				if (result == null) result = caseElementoAsersion(pathParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +213,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				QueryParam queryParam = (QueryParam)theEObject;
 				T result = caseQueryParam(queryParam);
 				if (result == null) result = caseParametro(queryParam);
+				if (result == null) result = caseElementoAsersion(queryParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -215,9 +223,9 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case XSoftwarePackage.STATUS: {
-				Status status = (Status)theEObject;
-				T result = caseStatus(status);
+			case XSoftwarePackage.ELEMENTO_ASERSION: {
+				ElementoAsersion elementoAsersion = (ElementoAsersion)theEObject;
+				T result = caseElementoAsersion(elementoAsersion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -571,17 +579,17 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Elemento Asersion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Elemento Asersion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStatus(Status object) {
+	public T caseElementoAsersion(ElementoAsersion object) {
 		return null;
 	}
 

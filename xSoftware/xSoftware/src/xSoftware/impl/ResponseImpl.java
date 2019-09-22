@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import xSoftware.Entidad;
 import xSoftware.MyNumeric;
 import xSoftware.Response;
-import xSoftware.Status;
 import xSoftware.TipoAtributo;
 import xSoftware.XSoftwarePackage;
 
@@ -83,14 +82,24 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	protected EList<MyNumeric> mynumeric;
 
 	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference list.
+	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStatus()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Status> status;
+	protected static final int STATUS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected int status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,11 +196,20 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Status> getStatus() {
-		if (status == null) {
-			status = new EObjectContainmentEList<Status>(Status.class, this, XSoftwarePackage.RESPONSE__STATUS);
-		}
+	public int getStatus() {
 		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatus(int newStatus) {
+		int oldStatus = status;
+		status = newStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.RESPONSE__STATUS, oldStatus, status));
 	}
 
 	/**
@@ -204,8 +222,6 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 		switch (featureID) {
 			case XSoftwarePackage.RESPONSE__MYNUMERIC:
 				return ((InternalEList<?>)getMynumeric()).basicRemove(otherEnd, msgs);
-			case XSoftwarePackage.RESPONSE__STATUS:
-				return ((InternalEList<?>)getStatus()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -251,8 +267,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 				getMynumeric().addAll((Collection<? extends MyNumeric>)newValue);
 				return;
 			case XSoftwarePackage.RESPONSE__STATUS:
-				getStatus().clear();
-				getStatus().addAll((Collection<? extends Status>)newValue);
+				setStatus((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,7 +291,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 				getMynumeric().clear();
 				return;
 			case XSoftwarePackage.RESPONSE__STATUS:
-				getStatus().clear();
+				setStatus(STATUS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -297,7 +312,7 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 			case XSoftwarePackage.RESPONSE__MYNUMERIC:
 				return mynumeric != null && !mynumeric.isEmpty();
 			case XSoftwarePackage.RESPONSE__STATUS:
-				return status != null && !status.isEmpty();
+				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -314,6 +329,8 @@ public class ResponseImpl extends MinimalEObjectImpl.Container implements Respon
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (tipoPrimitivo: ");
 		result.append(tipoPrimitivo);
+		result.append(", status: ");
+		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

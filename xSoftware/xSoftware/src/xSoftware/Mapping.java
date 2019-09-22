@@ -13,11 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.Mapping#getReferencia <em>Referencia</em>}</li>
- *   <li>{@link xSoftware.Mapping#getServicio <em>Servicio</em>}</li>
  *   <li>{@link xSoftware.Mapping#getParametro <em>Parametro</em>}</li>
  *   <li>{@link xSoftware.Mapping#getDatoprimitivo <em>Datoprimitivo</em>}</li>
- *   <li>{@link xSoftware.Mapping#getReferenciaEntidad <em>Referencia Entidad</em>}</li>
+ *   <li>{@link xSoftware.Mapping#getAtributo <em>Atributo</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getMapping()
@@ -25,58 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Mapping extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Referencia</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Referencia</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Referencia</em>' reference.
-	 * @see #setReferencia(Atributo)
-	 * @see xSoftware.XSoftwarePackage#getMapping_Referencia()
-	 * @model
-	 * @generated
-	 */
-	Atributo getReferencia();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.Mapping#getReferencia <em>Referencia</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Referencia</em>' reference.
-	 * @see #getReferencia()
-	 * @generated
-	 */
-	void setReferencia(Atributo value);
-
-	/**
-	 * Returns the value of the '<em><b>Servicio</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Servicio</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Servicio</em>' reference.
-	 * @see #setServicio(ServicioRest)
-	 * @see xSoftware.XSoftwarePackage#getMapping_Servicio()
-	 * @model required="true"
-	 * @generated
-	 */
-	ServicioRest getServicio();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.Mapping#getServicio <em>Servicio</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Servicio</em>' reference.
-	 * @see #getServicio()
-	 * @generated
-	 */
-	void setServicio(ServicioRest value);
-
 	/**
 	 * Returns the value of the '<em><b>Parametro</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -130,29 +76,29 @@ public interface Mapping extends EObject {
 	void setDatoprimitivo(DatoPrimitivo value);
 
 	/**
-	 * Returns the value of the '<em><b>Referencia Entidad</b></em>' reference.
+	 * Returns the value of the '<em><b>Atributo</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Referencia Entidad</em>' reference isn't clear,
+	 * If the meaning of the '<em>Atributo</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Referencia Entidad</em>' reference.
-	 * @see #setReferenciaEntidad(Entidad)
-	 * @see xSoftware.XSoftwarePackage#getMapping_ReferenciaEntidad()
+	 * @return the value of the '<em>Atributo</em>' reference.
+	 * @see #setAtributo(Atributo)
+	 * @see xSoftware.XSoftwarePackage#getMapping_Atributo()
 	 * @model
 	 * @generated
 	 */
-	Entidad getReferenciaEntidad();
+	Atributo getAtributo();
 
 	/**
-	 * Sets the value of the '{@link xSoftware.Mapping#getReferenciaEntidad <em>Referencia Entidad</em>}' reference.
+	 * Sets the value of the '{@link xSoftware.Mapping#getAtributo <em>Atributo</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Referencia Entidad</em>' reference.
-	 * @see #getReferenciaEntidad()
+	 * @param value the new value of the '<em>Atributo</em>' reference.
+	 * @see #getAtributo()
 	 * @generated
 	 */
-	void setReferenciaEntidad(Entidad value);
+	void setAtributo(Atributo value);
 
 } // Mapping

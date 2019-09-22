@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Parametro;
 import xSoftware.XSoftwarePackage;
@@ -25,7 +24,7 @@ import xSoftware.XSoftwarePackage;
  *
  * @generated
  */
-public abstract class ParametroImpl extends MinimalEObjectImpl.Container implements Parametro {
+public abstract class ParametroImpl extends ElementoAsersionImpl implements Parametro {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

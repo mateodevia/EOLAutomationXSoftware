@@ -13,10 +13,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Atributo;
 import xSoftware.DatoPrimitivo;
-import xSoftware.Entidad;
 import xSoftware.Mapping;
 import xSoftware.Parametro;
-import xSoftware.ServicioRest;
 import xSoftware.XSoftwarePackage;
 
 /**
@@ -27,36 +25,14 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.MappingImpl#getReferencia <em>Referencia</em>}</li>
- *   <li>{@link xSoftware.impl.MappingImpl#getServicio <em>Servicio</em>}</li>
  *   <li>{@link xSoftware.impl.MappingImpl#getParametro <em>Parametro</em>}</li>
  *   <li>{@link xSoftware.impl.MappingImpl#getDatoprimitivo <em>Datoprimitivo</em>}</li>
- *   <li>{@link xSoftware.impl.MappingImpl#getReferenciaEntidad <em>Referencia Entidad</em>}</li>
+ *   <li>{@link xSoftware.impl.MappingImpl#getAtributo <em>Atributo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping {
-	/**
-	 * The cached value of the '{@link #getReferencia() <em>Referencia</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReferencia()
-	 * @generated
-	 * @ordered
-	 */
-	protected Atributo referencia;
-
-	/**
-	 * The cached value of the '{@link #getServicio() <em>Servicio</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getServicio()
-	 * @generated
-	 * @ordered
-	 */
-	protected ServicioRest servicio;
-
 	/**
 	 * The cached value of the '{@link #getParametro() <em>Parametro</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -78,14 +54,14 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	protected DatoPrimitivo datoprimitivo;
 
 	/**
-	 * The cached value of the '{@link #getReferenciaEntidad() <em>Referencia Entidad</em>}' reference.
+	 * The cached value of the '{@link #getAtributo() <em>Atributo</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReferenciaEntidad()
+	 * @see #getAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entidad referenciaEntidad;
+	protected Atributo atributo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,82 +80,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	@Override
 	protected EClass eStaticClass() {
 		return XSoftwarePackage.Literals.MAPPING;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo getReferencia() {
-		if (referencia != null && referencia.eIsProxy()) {
-			InternalEObject oldReferencia = (InternalEObject)referencia;
-			referencia = (Atributo)eResolveProxy(oldReferencia);
-			if (referencia != oldReferencia) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.MAPPING__REFERENCIA, oldReferencia, referencia));
-			}
-		}
-		return referencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Atributo basicGetReferencia() {
-		return referencia;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReferencia(Atributo newReferencia) {
-		Atributo oldReferencia = referencia;
-		referencia = newReferencia;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__REFERENCIA, oldReferencia, referencia));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServicioRest getServicio() {
-		if (servicio != null && servicio.eIsProxy()) {
-			InternalEObject oldServicio = (InternalEObject)servicio;
-			servicio = (ServicioRest)eResolveProxy(oldServicio);
-			if (servicio != oldServicio) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.MAPPING__SERVICIO, oldServicio, servicio));
-			}
-		}
-		return servicio;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServicioRest basicGetServicio() {
-		return servicio;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setServicio(ServicioRest newServicio) {
-		ServicioRest oldServicio = servicio;
-		servicio = newServicio;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__SERVICIO, oldServicio, servicio));
 	}
 
 	/**
@@ -268,16 +168,16 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad getReferenciaEntidad() {
-		if (referenciaEntidad != null && referenciaEntidad.eIsProxy()) {
-			InternalEObject oldReferenciaEntidad = (InternalEObject)referenciaEntidad;
-			referenciaEntidad = (Entidad)eResolveProxy(oldReferenciaEntidad);
-			if (referenciaEntidad != oldReferenciaEntidad) {
+	public Atributo getAtributo() {
+		if (atributo != null && atributo.eIsProxy()) {
+			InternalEObject oldAtributo = (InternalEObject)atributo;
+			atributo = (Atributo)eResolveProxy(oldAtributo);
+			if (atributo != oldAtributo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD, oldReferenciaEntidad, referenciaEntidad));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.MAPPING__ATRIBUTO, oldAtributo, atributo));
 			}
 		}
-		return referenciaEntidad;
+		return atributo;
 	}
 
 	/**
@@ -285,8 +185,8 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad basicGetReferenciaEntidad() {
-		return referenciaEntidad;
+	public Atributo basicGetAtributo() {
+		return atributo;
 	}
 
 	/**
@@ -294,11 +194,11 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReferenciaEntidad(Entidad newReferenciaEntidad) {
-		Entidad oldReferenciaEntidad = referenciaEntidad;
-		referenciaEntidad = newReferenciaEntidad;
+	public void setAtributo(Atributo newAtributo) {
+		Atributo oldAtributo = atributo;
+		atributo = newAtributo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD, oldReferenciaEntidad, referenciaEntidad));
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.MAPPING__ATRIBUTO, oldAtributo, atributo));
 	}
 
 	/**
@@ -323,20 +223,14 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.MAPPING__REFERENCIA:
-				if (resolve) return getReferencia();
-				return basicGetReferencia();
-			case XSoftwarePackage.MAPPING__SERVICIO:
-				if (resolve) return getServicio();
-				return basicGetServicio();
 			case XSoftwarePackage.MAPPING__PARAMETRO:
 				if (resolve) return getParametro();
 				return basicGetParametro();
 			case XSoftwarePackage.MAPPING__DATOPRIMITIVO:
 				return getDatoprimitivo();
-			case XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD:
-				if (resolve) return getReferenciaEntidad();
-				return basicGetReferenciaEntidad();
+			case XSoftwarePackage.MAPPING__ATRIBUTO:
+				if (resolve) return getAtributo();
+				return basicGetAtributo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -349,20 +243,14 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.MAPPING__REFERENCIA:
-				setReferencia((Atributo)newValue);
-				return;
-			case XSoftwarePackage.MAPPING__SERVICIO:
-				setServicio((ServicioRest)newValue);
-				return;
 			case XSoftwarePackage.MAPPING__PARAMETRO:
 				setParametro((Parametro)newValue);
 				return;
 			case XSoftwarePackage.MAPPING__DATOPRIMITIVO:
 				setDatoprimitivo((DatoPrimitivo)newValue);
 				return;
-			case XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD:
-				setReferenciaEntidad((Entidad)newValue);
+			case XSoftwarePackage.MAPPING__ATRIBUTO:
+				setAtributo((Atributo)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,20 +264,14 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MAPPING__REFERENCIA:
-				setReferencia((Atributo)null);
-				return;
-			case XSoftwarePackage.MAPPING__SERVICIO:
-				setServicio((ServicioRest)null);
-				return;
 			case XSoftwarePackage.MAPPING__PARAMETRO:
 				setParametro((Parametro)null);
 				return;
 			case XSoftwarePackage.MAPPING__DATOPRIMITIVO:
 				setDatoprimitivo((DatoPrimitivo)null);
 				return;
-			case XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD:
-				setReferenciaEntidad((Entidad)null);
+			case XSoftwarePackage.MAPPING__ATRIBUTO:
+				setAtributo((Atributo)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -403,16 +285,12 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.MAPPING__REFERENCIA:
-				return referencia != null;
-			case XSoftwarePackage.MAPPING__SERVICIO:
-				return servicio != null;
 			case XSoftwarePackage.MAPPING__PARAMETRO:
 				return parametro != null;
 			case XSoftwarePackage.MAPPING__DATOPRIMITIVO:
 				return datoprimitivo != null;
-			case XSoftwarePackage.MAPPING__REFERENCIA_ENTIDAD:
-				return referenciaEntidad != null;
+			case XSoftwarePackage.MAPPING__ATRIBUTO:
+				return atributo != null;
 		}
 		return super.eIsSet(featureID);
 	}

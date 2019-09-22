@@ -259,6 +259,34 @@ public interface XSoftwarePackage extends EPackage {
 	int ENTIDAD_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.ElementoAsersionImpl <em>Elemento Asersion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.ElementoAsersionImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getElementoAsersion()
+	 * @generated
+	 */
+	int ELEMENTO_ASERSION = 23;
+
+	/**
+	 * The number of structural features of the '<em>Elemento Asersion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Elemento Asersion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.impl.AtributoImpl <em>Atributo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -275,7 +303,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__NAME = 0;
+	int ATRIBUTO__NAME = ELEMENTO_ASERSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -284,7 +312,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__PRIMARY_KEY = 1;
+	int ATRIBUTO__PRIMARY_KEY = ELEMENTO_ASERSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
@@ -293,7 +321,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__TIPO = 2;
+	int ATRIBUTO__TIPO = ELEMENTO_ASERSION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
@@ -302,7 +330,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = 3;
+	int ATRIBUTO_FEATURE_COUNT = ELEMENTO_ASERSION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -311,7 +339,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_OPERATION_COUNT = 0;
+	int ATRIBUTO_OPERATION_COUNT = ELEMENTO_ASERSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.AtributoMockaImpl <em>Atributo Mocka</em>}' class.
@@ -415,7 +443,7 @@ public interface XSoftwarePackage extends EPackage {
 	int RESPONSE__MYNUMERIC = 2;
 
 	/**
-	 * The feature id for the '<em><b>Status</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -534,40 +562,22 @@ public interface XSoftwarePackage extends EPackage {
 	int ASERCION__OPERADOR = 1;
 
 	/**
-	 * The feature id for the '<em><b>Parametro</b></em>' reference.
+	 * The feature id for the '<em><b>Elemento1</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__PARAMETRO = 2;
+	int ASERCION__ELEMENTO1 = 2;
 
 	/**
-	 * The feature id for the '<em><b>Entidad</b></em>' reference.
+	 * The feature id for the '<em><b>Elemento2</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ENTIDAD = 3;
-
-	/**
-	 * The feature id for the '<em><b>Atributo</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASERCION__ATRIBUTO = 4;
-
-	/**
-	 * The feature id for the '<em><b>Servicio</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASERCION__SERVICIO = 5;
+	int ASERCION__ELEMENTO2 = 3;
 
 	/**
 	 * The number of structural features of the '<em>Asercion</em>' class.
@@ -576,7 +586,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION_FEATURE_COUNT = 6;
+	int ASERCION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Asercion</em>' class.
@@ -829,31 +839,13 @@ public interface XSoftwarePackage extends EPackage {
 	int MAPPING = 12;
 
 	/**
-	 * The feature id for the '<em><b>Referencia</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAPPING__REFERENCIA = 0;
-
-	/**
-	 * The feature id for the '<em><b>Servicio</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAPPING__SERVICIO = 1;
-
-	/**
 	 * The feature id for the '<em><b>Parametro</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING__PARAMETRO = 2;
+	int MAPPING__PARAMETRO = 0;
 
 	/**
 	 * The feature id for the '<em><b>Datoprimitivo</b></em>' containment reference.
@@ -862,16 +854,16 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING__DATOPRIMITIVO = 3;
+	int MAPPING__DATOPRIMITIVO = 1;
 
 	/**
-	 * The feature id for the '<em><b>Referencia Entidad</b></em>' reference.
+	 * The feature id for the '<em><b>Atributo</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING__REFERENCIA_ENTIDAD = 4;
+	int MAPPING__ATRIBUTO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Mapping</em>' class.
@@ -880,7 +872,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_FEATURE_COUNT = 5;
+	int MAPPING_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Mapping</em>' class.
@@ -1101,7 +1093,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO__NAME = 0;
+	int PARAMETRO__NAME = ELEMENTO_ASERSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parametro</em>' class.
@@ -1110,7 +1102,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_FEATURE_COUNT = 1;
+	int PARAMETRO_FEATURE_COUNT = ELEMENTO_ASERSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parametro</em>' class.
@@ -1119,7 +1111,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_OPERATION_COUNT = 0;
+	int PARAMETRO_OPERATION_COUNT = ELEMENTO_ASERSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.BodyParamImpl <em>Body Param</em>}' class.
@@ -1231,43 +1223,6 @@ public interface XSoftwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int QUERY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xSoftware.impl.StatusImpl <em>Status</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.impl.StatusImpl
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getStatus()
-	 * @generated
-	 */
-	int STATUS = 23;
-
-	/**
-	 * The feature id for the '<em><b>Valor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATUS__VALOR = 0;
-
-	/**
-	 * The number of structural features of the '<em>Status</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATUS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Status</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATUS_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
@@ -1548,15 +1503,15 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getResponse_Mynumeric();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link xSoftware.Response#getStatus <em>Status</em>}'.
+	 * Returns the meta object for the attribute '{@link xSoftware.Response#getStatus <em>Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Status</em>'.
+	 * @return the meta object for the attribute '<em>Status</em>'.
 	 * @see xSoftware.Response#getStatus()
 	 * @see #getResponse()
 	 * @generated
 	 */
-	EReference getResponse_Status();
+	EAttribute getResponse_Status();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Test <em>Test</em>}'.
@@ -1645,48 +1600,26 @@ public interface XSoftwarePackage extends EPackage {
 	EAttribute getAsercion_Operador();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getParametro <em>Parametro</em>}'.
+	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getElemento1 <em>Elemento1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parametro</em>'.
-	 * @see xSoftware.Asercion#getParametro()
+	 * @return the meta object for the reference '<em>Elemento1</em>'.
+	 * @see xSoftware.Asercion#getElemento1()
 	 * @see #getAsercion()
 	 * @generated
 	 */
-	EReference getAsercion_Parametro();
+	EReference getAsercion_Elemento1();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getEntidad <em>Entidad</em>}'.
+	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getElemento2 <em>Elemento2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entidad</em>'.
-	 * @see xSoftware.Asercion#getEntidad()
+	 * @return the meta object for the reference '<em>Elemento2</em>'.
+	 * @see xSoftware.Asercion#getElemento2()
 	 * @see #getAsercion()
 	 * @generated
 	 */
-	EReference getAsercion_Entidad();
-
-	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getAtributo <em>Atributo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Atributo</em>'.
-	 * @see xSoftware.Asercion#getAtributo()
-	 * @see #getAsercion()
-	 * @generated
-	 */
-	EReference getAsercion_Atributo();
-
-	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getServicio <em>Servicio</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Servicio</em>'.
-	 * @see xSoftware.Asercion#getServicio()
-	 * @see #getAsercion()
-	 * @generated
-	 */
-	EReference getAsercion_Servicio();
+	EReference getAsercion_Elemento2();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.PrimitiveType <em>Primitive Type</em>}'.
@@ -1793,28 +1726,6 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getMapping();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Mapping#getReferencia <em>Referencia</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Referencia</em>'.
-	 * @see xSoftware.Mapping#getReferencia()
-	 * @see #getMapping()
-	 * @generated
-	 */
-	EReference getMapping_Referencia();
-
-	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Mapping#getServicio <em>Servicio</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Servicio</em>'.
-	 * @see xSoftware.Mapping#getServicio()
-	 * @see #getMapping()
-	 * @generated
-	 */
-	EReference getMapping_Servicio();
-
-	/**
 	 * Returns the meta object for the reference '{@link xSoftware.Mapping#getParametro <em>Parametro</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1837,15 +1748,15 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getMapping_Datoprimitivo();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Mapping#getReferenciaEntidad <em>Referencia Entidad</em>}'.
+	 * Returns the meta object for the reference '{@link xSoftware.Mapping#getAtributo <em>Atributo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Referencia Entidad</em>'.
-	 * @see xSoftware.Mapping#getReferenciaEntidad()
+	 * @return the meta object for the reference '<em>Atributo</em>'.
+	 * @see xSoftware.Mapping#getAtributo()
 	 * @see #getMapping()
 	 * @generated
 	 */
-	EReference getMapping_ReferenciaEntidad();
+	EReference getMapping_Atributo();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.SimpleEntity <em>Simple Entity</em>}'.
@@ -2036,25 +1947,14 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getDatoPrimitivo();
 
 	/**
-	 * Returns the meta object for class '{@link xSoftware.Status <em>Status</em>}'.
+	 * Returns the meta object for class '{@link xSoftware.ElementoAsersion <em>Elemento Asersion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Status</em>'.
-	 * @see xSoftware.Status
+	 * @return the meta object for class '<em>Elemento Asersion</em>'.
+	 * @see xSoftware.ElementoAsersion
 	 * @generated
 	 */
-	EClass getStatus();
-
-	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.Status#getValor <em>Valor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Valor</em>'.
-	 * @see xSoftware.Status#getValor()
-	 * @see #getStatus()
-	 * @generated
-	 */
-	EAttribute getStatus_Valor();
+	EClass getElementoAsersion();
 
 	/**
 	 * Returns the meta object for enum '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}'.
@@ -2306,12 +2206,12 @@ public interface XSoftwarePackage extends EPackage {
 		EReference RESPONSE__MYNUMERIC = eINSTANCE.getResponse_Mynumeric();
 
 		/**
-		 * The meta object literal for the '<em><b>Status</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESPONSE__STATUS = eINSTANCE.getResponse_Status();
+		EAttribute RESPONSE__STATUS = eINSTANCE.getResponse_Status();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.TestImpl <em>Test</em>}' class.
@@ -2382,36 +2282,20 @@ public interface XSoftwarePackage extends EPackage {
 		EAttribute ASERCION__OPERADOR = eINSTANCE.getAsercion_Operador();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametro</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Elemento1</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASERCION__PARAMETRO = eINSTANCE.getAsercion_Parametro();
+		EReference ASERCION__ELEMENTO1 = eINSTANCE.getAsercion_Elemento1();
 
 		/**
-		 * The meta object literal for the '<em><b>Entidad</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Elemento2</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASERCION__ENTIDAD = eINSTANCE.getAsercion_Entidad();
-
-		/**
-		 * The meta object literal for the '<em><b>Atributo</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASERCION__ATRIBUTO = eINSTANCE.getAsercion_Atributo();
-
-		/**
-		 * The meta object literal for the '<em><b>Servicio</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASERCION__SERVICIO = eINSTANCE.getAsercion_Servicio();
+		EReference ASERCION__ELEMENTO2 = eINSTANCE.getAsercion_Elemento2();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
@@ -2506,22 +2390,6 @@ public interface XSoftwarePackage extends EPackage {
 		EClass MAPPING = eINSTANCE.getMapping();
 
 		/**
-		 * The meta object literal for the '<em><b>Referencia</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAPPING__REFERENCIA = eINSTANCE.getMapping_Referencia();
-
-		/**
-		 * The meta object literal for the '<em><b>Servicio</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAPPING__SERVICIO = eINSTANCE.getMapping_Servicio();
-
-		/**
 		 * The meta object literal for the '<em><b>Parametro</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2538,12 +2406,12 @@ public interface XSoftwarePackage extends EPackage {
 		EReference MAPPING__DATOPRIMITIVO = eINSTANCE.getMapping_Datoprimitivo();
 
 		/**
-		 * The meta object literal for the '<em><b>Referencia Entidad</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Atributo</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MAPPING__REFERENCIA_ENTIDAD = eINSTANCE.getMapping_ReferenciaEntidad();
+		EReference MAPPING__ATRIBUTO = eINSTANCE.getMapping_Atributo();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.SimpleEntityImpl <em>Simple Entity</em>}' class.
@@ -2710,22 +2578,14 @@ public interface XSoftwarePackage extends EPackage {
 		EClass DATO_PRIMITIVO = eINSTANCE.getDatoPrimitivo();
 
 		/**
-		 * The meta object literal for the '{@link xSoftware.impl.StatusImpl <em>Status</em>}' class.
+		 * The meta object literal for the '{@link xSoftware.impl.ElementoAsersionImpl <em>Elemento Asersion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see xSoftware.impl.StatusImpl
-		 * @see xSoftware.impl.XSoftwarePackageImpl#getStatus()
+		 * @see xSoftware.impl.ElementoAsersionImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getElementoAsersion()
 		 * @generated
 		 */
-		EClass STATUS = eINSTANCE.getStatus();
-
-		/**
-		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STATUS__VALOR = eINSTANCE.getStatus_Valor();
+		EClass ELEMENTO_ASERSION = eINSTANCE.getElementoAsersion();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
