@@ -164,6 +164,18 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createElementoAsersionAdapter();
 			}
 			@Override
+			public Adapter caseUrl(Url object) {
+				return createUrlAdapter();
+			}
+			@Override
+			public Adapter caseUrlExpresion(UrlExpresion object) {
+				return createUrlExpresionAdapter();
+			}
+			@Override
+			public Adapter caseStringType(StringType object) {
+				return createStringTypeAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -516,6 +528,48 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElementoAsersionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.Url <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.Url
+	 * @generated
+	 */
+	public Adapter createUrlAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.UrlExpresion <em>Url Expresion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.UrlExpresion
+	 * @generated
+	 */
+	public Adapter createUrlExpresionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xSoftware.StringType <em>String Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xSoftware.StringType
+	 * @generated
+	 */
+	public Adapter createStringTypeAdapter() {
 		return null;
 	}
 

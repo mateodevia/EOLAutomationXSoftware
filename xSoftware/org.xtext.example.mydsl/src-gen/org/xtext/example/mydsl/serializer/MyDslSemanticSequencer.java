@@ -20,7 +20,6 @@ import xSoftware.Asercion;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
-import xSoftware.BodyParam;
 import xSoftware.Mapping;
 import xSoftware.MockarooEntity;
 import xSoftware.MyBoolean;
@@ -33,7 +32,9 @@ import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
 import xSoftware.SimpleEntity;
+import xSoftware.StringType;
 import xSoftware.Test;
+import xSoftware.Url;
 import xSoftware.XSoftwarePackage;
 
 @SuppressWarnings("all")
@@ -64,9 +65,6 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case XSoftwarePackage.ATRIBUTO_SIMPLE:
 				sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
-				return; 
-			case XSoftwarePackage.BODY_PARAM:
-				sequence_BodyParam(context, (BodyParam) semanticObject); 
 				return; 
 			case XSoftwarePackage.MAPPING:
 				sequence_Mapping(context, (Mapping) semanticObject); 
@@ -104,8 +102,14 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case XSoftwarePackage.SIMPLE_ENTITY:
 				sequence_SimpleEntity(context, (SimpleEntity) semanticObject); 
 				return; 
+			case XSoftwarePackage.STRING_TYPE:
+				sequence_StringType(context, (StringType) semanticObject); 
+				return; 
 			case XSoftwarePackage.TEST:
 				sequence_Test(context, (Test) semanticObject); 
+				return; 
+			case XSoftwarePackage.URL:
+				sequence_Url(context, (Url) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -195,24 +199,6 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
-	 *     BodyParam returns BodyParam
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_BodyParam(ISerializationContext context, BodyParam semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getBodyParamAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Mapping returns Mapping
 	 *
 	 * Constraint:
@@ -296,6 +282,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     UrlExpresion returns PathParam
 	 *     Parametro returns PathParam
 	 *     PathParam returns PathParam
 	 *
@@ -333,6 +320,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     UrlExpresion returns QueryParam
 	 *     Parametro returns QueryParam
 	 *     QueryParam returns QueryParam
 	 *
@@ -345,7 +333,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.PARAMETRO__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getQueryParamAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getQueryParamAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -379,14 +367,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     ServicioRest returns ServicioRest
 	 *
 	 * Constraint:
-	 *     (
-	 *         metodo=TipoMetodoRest 
-	 *         name=EString 
-	 *         url=EString 
-	 *         parametros+=Parametro* 
-	 *         request=Request? 
-	 *         response=Response
-	 *     )
+	 *     (metodo=TipoMetodoRest name=EString url=Url request=Request? response=Response)
 	 */
 	protected void sequence_ServicioRest(ISerializationContext context, ServicioRest semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -409,12 +390,43 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Contexts:
+	 *     UrlExpresion returns StringType
+	 *     StringType returns StringType
+	 *
+	 * Constraint:
+	 *     text=EString
+	 */
+	protected void sequence_StringType(ISerializationContext context, StringType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.STRING_TYPE__TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.STRING_TYPE__TEXT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStringTypeAccess().getTextEStringParserRuleCall_2_0(), semanticObject.getText());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Test returns Test
 	 *
 	 * Constraint:
 	 *     (service=[ServicioRest|ID] descripcion=EString mappings+=Mapping* asertions+=Asercion*)
 	 */
 	protected void sequence_Test(ISerializationContext context, Test semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Url returns Url
+	 *
+	 * Constraint:
+	 *     urlexpresions+=UrlExpresion+
+	 */
+	protected void sequence_Url(ISerializationContext context, Url semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

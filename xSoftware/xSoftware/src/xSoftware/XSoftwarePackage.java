@@ -177,31 +177,22 @@ public interface XSoftwarePackage extends EPackage {
 	int SERVICIO_REST__RESPONSE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICIO_REST__URL = 4;
-
-	/**
 	 * The feature id for the '<em><b>Request</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST__REQUEST = 5;
+	int SERVICIO_REST__REQUEST = 4;
 
 	/**
-	 * The feature id for the '<em><b>Parametros</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Url</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST__PARAMETROS = 6;
+	int SERVICIO_REST__URL = 5;
 
 	/**
 	 * The number of structural features of the '<em>Servicio Rest</em>' class.
@@ -210,7 +201,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICIO_REST_FEATURE_COUNT = 7;
+	int SERVICIO_REST_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Servicio Rest</em>' class.
@@ -1225,6 +1216,108 @@ public interface XSoftwarePackage extends EPackage {
 	int QUERY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.UrlImpl <em>Url</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.UrlImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getUrl()
+	 * @generated
+	 */
+	int URL = 24;
+
+	/**
+	 * The feature id for the '<em><b>Urlexpresions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL__URLEXPRESIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Url</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Url</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.UrlExpresionImpl <em>Url Expresion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.UrlExpresionImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getUrlExpresion()
+	 * @generated
+	 */
+	int URL_EXPRESION = 25;
+
+	/**
+	 * The number of structural features of the '<em>Url Expresion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Url Expresion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link xSoftware.impl.StringTypeImpl <em>String Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.StringTypeImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getStringType()
+	 * @generated
+	 */
+	int STRING_TYPE = 26;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TYPE__TEXT = URL_EXPRESION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>String Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TYPE_FEATURE_COUNT = URL_EXPRESION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>String Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_TYPE_OPERATION_COUNT = URL_EXPRESION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1232,7 +1325,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoMetodoRest()
 	 * @generated
 	 */
-	int TIPO_METODO_REST = 24;
+	int TIPO_METODO_REST = 27;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.
@@ -1242,7 +1335,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockaroo()
 	 * @generated
 	 */
-	int MOCKAROO = 25;
+	int MOCKAROO = 28;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoAtributo <em>Tipo Atributo</em>}' enum.
@@ -1252,7 +1345,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoAtributo()
 	 * @generated
 	 */
-	int TIPO_ATRIBUTO = 26;
+	int TIPO_ATRIBUTO = 29;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Operador <em>Operador</em>}' enum.
@@ -1262,7 +1355,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 27;
+	int OPERADOR = 30;
 
 
 	/**
@@ -1385,17 +1478,6 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getServicioRest_Response();
 
 	/**
-	 * Returns the meta object for the attribute '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see xSoftware.ServicioRest#getUrl()
-	 * @see #getServicioRest()
-	 * @generated
-	 */
-	EAttribute getServicioRest_Url();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link xSoftware.ServicioRest#getRequest <em>Request</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1407,15 +1489,15 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getServicioRest_Request();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link xSoftware.ServicioRest#getParametros <em>Parametros</em>}'.
+	 * Returns the meta object for the containment reference '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parametros</em>'.
-	 * @see xSoftware.ServicioRest#getParametros()
+	 * @return the meta object for the containment reference '<em>Url</em>'.
+	 * @see xSoftware.ServicioRest#getUrl()
 	 * @see #getServicioRest()
 	 * @generated
 	 */
-	EReference getServicioRest_Parametros();
+	EReference getServicioRest_Url();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Entidad <em>Entidad</em>}'.
@@ -1957,6 +2039,58 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getElementoAsersion();
 
 	/**
+	 * Returns the meta object for class '{@link xSoftware.Url <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Url</em>'.
+	 * @see xSoftware.Url
+	 * @generated
+	 */
+	EClass getUrl();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link xSoftware.Url#getUrlexpresions <em>Urlexpresions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Urlexpresions</em>'.
+	 * @see xSoftware.Url#getUrlexpresions()
+	 * @see #getUrl()
+	 * @generated
+	 */
+	EReference getUrl_Urlexpresions();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.UrlExpresion <em>Url Expresion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Url Expresion</em>'.
+	 * @see xSoftware.UrlExpresion
+	 * @generated
+	 */
+	EClass getUrlExpresion();
+
+	/**
+	 * Returns the meta object for class '{@link xSoftware.StringType <em>String Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>String Type</em>'.
+	 * @see xSoftware.StringType
+	 * @generated
+	 */
+	EClass getStringType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.StringType#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see xSoftware.StringType#getText()
+	 * @see #getStringType()
+	 * @generated
+	 */
+	EAttribute getStringType_Text();
+
+	/**
 	 * Returns the meta object for enum '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2112,14 +2246,6 @@ public interface XSoftwarePackage extends EPackage {
 		EReference SERVICIO_REST__RESPONSE = eINSTANCE.getServicioRest_Response();
 
 		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICIO_REST__URL = eINSTANCE.getServicioRest_Url();
-
-		/**
 		 * The meta object literal for the '<em><b>Request</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2128,12 +2254,12 @@ public interface XSoftwarePackage extends EPackage {
 		EReference SERVICIO_REST__REQUEST = eINSTANCE.getServicioRest_Request();
 
 		/**
-		 * The meta object literal for the '<em><b>Parametros</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Url</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICIO_REST__PARAMETROS = eINSTANCE.getServicioRest_Parametros();
+		EReference SERVICIO_REST__URL = eINSTANCE.getServicioRest_Url();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.EntidadImpl <em>Entidad</em>}' class.
@@ -2586,6 +2712,52 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ELEMENTO_ASERSION = eINSTANCE.getElementoAsersion();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.UrlImpl <em>Url</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.UrlImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getUrl()
+		 * @generated
+		 */
+		EClass URL = eINSTANCE.getUrl();
+
+		/**
+		 * The meta object literal for the '<em><b>Urlexpresions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference URL__URLEXPRESIONS = eINSTANCE.getUrl_Urlexpresions();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.UrlExpresionImpl <em>Url Expresion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.UrlExpresionImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getUrlExpresion()
+		 * @generated
+		 */
+		EClass URL_EXPRESION = eINSTANCE.getUrlExpresion();
+
+		/**
+		 * The meta object literal for the '{@link xSoftware.impl.StringTypeImpl <em>String Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xSoftware.impl.StringTypeImpl
+		 * @see xSoftware.impl.XSoftwarePackageImpl#getStringType()
+		 * @generated
+		 */
+		EClass STRING_TYPE = eINSTANCE.getStringType();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_TYPE__TEXT = eINSTANCE.getStringType_Text();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.TipoMetodoRest <em>Tipo Metodo Rest</em>}' enum.

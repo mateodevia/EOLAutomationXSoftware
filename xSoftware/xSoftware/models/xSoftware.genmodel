@@ -51,9 +51,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/metodo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/response"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//ServicioRest/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/request"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/parametros"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//ServicioRest/url"/>
     </genClasses>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//Entidad">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//Entidad/name"/>
@@ -121,5 +120,12 @@
     <genClasses ecoreClass="xSoftware.ecore#//QueryParam"/>
     <genClasses image="false" ecoreClass="xSoftware.ecore#//DatoPrimitivo"/>
     <genClasses ecoreClass="xSoftware.ecore#//ElementoAsersion"/>
+    <genClasses ecoreClass="xSoftware.ecore#//Url">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xSoftware.ecore#//Url/urlexpresions"/>
+    </genClasses>
+    <genClasses ecoreClass="xSoftware.ecore#//UrlExpresion"/>
+    <genClasses ecoreClass="xSoftware.ecore#//StringType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xSoftware.ecore#//StringType/text"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

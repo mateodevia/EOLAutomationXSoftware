@@ -19,9 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link xSoftware.ServicioRest#getMetodo <em>Metodo</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getName <em>Name</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getResponse <em>Response</em>}</li>
- *   <li>{@link xSoftware.ServicioRest#getUrl <em>Url</em>}</li>
  *   <li>{@link xSoftware.ServicioRest#getRequest <em>Request</em>}</li>
- *   <li>{@link xSoftware.ServicioRest#getParametros <em>Parametros</em>}</li>
+ *   <li>{@link xSoftware.ServicioRest#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see xSoftware.XSoftwarePackage#getServicioRest()
@@ -127,32 +126,6 @@ public interface ServicioRest extends EObject {
 	void setResponse(Response value);
 
 	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see xSoftware.XSoftwarePackage#getServicioRest_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Request</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -179,19 +152,29 @@ public interface ServicioRest extends EObject {
 	void setRequest(Request value);
 
 	/**
-	 * Returns the value of the '<em><b>Parametros</b></em>' containment reference list.
-	 * The list contents are of type {@link xSoftware.Parametro}.
+	 * Returns the value of the '<em><b>Url</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parametros</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Url</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parametros</em>' containment reference list.
-	 * @see xSoftware.XSoftwarePackage#getServicioRest_Parametros()
-	 * @model containment="true"
+	 * @return the value of the '<em>Url</em>' containment reference.
+	 * @see #setUrl(Url)
+	 * @see xSoftware.XSoftwarePackage#getServicioRest_Url()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Parametro> getParametros();
+	Url getUrl();
+
+	/**
+	 * Sets the value of the '{@link xSoftware.ServicioRest#getUrl <em>Url</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' containment reference.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(Url value);
 
 } // ServicioRest

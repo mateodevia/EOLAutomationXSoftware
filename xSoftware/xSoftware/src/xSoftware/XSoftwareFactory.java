@@ -202,6 +202,33 @@ public interface XSoftwareFactory extends EFactory {
 	ElementoAsersion createElementoAsersion();
 
 	/**
+	 * Returns a new object of class '<em>Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Url</em>'.
+	 * @generated
+	 */
+	Url createUrl();
+
+	/**
+	 * Returns a new object of class '<em>Url Expresion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Url Expresion</em>'.
+	 * @generated
+	 */
+	UrlExpresion createUrlExpresion();
+
+	/**
+	 * Returns a new object of class '<em>String Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>String Type</em>'.
+	 * @generated
+	 */
+	StringType createStringType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

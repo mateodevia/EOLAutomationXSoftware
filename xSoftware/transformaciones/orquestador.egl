@@ -1,0 +1,20 @@
+[% 
+	var t:Template:= TemplateFactory.load('transIndex.egl');
+	t.generate('index.js');
+	
+	for(servicio in xs!ServicioRest.all){
+	
+		var t:Template:= TemplateFactory.load('transObjectRepository.egl');
+		t.populate('servicio', servicio);
+		t.generate('Object Repository/'+servicio.name+'.rs');
+	}
+	var id = 1;
+	for(test in xs!Test.all){
+		
+		var t:Template:= TemplateFactory.load('transTestCase.egl');
+		t.populate('id', id);
+		t.populate('test', test);
+		t.generate('Test Cases/'+test.service.name+'.tc');
+		id = id+1;
+	}
+%]

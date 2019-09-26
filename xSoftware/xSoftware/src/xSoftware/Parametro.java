@@ -19,7 +19,7 @@ package xSoftware;
  * @model abstract="true"
  * @generated
  */
-public interface Parametro extends ElementoAsersion {
+public interface Parametro extends ElementoAsersion, UrlExpresion {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

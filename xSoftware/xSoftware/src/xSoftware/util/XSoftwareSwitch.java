@@ -190,6 +190,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				Parametro parametro = (Parametro)theEObject;
 				T result = caseParametro(parametro);
 				if (result == null) result = caseElementoAsersion(parametro);
+				if (result == null) result = caseUrlExpresion(parametro);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -198,6 +199,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseBodyParam(bodyParam);
 				if (result == null) result = caseParametro(bodyParam);
 				if (result == null) result = caseElementoAsersion(bodyParam);
+				if (result == null) result = caseUrlExpresion(bodyParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -206,6 +208,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = casePathParam(pathParam);
 				if (result == null) result = caseParametro(pathParam);
 				if (result == null) result = caseElementoAsersion(pathParam);
+				if (result == null) result = caseUrlExpresion(pathParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -214,6 +217,7 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 				T result = caseQueryParam(queryParam);
 				if (result == null) result = caseParametro(queryParam);
 				if (result == null) result = caseElementoAsersion(queryParam);
+				if (result == null) result = caseUrlExpresion(queryParam);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -226,6 +230,25 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 			case XSoftwarePackage.ELEMENTO_ASERSION: {
 				ElementoAsersion elementoAsersion = (ElementoAsersion)theEObject;
 				T result = caseElementoAsersion(elementoAsersion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.URL: {
+				Url url = (Url)theEObject;
+				T result = caseUrl(url);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.URL_EXPRESION: {
+				UrlExpresion urlExpresion = (UrlExpresion)theEObject;
+				T result = caseUrlExpresion(urlExpresion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XSoftwarePackage.STRING_TYPE: {
+				StringType stringType = (StringType)theEObject;
+				T result = caseStringType(stringType);
+				if (result == null) result = caseUrlExpresion(stringType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -590,6 +613,51 @@ public class XSoftwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElementoAsersion(ElementoAsersion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Url</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Url</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUrl(Url object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Url Expresion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Url Expresion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUrlExpresion(UrlExpresion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringType(StringType object) {
 		return null;
 	}
 

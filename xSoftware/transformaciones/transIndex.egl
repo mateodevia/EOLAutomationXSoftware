@@ -1,0 +1,113 @@
+var mockaroo = require('mockaroo');
+var fs = require('fs');
+var json2xls = require('json2xls');
+
+var client = new mockaroo.Client({
+    apiKey: 'c1527490'
+});
+
+[%
+for(entity in xs!Entidad.all){
+
+if(entity.isTypeOf(MockarooEntity)){
+	
+%]var [%=entity.name.firstToLowerCase()%] = client.generate({
+	count: 5,
+	format: 'json',
+	header: true,
+	fields: [
+	[%
+	var esElPrimero = true;
+	for(atributo in entity.atributos){
+	
+		var mockType = '';
+		
+		if(atributo.isTypeOf(AtributoMocka) and esElPrimero){
+			if(atributo.MockType.toString() = 'FirstNameType'){
+				mockType = 'First Name';
+			} else if(atributo.MockType.toString() = 'FirstNameMaleType'){
+				mockType = 'First Name (Male)';
+			} else if(atributo.MockType.toString() = 'FirstNameFemaleType'){
+				mockType = 'First Name (Female)';
+			} else if(atributo.MockType.toString() = 'LastNameType'){
+				mockType = 'Last Name';
+			} else if(atributo.MockType.toString() = 'FullNameType'){
+				mockType = 'Full Name';
+			} else if(atributo.MockType.toString() = 'GenderType'){
+				mockType = 'Gender';
+			} else if(atributo.MockType.toString() = 'EmailAddressType'){
+				mockType = 'Email Address';
+			} else if(atributo.MockType.toString() = 'PhoneType'){
+				mockType = 'Phone';
+			} else if(atributo.MockType.toString() = 'CountryType'){
+				mockType = 'Country';
+			} else if(atributo.MockType.toString() = 'CityType'){
+				mockType = 'City';
+			} else if(atributo.MockType.toString() = 'CountryCodeType'){
+				mockType = 'Country Code';
+			} else if(atributo.MockType.toString() = 'LatitudeType'){
+				mockType = 'Latitude';
+			} else if(atributo.MockType.toString() = 'LongitudeType'){
+				mockType = 'Longitude';
+			} else if(atributo.MockType.toString() = 'RowNumberType'){
+				mockType = 'Row Number';
+			} else if(atributo.MockType.toString() = 'BooleanType'){
+				mockType = 'Boolean';
+			}%]
+	{
+		name: '[%=atributo.name%]',
+		type: '[%=mockType%]'
+	}[%
+		}
+		else if(atributo.isTypeOf(AtributoMocka)){
+			if(atributo.MockType.toString() = 'FirstNameType'){
+					mockType = 'First Name';
+				} else if(atributo.MockType.toString() = 'FirstNameMaleType'){
+					mockType = 'First Name (Male)';
+				} else if(atributo.MockType.toString() = 'FirstNameFemaleType'){
+					mockType = 'First Name (Female)';
+				} else if(atributo.MockType.toString() = 'LastNameType'){
+					mockType = 'Last Name';
+				} else if(atributo.MockType.toString() = 'FullNameType'){
+					mockType = 'Full Name';
+				} else if(atributo.MockType.toString() = 'GenderType'){
+					mockType = 'Gender';
+				} else if(atributo.MockType.toString() = 'EmailAddressType'){
+					mockType = 'Email Address';
+				} else if(atributo.MockType.toString() = 'PhoneType'){
+					mockType = 'Phone';
+				} else if(atributo.MockType.toString() = 'CountryType'){
+					mockType = 'Country';
+				} else if(atributo.MockType.toString() = 'CityType'){
+					mockType = 'City';
+				} else if(atributo.MockType.toString() = 'CountryCodeType'){
+					mockType = 'Country Code';
+				} else if(atributo.MockType.toString() = 'LatitudeType'){
+					mockType = 'Latitude';
+				} else if(atributo.MockType.toString() = 'LongitudeType'){
+					mockType = 'Longitude';
+				} else if(atributo.mockType.toString() = 'RowNumberType'){
+					mockType = 'Row Number';
+				} else if(atributo.MockType.toString() = 'BooleanType'){
+					mockType = 'Boolean';
+				}%],
+	{
+		name: '[%=atributo.name%]',
+		type: '[%=mockType%]'
+	}[%
+		}
+		esElPrimero = false;
+	}
+	%]
+		]
+});
+
+[%=entity.name.firstToLowerCase()%].then(function ([%=entity.name.firstToLowerCase()%]_response) {
+    var [%=entity.name.firstToLowerCase()%]xls = json2xls([%=entity.name.firstToLowerCase()%]_response);
+    fs.writeFileSync('./data/[%=entity.name.firstToLowerCase()%].xlsx', [%=entity.name.firstToLowerCase()%]xls, 'binary');
+});
+
+[%
+	}
+}
+%]

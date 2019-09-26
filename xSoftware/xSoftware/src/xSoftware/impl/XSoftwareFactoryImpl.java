@@ -77,6 +77,9 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.PATH_PARAM: return createPathParam();
 			case XSoftwarePackage.QUERY_PARAM: return createQueryParam();
 			case XSoftwarePackage.ELEMENTO_ASERSION: return createElementoAsersion();
+			case XSoftwarePackage.URL: return createUrl();
+			case XSoftwarePackage.URL_EXPRESION: return createUrlExpresion();
+			case XSoftwarePackage.STRING_TYPE: return createStringType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -322,6 +325,36 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	public ElementoAsersion createElementoAsersion() {
 		ElementoAsersionImpl elementoAsersion = new ElementoAsersionImpl();
 		return elementoAsersion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Url createUrl() {
+		UrlImpl url = new UrlImpl();
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UrlExpresion createUrlExpresion() {
+		UrlExpresionImpl urlExpresion = new UrlExpresionImpl();
+		return urlExpresion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringType createStringType() {
+		StringTypeImpl stringType = new StringTypeImpl();
+		return stringType;
 	}
 
 	/**

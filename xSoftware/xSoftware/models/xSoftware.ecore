@@ -19,11 +19,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" lowerBound="1"
         eType="#//Response" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//Request"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parametros" upperBound="-1"
-        eType="#//Parametro" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="url" lowerBound="1" eType="#//Url"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entidad" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -118,7 +117,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoEntidad" eType="#//Entidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoPrimitivo" eType="#//TipoAtributo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true" eSuperTypes="#//ElementoAsersion">
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true" eSuperTypes="#//ElementoAsersion #//UrlExpresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BodyParam" eSuperTypes="#//Parametro"/>
@@ -133,4 +132,12 @@
     <eLiterals name="MenorIgual" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ElementoAsersion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Url">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="urlexpresions" lowerBound="1"
+        upperBound="-1" eType="#//UrlExpresion" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UrlExpresion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StringType" eSuperTypes="#//UrlExpresion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

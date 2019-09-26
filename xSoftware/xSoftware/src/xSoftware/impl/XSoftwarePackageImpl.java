@@ -35,9 +35,12 @@ import xSoftware.Request;
 import xSoftware.Response;
 import xSoftware.ServicioRest;
 import xSoftware.SimpleEntity;
+import xSoftware.StringType;
 import xSoftware.Test;
 import xSoftware.TipoAtributo;
 import xSoftware.TipoMetodoRest;
+import xSoftware.Url;
+import xSoftware.UrlExpresion;
 import xSoftware.XSoftwareFactory;
 import xSoftware.XSoftwarePackage;
 
@@ -215,6 +218,27 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	private EClass elementoAsersionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass urlEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass urlExpresionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -409,17 +433,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getServicioRest_Url() {
-		return (EAttribute)servicioRestEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getServicioRest_Request() {
-		return (EReference)servicioRestEClass.getEStructuralFeatures().get(5);
+		return (EReference)servicioRestEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -427,8 +442,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getServicioRest_Parametros() {
-		return (EReference)servicioRestEClass.getEStructuralFeatures().get(6);
+	public EReference getServicioRest_Url() {
+		return (EReference)servicioRestEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -895,6 +910,51 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getUrl() {
+		return urlEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUrl_Urlexpresions() {
+		return (EReference)urlEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUrlExpresion() {
+		return urlExpresionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringType() {
+		return stringTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringType_Text() {
+		return (EAttribute)stringTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTipoMetodoRest() {
 		return tipoMetodoRestEEnum;
 	}
@@ -966,9 +1026,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEAttribute(servicioRestEClass, SERVICIO_REST__METODO);
 		createEAttribute(servicioRestEClass, SERVICIO_REST__NAME);
 		createEReference(servicioRestEClass, SERVICIO_REST__RESPONSE);
-		createEAttribute(servicioRestEClass, SERVICIO_REST__URL);
 		createEReference(servicioRestEClass, SERVICIO_REST__REQUEST);
-		createEReference(servicioRestEClass, SERVICIO_REST__PARAMETROS);
+		createEReference(servicioRestEClass, SERVICIO_REST__URL);
 
 		entidadEClass = createEClass(ENTIDAD);
 		createEAttribute(entidadEClass, ENTIDAD__NAME);
@@ -1043,6 +1102,14 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 
 		elementoAsersionEClass = createEClass(ELEMENTO_ASERSION);
 
+		urlEClass = createEClass(URL);
+		createEReference(urlEClass, URL__URLEXPRESIONS);
+
+		urlExpresionEClass = createEClass(URL_EXPRESION);
+
+		stringTypeEClass = createEClass(STRING_TYPE);
+		createEAttribute(stringTypeEClass, STRING_TYPE__TEXT);
+
 		// Create enums
 		tipoMetodoRestEEnum = createEEnum(TIPO_METODO_REST);
 		mockarooEEnum = createEEnum(MOCKAROO);
@@ -1088,9 +1155,11 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		atributoEClass.getESuperTypes().add(this.getElementoAsersion());
 		atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
 		parametroEClass.getESuperTypes().add(this.getElementoAsersion());
+		parametroEClass.getESuperTypes().add(this.getUrlExpresion());
 		bodyParamEClass.getESuperTypes().add(this.getParametro());
 		pathParamEClass.getESuperTypes().add(this.getParametro());
 		queryParamEClass.getESuperTypes().add(this.getParametro());
+		stringTypeEClass.getESuperTypes().add(this.getUrlExpresion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(apiEClass, Api.class, "Api", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1105,9 +1174,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEAttribute(getServicioRest_Metodo(), this.getTipoMetodoRest(), "metodo", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getServicioRest_Name(), ecorePackage.getEString(), "name", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServicioRest_Response(), this.getResponse(), null, "response", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getServicioRest_Url(), ecorePackage.getEString(), "url", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getServicioRest_Request(), this.getRequest(), null, "request", null, 0, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getServicioRest_Parametros(), this.getParametro(), null, "parametros", null, 0, -1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getServicioRest_Url(), this.getUrl(), null, "url", null, 1, 1, ServicioRest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadEClass, Entidad.class, "Entidad", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEntidad_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entidad.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1181,6 +1249,14 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEClass(datoPrimitivoEClass, DatoPrimitivo.class, "DatoPrimitivo", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(elementoAsersionEClass, ElementoAsersion.class, "ElementoAsersion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(urlEClass, Url.class, "Url", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUrl_Urlexpresions(), this.getUrlExpresion(), null, "urlexpresions", null, 1, -1, Url.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(urlExpresionEClass, UrlExpresion.class, "UrlExpresion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stringTypeEClass, StringType.class, "StringType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringType_Text(), ecorePackage.getEString(), "text", null, 0, 1, StringType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(tipoMetodoRestEEnum, TipoMetodoRest.class, "TipoMetodoRest");

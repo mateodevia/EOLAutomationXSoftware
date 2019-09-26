@@ -52,24 +52,32 @@ MockarooEntity returns MockarooEntity:
 ServicioRest returns ServicioRest:
 	(metodo=TipoMetodoRest) (name=EString) '{'
 	
-		'URL' EQUAL '/' (url=EString) ((parametros+=(Parametro) | "/"EString))* SEMICOLON
+		'URL' EQUAL (url=Url)SEMICOLON
 		
 		(request=Request)?
 		
 		response=Response
 	'}';
-
+	
+Url returns Url:
+	{Url}
+	urlexpresions+=(UrlExpresion)+;
+	
+UrlExpresion returns UrlExpresion:
+	(StringType | Parametro);
+	
+StringType returns StringType:
+	{StringType}
+	'/'text=EString;
+	
 Parametro returns Parametro:
 	(QueryParam | PathParam );
 	
 QueryParam returns QueryParam:
-	"?${" name=ID "}";	
+	'?'?"${" name=ID "}";	
 	
 PathParam returns PathParam:
 	"/:{" name=ID "}";
-	
-BodyParam returns BodyParam:
-	"?${" name=ID "}";
 
 Response returns Response:
 	'Response'
