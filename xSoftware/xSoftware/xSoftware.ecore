@@ -83,7 +83,7 @@
     <eLiterals name="CityType" value="8"/>
     <eLiterals name="CountryCodeType" value="9"/>
     <eLiterals name="LatitudeType" value="10"/>
-    <eLiterals name="LongitudType" value="11"/>
+    <eLiterals name="LongitudeType" value="11"/>
     <eLiterals name="RowNumberType" value="12"/>
     <eLiterals name="BooleanType" value="13"/>
     <eLiterals name="FirstNameMaleType" value="14"/>
@@ -122,7 +122,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true" eSuperTypes="#//ElementoAsersion #//UrlExpresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BodyParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="PathParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="QueryParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="DatoPrimitivo" abstract="true"/>

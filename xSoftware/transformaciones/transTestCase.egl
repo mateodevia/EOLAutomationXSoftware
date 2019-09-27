@@ -21,8 +21,22 @@
    }
    for (param in test.service.url.urlexpresions.select(e|e.isKindOf(Parametro))){%]
 		
-   <variable>
-      <defaultValue>'1'</defaultValue>
+   <variable>[%
+   var defaultDato = test.mappings.selectOne(m|m.parametro=param).datoprimitivo;
+   var defaultValue = '1';
+   if(defaultDato.isTypeOf(MyString)){
+   	defaultValue = defaultDato.name;
+   }
+   else if(defaultDato.isTypeOf(MyNumeric)){
+   	defaultValue = defaultDato.name;
+   }
+   else if(defaultDato.isTypeOf(MyBoolean)){
+   	defaultValue = defaultDato.name;
+   }
+      
+   %]
+      
+      <defaultValue>[%=defaultValue%]</defaultValue>
       <description></description>
       <id>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
