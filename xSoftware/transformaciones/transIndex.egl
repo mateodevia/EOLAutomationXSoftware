@@ -104,7 +104,7 @@ if(entity.isTypeOf(MockarooEntity)){
 
 [%=entity.name.firstToLowerCase()%].then(function ([%=entity.name.firstToLowerCase()%]_response) {
     var [%=entity.name.firstToLowerCase()%]xls = json2xls([%=entity.name.firstToLowerCase()%]_response);
-    fs.writeFileSync('./data/[%=entity.name.firstToLowerCase()%].xlsx', [%=entity.name.firstToLowerCase()%]xls, 'binary');
+    fs.writeFileSync('./data/[%=entity.name.firstToLowerCase()%]s.xlsx', [%=entity.name.firstToLowerCase()%]xls, 'binary');
 });
 
 [%

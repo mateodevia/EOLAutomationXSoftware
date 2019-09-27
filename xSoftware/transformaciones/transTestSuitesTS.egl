@@ -22,31 +22,32 @@
             <iterationType>ALL</iterationType>
             <value></value>
          </iterationEntity>
-         <testDataId>Data Files/[%=test.service.request.tipoEntidad.name.firstToLowerCase()%]</testDataId>
+         <testDataId>Data Files/[%=test.service.request.tipoEntidad.name%]s</testDataId>
       </testDataLink>[%
 	   var variable = 1;
 	   if(test.service.request.isDefined()){
 		for (atributo in test.service.request.tipoEntidad.atributos.select(p|p.name<>'id')){%]
 			
-	   <variables>
-	      <testDataLinkId>[%=id%]24daea7-c916-4f22-a7de-c0455e0ff432</testDataLinkId>
-	      <type>DATA_COLUMN</type>
-	      <value>[%=atributo.name%]</value>
-	      <variableId>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</variableId>
-	   </variables>[%
+	  <variableLink>
+	     <testDataLinkId>[%=id%]24daea7-c916-4f22-a7de-c0455e0ff432</testDataLinkId>
+	     <type>DATA_COLUMN</type>
+	     <value>[%=atributo.name%]</value>
+	     <variableId>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</variableId>
+	  </variableLink>[%
 	   		variable = variable + 1;
 		}
 	   }
 	   for (param in test.service.url.urlexpresions.select(e|e.isKindOf(Parametro))){%]
 			
-	   <variables>
-	      <testDataLinkId>[%=id%]24daea7-c916-4f22-a7de-c0455e0ff432</testDataLinkId>
-	      <type>DATA_COLUMN</type>
-	      <value>[%=atributo.name%]</value>
-	      <variableId>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</variableId>
-	   </variables>[%
+	  <variableLink>
+	     <testDataLinkId>[%=id%]24daea7-c916-4f22-a7de-c0455e0ff432</testDataLinkId>
+	     <type>DATA_COLUMN</type>
+	     <value>[%=atributo.name%]</value>
+	     <variableId>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</variableId>
+	  </variableLink>[%
 	   		variable = variable + 1;
 		}
 	   %]
+	   
    </testCaseLink>
 </TestSuiteEntity>

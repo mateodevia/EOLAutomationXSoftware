@@ -32,4 +32,12 @@
 		
 		id = id+1;
 	}
+	var id = 1;
+	for(entity in xs!MockarooEntity.all){
+		var t:Template:= TemplateFactory.load('transDataFiles.egl');
+		t.populate('id', id);
+		t.populate('entity', entity);
+		t.generate('Data Files/'+entity.name+'s.dat');
+		id = id+1;
+	}
 %]

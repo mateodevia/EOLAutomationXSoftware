@@ -35,7 +35,7 @@ var country = client.generate({
 
 country.then(function (country_response) {
     var countryxls = json2xls(country_response);
-    fs.writeFileSync('./data/country.xlsx', countryxls, 'binary');
+    fs.writeFileSync('./data/countrys.xlsx', countryxls, 'binary');
 });
 
 var student = client.generate({
@@ -71,6 +71,6 @@ var student = client.generate({
 
 student.then(function (student_response) {
     var studentxls = json2xls(student_response);
-    fs.writeFileSync('./data/student.xlsx', studentxls, 'binary');
+    fs.writeFileSync('./data/students.xlsx', studentxls, 'binary');
 });
 
