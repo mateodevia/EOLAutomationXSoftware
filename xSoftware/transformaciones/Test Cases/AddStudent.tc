@@ -5,53 +5,53 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>4a6fbecf-953f-4630-94a2-957fda2d0d8a</testCaseGuid>		
-   <variables>
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>10d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>first_name</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>20d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>last_name</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>30d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>gender</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>40d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>code</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>50d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>country</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>60d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>city</name>
-   </variables>		
-   <variables>
+   </variable>		
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>70d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>university</name>
-   </variables>   
+   </variable>   
 </TestCaseEntity>

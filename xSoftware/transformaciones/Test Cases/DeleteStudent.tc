@@ -5,11 +5,11 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>5a6fbecf-953f-4630-94a2-957fda2d0d8a</testCaseGuid>		
-   <variables>
+   <variable>
       <defaultValue>'1'</defaultValue>
       <description></description>
       <id>10d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
       <name>id</name>
-   </variables>   
+   </variable>   
 </TestCaseEntity>
