@@ -15,6 +15,21 @@
 		t.populate('id', id);
 		t.populate('test', test);
 		t.generate('Test Cases/'+test.service.name+'.tc');
+		
+		t = TemplateFactory.load('transScripts.egl');
+		t.populate('test', test);
+		t.generate('Scripts/'+test.service.name+'/Script'+id+'567746860749.groovy');
+		
+		if(test.service.request.isDefined()){
+			t = TemplateFactory.load('transTestSuitesTS.egl');
+			t.populate('id', id);
+			t.populate('test', test);
+			t.generate('Test Suites/'+test.service.name+'.ts');
+			
+			t = TemplateFactory.load('transTestSuitesGR.egl');
+			t.generate('Test Suites/'+test.service.name+'.groovy');
+		}
+		
 		id = id+1;
 	}
 %]
