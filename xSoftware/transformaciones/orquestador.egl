@@ -1,32 +1,32 @@
 [% 
-	var t:Template:= TemplateFactory.load('transIndex.egl');
+	var t:Template:= TemplateFactory.load('transformaciones/transIndex.egl');
 	t.generate('index.js');
 	
 	for(servicio in xs!ServicioRest.all){
 	
-		var t:Template:= TemplateFactory.load('transObjectRepository.egl');
+		var t:Template:= TemplateFactory.load('transformaciones/transObjectRepository.egl');
 		t.populate('servicio', servicio);
 		t.generate('Object Repository/'+servicio.name+'.rs');
 	}
 	var id = 1;
 	for(test in xs!Test.all){
 		
-		var t:Template:= TemplateFactory.load('transTestCase.egl');
+		var t:Template:= TemplateFactory.load('transformaciones/transTestCase.egl');
 		t.populate('id', id);
 		t.populate('test', test);
 		t.generate('Test Cases/'+test.service.name+'.tc');
 		
-		t = TemplateFactory.load('transScripts.egl');
+		t = TemplateFactory.load('transformaciones/transScripts.egl');
 		t.populate('test', test);
 		t.generate('Scripts/'+test.service.name+'/Script'+id+'567746860749.groovy');
 		
 		if(test.service.request.isDefined()){
-			t = TemplateFactory.load('transTestSuitesTS.egl');
+			t = TemplateFactory.load('transformaciones/transTestSuitesTS.egl');
 			t.populate('id', id);
 			t.populate('test', test);
 			t.generate('Test Suites/'+test.service.name+'.ts');
 			
-			t = TemplateFactory.load('transTestSuitesGR.egl');
+			t = TemplateFactory.load('transformaciones/transTestSuitesGR.egl');
 			t.generate('Test Suites/'+test.service.name+'.groovy');
 		}
 		
@@ -34,7 +34,7 @@
 	}
 	var id = 1;
 	for(entity in xs!MockarooEntity.all){
-		var t:Template:= TemplateFactory.load('transDataFiles.egl');
+		var t:Template:= TemplateFactory.load('transformaciones/transDataFiles.egl');
 		t.populate('id', id);
 		t.populate('entity', entity);
 		t.generate('Data Files/'+entity.name+'s.dat');
