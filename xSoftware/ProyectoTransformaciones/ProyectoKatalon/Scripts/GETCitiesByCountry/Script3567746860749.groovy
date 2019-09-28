@@ -11,7 +11,8 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import internal.GlobalVariable as GlobalVariableimport groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable	
+import groovy.json.JsonSlurper
 import org.junit.After
 
 response = WS.sendRequest(findTestObject('GETCitiesByCountry', [('country') : "$country", ('state') : "$state"]))

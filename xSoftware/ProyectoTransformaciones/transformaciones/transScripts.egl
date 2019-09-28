@@ -15,6 +15,7 @@ import internal.GlobalVariable as GlobalVariable[%
 
 if( test.asertions.select(a | a.elemento1.tipo = 'response').size()>0){
 	%]
+	
 import groovy.json.JsonSlurper
 import org.junit.After
 	[%
