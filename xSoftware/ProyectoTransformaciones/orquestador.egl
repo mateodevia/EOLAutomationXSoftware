@@ -14,7 +14,7 @@
 		var t:Template:= TemplateFactory.load('transformaciones/transTestCase.egl');
 		t.populate('id', id);
 		t.populate('test', test);
-		t.generate('ProyectoKatalon/Test Cases/'+test.service.name+'.tc');
+		t.generate('ProyectoKatalon/Test Cases/'+test.service.name+id+'.tc');
 		
 		t = TemplateFactory.load('transformaciones/transScripts.egl');
 		t.populate('test', test);
@@ -24,10 +24,10 @@
 			t = TemplateFactory.load('transformaciones/transTestSuitesTS.egl');
 			t.populate('id', id);
 			t.populate('test', test);
-			t.generate('ProyectoKatalon/Test Suites/'+test.service.name+'.ts');
+			t.generate('ProyectoKatalon/Test Suites/'+test.service.name+id+'.ts');
 			
 			t = TemplateFactory.load('transformaciones/transTestSuitesGR.egl');
-			t.generate('ProyectoKatalon/Test Suites/'+test.service.name+'.groovy');
+			t.generate('ProyectoKatalon/Test Suites/'+test.service.name+id+'.groovy');
 		}
 		
 		id = id+1;

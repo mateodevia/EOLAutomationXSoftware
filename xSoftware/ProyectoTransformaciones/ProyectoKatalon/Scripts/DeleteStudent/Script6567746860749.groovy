@@ -11,12 +11,7 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import internal.GlobalVariable as GlobalVariable	
-import groovy.json.JsonSlurper
-import org.junit.After
-
-response = WS.sendRequest(findTestObject('GETCitiesByCountry', [('country') : "$country", ('state') : "$state"]))
-
-List json = new JsonSlurper().parseText(response.getResponseText())
-WS.verifyResponseStatusCode(response, 200)
-WS.verifyGreaterThanOrEqual(json.size(), 10)
+import internal.GlobalVariable as GlobalVariable
+response = WS.sendRequest(findTestObject('DeleteStudent', [('id') : "$id"]))
+WS.verifyResponseStatusCode(response, 300)
+WS.verifyElementPropertyValue(response, 'status', 'success')

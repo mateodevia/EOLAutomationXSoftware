@@ -129,7 +129,6 @@ Test p3{
     Assertions{
         response.status == 200;
         response >= 10 ;
-        response > 10;
     }
 }
 
@@ -150,6 +149,18 @@ Test p4{
     ]    
     Assertions{
         response.status == 200; 
+        response->Respuesta.status == 'success';
+    }
+}
+
+Test p5{
+    service = DeleteStudent;
+    description ="Elimina un estudiante";
+    Mapping[
+        {parameter=DeleteStudent.id,value=request->Student.id}
+    ]    
+    Assertions{
+        response.status == 300; 
         response->Respuesta.status == 'success';
     }
 }
