@@ -1,6 +1,6 @@
 [% 
 	var t:Template:= TemplateFactory.load('transformaciones/transIndex.egl');
-	t.generate('index.js');
+	t.generate('ProyectoMockaroo/index.js');
 	
 	for(servicio in xs!ServicioRest.all){
 	
