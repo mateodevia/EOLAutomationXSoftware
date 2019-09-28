@@ -26,7 +26,7 @@
 'GenderType'=60
 'LastNameType'=57
 'LatitudeType'=66
-'LongitudType'=67
+'LongitudeType'=67
 'Mapping'=35
 'PK,mockType'=18
 'POST'=71
@@ -47,11 +47,11 @@
 'false'=46
 'int'=49
 'mockType'=19
-'parameter.'=44
+'parameter.'=42
 'request->'=40
-'response'=42
-'response->'=43
-'response.status'=41
+'response'=44
+'response->'=41
+'response.status'=43
 'service'=33
 'string'=48
 'true'=45

@@ -20,6 +20,7 @@ import xSoftware.Asercion;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
+import xSoftware.ElementoAsersion;
 import xSoftware.Mapping;
 import xSoftware.MockarooEntity;
 import xSoftware.MyBoolean;
@@ -66,6 +67,28 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case XSoftwarePackage.ATRIBUTO_SIMPLE:
 				sequence_AtributoSimple(context, (AtributoSimple) semanticObject); 
 				return; 
+			case XSoftwarePackage.ELEMENTO_ASERSION:
+				if (rule == grammarAccess.getElementoAtributoRule()) {
+					sequence_ElementoAtributo(context, (ElementoAsersion) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getElementoParametroRule()) {
+					sequence_ElementoParametro(context, (ElementoAsersion) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getElementoPrimitivoRule()) {
+					sequence_ElementoPrimitivo(context, (ElementoAsersion) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getElementoResponseRule()) {
+					sequence_ElementoResponse(context, (ElementoAsersion) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getElementoStatusRule()) {
+					sequence_ElementoStatus(context, (ElementoAsersion) semanticObject); 
+					return; 
+				}
+				else break;
 			case XSoftwarePackage.MAPPING:
 				sequence_Mapping(context, (Mapping) semanticObject); 
 				return; 
@@ -133,7 +156,11 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Asercion returns Asercion
 	 *
 	 * Constraint:
-	 *     (elemento1=[Atributo|QualifiedName]? operador=Operador (elementoPrimitivo2=DatoPrimitivo | elemento2=[Parametro|QualifiedName]))
+	 *     (
+	 *         (elemento1=ElementoStatus | elemento1=ElementoResponse | elemento1=ElementoAtributo) 
+	 *         operador=Operador 
+	 *         (elemento2=ElementoPrimitivo | elemento2=ElementoParametro)
+	 *     )
 	 */
 	protected void sequence_Asercion(ISerializationContext context, Asercion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -193,6 +220,96 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAtributoSimpleAccess().getTipoTipoAtributoEnumRuleCall_0_0(), semanticObject.getTipo());
 		feeder.accept(grammarAccess.getAtributoSimpleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ElementoAtributo returns ElementoAsersion
+	 *
+	 * Constraint:
+	 *     atributo=[Atributo|QualifiedName]
+	 */
+	protected void sequence_ElementoAtributo(ISerializationContext context, ElementoAsersion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__ATRIBUTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__ATRIBUTO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getElementoAtributoAccess().getAtributoAtributoQualifiedNameParserRuleCall_0_1(), semanticObject.eGet(XSoftwarePackage.Literals.ELEMENTO_ASERSION__ATRIBUTO, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ElementoParametro returns ElementoAsersion
+	 *
+	 * Constraint:
+	 *     parametro=[Parametro|QualifiedName]
+	 */
+	protected void sequence_ElementoParametro(ISerializationContext context, ElementoAsersion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__PARAMETRO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__PARAMETRO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getElementoParametroAccess().getParametroParametroQualifiedNameParserRuleCall_0_1(), semanticObject.eGet(XSoftwarePackage.Literals.ELEMENTO_ASERSION__PARAMETRO, false));
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ElementoPrimitivo returns ElementoAsersion
+	 *
+	 * Constraint:
+	 *     elementoPrimitivo=DatoPrimitivo
+	 */
+	protected void sequence_ElementoPrimitivo(ISerializationContext context, ElementoAsersion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__ELEMENTO_PRIMITIVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__ELEMENTO_PRIMITIVO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getElementoPrimitivoAccess().getElementoPrimitivoDatoPrimitivoParserRuleCall_0(), semanticObject.getElementoPrimitivo());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ElementoResponse returns ElementoAsersion
+	 *
+	 * Constraint:
+	 *     tipo='response'
+	 */
+	protected void sequence_ElementoResponse(ISerializationContext context, ElementoAsersion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__TIPO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__TIPO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getElementoResponseAccess().getTipoResponseKeyword_0(), semanticObject.getTipo());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ElementoStatus returns ElementoAsersion
+	 *
+	 * Constraint:
+	 *     tipo='response.status'
+	 */
+	protected void sequence_ElementoStatus(ISerializationContext context, ElementoAsersion semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__TIPO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, XSoftwarePackage.Literals.ELEMENTO_ASERSION__TIPO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getElementoStatusAccess().getTipoResponseStatusKeyword_0(), semanticObject.getTipo());
 		feeder.finish();
 	}
 	

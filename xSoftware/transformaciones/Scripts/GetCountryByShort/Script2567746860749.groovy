@@ -16,3 +16,5 @@ import internal.GlobalVariable as GlobalVariable
 response = WS.sendRequest(findTestObject('GetCountryByShort', [('country') : "$country"]))
 
 WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'shortName', country)
+WS.verifyElementPropertyValue(response, 'name', 'Brazil')

@@ -2,6 +2,7 @@
  */
 package xSoftware;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ package xSoftware;
  * @model abstract="true"
  * @generated
  */
-public interface Atributo extends ElementoAsersion {
+public interface Atributo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

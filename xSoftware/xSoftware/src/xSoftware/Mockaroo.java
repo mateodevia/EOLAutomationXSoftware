@@ -129,14 +129,14 @@ public enum Mockaroo implements Enumerator {
 	LATITUDE_TYPE(10, "LatitudeType", "LatitudeType"),
 
 	/**
-	 * The '<em><b>Longitud Type</b></em>' literal object.
+	 * The '<em><b>Longitude Type</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LONGITUD_TYPE_VALUE
+	 * @see #LONGITUDE_TYPE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LONGITUD_TYPE(11, "LongitudType", "LongitudType"),
+	LONGITUDE_TYPE(11, "LongitudeType", "LongitudeType"),
 
 	/**
 	 * The '<em><b>Row Number Type</b></em>' literal object.
@@ -156,7 +156,27 @@ public enum Mockaroo implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOOLEAN_TYPE(13, "BooleanType", "BooleanType");
+	BOOLEAN_TYPE(13, "BooleanType", "BooleanType"),
+
+	/**
+	 * The '<em><b>First Name Male Type</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FIRST_NAME_MALE_TYPE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	FIRST_NAME_MALE_TYPE(14, "FirstNameMaleType", "FirstNameMaleType"),
+
+	/**
+	 * The '<em><b>First Name Female Type</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #FIRST_NAME_FEMALE_TYPE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	FIRST_NAME_FEMALE_TYPE(15, "FirstNameFemaleType", "FirstNameFemaleType");
 
 	/**
 	 * The '<em><b>First Name Type</b></em>' literal value.
@@ -324,19 +344,19 @@ public enum Mockaroo implements Enumerator {
 	public static final int LATITUDE_TYPE_VALUE = 10;
 
 	/**
-	 * The '<em><b>Longitud Type</b></em>' literal value.
+	 * The '<em><b>Longitude Type</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Longitud Type</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Longitude Type</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LONGITUD_TYPE
-	 * @model name="LongitudType"
+	 * @see #LONGITUDE_TYPE
+	 * @model name="LongitudeType"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LONGITUD_TYPE_VALUE = 11;
+	public static final int LONGITUDE_TYPE_VALUE = 11;
 
 	/**
 	 * The '<em><b>Row Number Type</b></em>' literal value.
@@ -369,6 +389,36 @@ public enum Mockaroo implements Enumerator {
 	public static final int BOOLEAN_TYPE_VALUE = 13;
 
 	/**
+	 * The '<em><b>First Name Male Type</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>First Name Male Type</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #FIRST_NAME_MALE_TYPE
+	 * @model name="FirstNameMaleType"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FIRST_NAME_MALE_TYPE_VALUE = 14;
+
+	/**
+	 * The '<em><b>First Name Female Type</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>First Name Female Type</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #FIRST_NAME_FEMALE_TYPE
+	 * @model name="FirstNameFemaleType"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FIRST_NAME_FEMALE_TYPE_VALUE = 15;
+
+	/**
 	 * An array of all the '<em><b>Mockaroo</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -387,9 +437,11 @@ public enum Mockaroo implements Enumerator {
 			CITY_TYPE,
 			COUNTRY_CODE_TYPE,
 			LATITUDE_TYPE,
-			LONGITUD_TYPE,
+			LONGITUDE_TYPE,
 			ROW_NUMBER_TYPE,
 			BOOLEAN_TYPE,
+			FIRST_NAME_MALE_TYPE,
+			FIRST_NAME_FEMALE_TYPE,
 		};
 
 	/**
@@ -457,9 +509,11 @@ public enum Mockaroo implements Enumerator {
 			case CITY_TYPE_VALUE: return CITY_TYPE;
 			case COUNTRY_CODE_TYPE_VALUE: return COUNTRY_CODE_TYPE;
 			case LATITUDE_TYPE_VALUE: return LATITUDE_TYPE;
-			case LONGITUD_TYPE_VALUE: return LONGITUD_TYPE;
+			case LONGITUDE_TYPE_VALUE: return LONGITUDE_TYPE;
 			case ROW_NUMBER_TYPE_VALUE: return ROW_NUMBER_TYPE;
 			case BOOLEAN_TYPE_VALUE: return BOOLEAN_TYPE;
+			case FIRST_NAME_MALE_TYPE_VALUE: return FIRST_NAME_MALE_TYPE;
+			case FIRST_NAME_FEMALE_TYPE_VALUE: return FIRST_NAME_FEMALE_TYPE;
 		}
 		return null;
 	}

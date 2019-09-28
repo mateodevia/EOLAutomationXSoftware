@@ -47,11 +47,11 @@
         eType="#//Asercion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Asercion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elementoPrimitivo2" eType="#//DatoPrimitivo"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operador" eType="#//Operador"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento1" eType="#//ElementoAsersion"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento2" eType="#//ElementoAsersion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento1" eType="#//ElementoAsersion"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento2" eType="#//ElementoAsersion"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoMetodoRest">
     <eLiterals name="GET"/>
@@ -83,9 +83,11 @@
     <eLiterals name="CityType" value="8"/>
     <eLiterals name="CountryCodeType" value="9"/>
     <eLiterals name="LatitudeType" value="10"/>
-    <eLiterals name="LongitudType" value="11"/>
+    <eLiterals name="LongitudeType" value="11"/>
     <eLiterals name="RowNumberType" value="12"/>
     <eLiterals name="BooleanType" value="13"/>
+    <eLiterals name="FirstNameMaleType" value="14"/>
+    <eLiterals name="FirstNameFemaleType" value="15"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoArreglo" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mapping">
@@ -107,7 +109,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributos" upperBound="-1"
         eType="#//Atributo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Atributo" abstract="true" eSuperTypes="#//ElementoAsersion">
+  <eClassifiers xsi:type="ecore:EClass" name="Atributo" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="primaryKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="#//TipoAtributo"/>
@@ -117,10 +119,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipoEntidad" eType="#//Entidad"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoPrimitivo" eType="#//TipoAtributo"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true" eSuperTypes="#//ElementoAsersion #//UrlExpresion">
+  <eClassifiers xsi:type="ecore:EClass" name="Parametro" abstract="true" eSuperTypes="#//UrlExpresion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BodyParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="PathParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="QueryParam" eSuperTypes="#//Parametro"/>
   <eClassifiers xsi:type="ecore:EClass" name="DatoPrimitivo" abstract="true"/>
@@ -131,7 +132,13 @@
     <eLiterals name="MayorIgual" value="3"/>
     <eLiterals name="MenorIgual" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ElementoAsersion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementoAsersion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametro" eType="#//Parametro"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributo" eType="#//Atributo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementoPrimitivo" eType="#//DatoPrimitivo"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Url">
     <eStructuralFeatures xsi:type="ecore:EReference" name="urlexpresions" lowerBound="1"
         upperBound="-1" eType="#//UrlExpresion" containment="true"/>

@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import xSoftware.Asercion;
-import xSoftware.DatoPrimitivo;
 import xSoftware.ElementoAsersion;
 import xSoftware.Operador;
 import xSoftware.XSoftwarePackage;
@@ -25,7 +24,6 @@ import xSoftware.XSoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xSoftware.impl.AsercionImpl#getElementoPrimitivo2 <em>Elemento Primitivo2</em>}</li>
  *   <li>{@link xSoftware.impl.AsercionImpl#getOperador <em>Operador</em>}</li>
  *   <li>{@link xSoftware.impl.AsercionImpl#getElemento1 <em>Elemento1</em>}</li>
  *   <li>{@link xSoftware.impl.AsercionImpl#getElemento2 <em>Elemento2</em>}</li>
@@ -34,16 +32,6 @@ import xSoftware.XSoftwarePackage;
  * @generated
  */
 public class AsercionImpl extends MinimalEObjectImpl.Container implements Asercion {
-	/**
-	 * The cached value of the '{@link #getElementoPrimitivo2() <em>Elemento Primitivo2</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getElementoPrimitivo2()
-	 * @generated
-	 * @ordered
-	 */
-	protected DatoPrimitivo elementoPrimitivo2;
-
 	/**
 	 * The default value of the '{@link #getOperador() <em>Operador</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,7 +53,7 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	protected Operador operador = OPERADOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getElemento1() <em>Elemento1</em>}' reference.
+	 * The cached value of the '{@link #getElemento1() <em>Elemento1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getElemento1()
@@ -75,7 +63,7 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	protected ElementoAsersion elemento1;
 
 	/**
-	 * The cached value of the '{@link #getElemento2() <em>Elemento2</em>}' reference.
+	 * The cached value of the '{@link #getElemento2() <em>Elemento2</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getElemento2()
@@ -108,49 +96,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DatoPrimitivo getElementoPrimitivo2() {
-		return elementoPrimitivo2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetElementoPrimitivo2(DatoPrimitivo newElementoPrimitivo2, NotificationChain msgs) {
-		DatoPrimitivo oldElementoPrimitivo2 = elementoPrimitivo2;
-		elementoPrimitivo2 = newElementoPrimitivo2;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2, oldElementoPrimitivo2, newElementoPrimitivo2);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setElementoPrimitivo2(DatoPrimitivo newElementoPrimitivo2) {
-		if (newElementoPrimitivo2 != elementoPrimitivo2) {
-			NotificationChain msgs = null;
-			if (elementoPrimitivo2 != null)
-				msgs = ((InternalEObject)elementoPrimitivo2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2, null, msgs);
-			if (newElementoPrimitivo2 != null)
-				msgs = ((InternalEObject)newElementoPrimitivo2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2, null, msgs);
-			msgs = basicSetElementoPrimitivo2(newElementoPrimitivo2, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2, newElementoPrimitivo2, newElementoPrimitivo2));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Operador getOperador() {
 		return operador;
 	}
@@ -173,14 +118,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * @generated
 	 */
 	public ElementoAsersion getElemento1() {
-		if (elemento1 != null && elemento1.eIsProxy()) {
-			InternalEObject oldElemento1 = (InternalEObject)elemento1;
-			elemento1 = (ElementoAsersion)eResolveProxy(oldElemento1);
-			if (elemento1 != oldElemento1) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ELEMENTO1, oldElemento1, elemento1));
-			}
-		}
 		return elemento1;
 	}
 
@@ -189,8 +126,14 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementoAsersion basicGetElemento1() {
-		return elemento1;
+	public NotificationChain basicSetElemento1(ElementoAsersion newElemento1, NotificationChain msgs) {
+		ElementoAsersion oldElemento1 = elemento1;
+		elemento1 = newElemento1;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO1, oldElemento1, newElemento1);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -199,10 +142,17 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * @generated
 	 */
 	public void setElemento1(ElementoAsersion newElemento1) {
-		ElementoAsersion oldElemento1 = elemento1;
-		elemento1 = newElemento1;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO1, oldElemento1, elemento1));
+		if (newElemento1 != elemento1) {
+			NotificationChain msgs = null;
+			if (elemento1 != null)
+				msgs = ((InternalEObject)elemento1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO1, null, msgs);
+			if (newElemento1 != null)
+				msgs = ((InternalEObject)newElemento1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO1, null, msgs);
+			msgs = basicSetElemento1(newElemento1, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO1, newElemento1, newElemento1));
 	}
 
 	/**
@@ -211,14 +161,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * @generated
 	 */
 	public ElementoAsersion getElemento2() {
-		if (elemento2 != null && elemento2.eIsProxy()) {
-			InternalEObject oldElemento2 = (InternalEObject)elemento2;
-			elemento2 = (ElementoAsersion)eResolveProxy(oldElemento2);
-			if (elemento2 != oldElemento2) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, XSoftwarePackage.ASERCION__ELEMENTO2, oldElemento2, elemento2));
-			}
-		}
 		return elemento2;
 	}
 
@@ -227,8 +169,14 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ElementoAsersion basicGetElemento2() {
-		return elemento2;
+	public NotificationChain basicSetElemento2(ElementoAsersion newElemento2, NotificationChain msgs) {
+		ElementoAsersion oldElemento2 = elemento2;
+		elemento2 = newElemento2;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO2, oldElemento2, newElemento2);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -237,10 +185,17 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	 * @generated
 	 */
 	public void setElemento2(ElementoAsersion newElemento2) {
-		ElementoAsersion oldElemento2 = elemento2;
-		elemento2 = newElemento2;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO2, oldElemento2, elemento2));
+		if (newElemento2 != elemento2) {
+			NotificationChain msgs = null;
+			if (elemento2 != null)
+				msgs = ((InternalEObject)elemento2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO2, null, msgs);
+			if (newElemento2 != null)
+				msgs = ((InternalEObject)newElemento2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XSoftwarePackage.ASERCION__ELEMENTO2, null, msgs);
+			msgs = basicSetElemento2(newElemento2, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XSoftwarePackage.ASERCION__ELEMENTO2, newElemento2, newElemento2));
 	}
 
 	/**
@@ -251,8 +206,10 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2:
-				return basicSetElementoPrimitivo2(null, msgs);
+			case XSoftwarePackage.ASERCION__ELEMENTO1:
+				return basicSetElemento1(null, msgs);
+			case XSoftwarePackage.ASERCION__ELEMENTO2:
+				return basicSetElemento2(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -265,16 +222,12 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2:
-				return getElementoPrimitivo2();
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				return getOperador();
 			case XSoftwarePackage.ASERCION__ELEMENTO1:
-				if (resolve) return getElemento1();
-				return basicGetElemento1();
+				return getElemento1();
 			case XSoftwarePackage.ASERCION__ELEMENTO2:
-				if (resolve) return getElemento2();
-				return basicGetElemento2();
+				return getElemento2();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -287,9 +240,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2:
-				setElementoPrimitivo2((DatoPrimitivo)newValue);
-				return;
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				setOperador((Operador)newValue);
 				return;
@@ -311,9 +261,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2:
-				setElementoPrimitivo2((DatoPrimitivo)null);
-				return;
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				setOperador(OPERADOR_EDEFAULT);
 				return;
@@ -335,8 +282,6 @@ public class AsercionImpl extends MinimalEObjectImpl.Container implements Aserci
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case XSoftwarePackage.ASERCION__ELEMENTO_PRIMITIVO2:
-				return elementoPrimitivo2 != null;
 			case XSoftwarePackage.ASERCION__OPERADOR:
 				return operador != OPERADOR_EDEFAULT;
 			case XSoftwarePackage.ASERCION__ELEMENTO1:

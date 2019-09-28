@@ -121,10 +121,17 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMappingAccess().getParametroAssignment_2(), "rule__Mapping__ParametroAssignment_2");
 					put(grammarAccess.getMappingAccess().getAtributoAssignment_6_0_1(), "rule__Mapping__AtributoAssignment_6_0_1");
 					put(grammarAccess.getMappingAccess().getDatoprimitivoAssignment_6_1(), "rule__Mapping__DatoprimitivoAssignment_6_1");
+					put(grammarAccess.getAsercionAccess().getElemento1Assignment_0_0(), "rule__Asercion__Elemento1Assignment_0_0");
+					put(grammarAccess.getAsercionAccess().getElemento1Assignment_0_1(), "rule__Asercion__Elemento1Assignment_0_1");
 					put(grammarAccess.getAsercionAccess().getElemento1Assignment_0_2_1(), "rule__Asercion__Elemento1Assignment_0_2_1");
 					put(grammarAccess.getAsercionAccess().getOperadorAssignment_1(), "rule__Asercion__OperadorAssignment_1");
-					put(grammarAccess.getAsercionAccess().getElementoPrimitivo2Assignment_2_0(), "rule__Asercion__ElementoPrimitivo2Assignment_2_0");
+					put(grammarAccess.getAsercionAccess().getElemento2Assignment_2_0(), "rule__Asercion__Elemento2Assignment_2_0");
 					put(grammarAccess.getAsercionAccess().getElemento2Assignment_2_1_1(), "rule__Asercion__Elemento2Assignment_2_1_1");
+					put(grammarAccess.getElementoStatusAccess().getTipoAssignment(), "rule__ElementoStatus__TipoAssignment");
+					put(grammarAccess.getElementoResponseAccess().getTipoAssignment(), "rule__ElementoResponse__TipoAssignment");
+					put(grammarAccess.getElementoAtributoAccess().getAtributoAssignment(), "rule__ElementoAtributo__AtributoAssignment");
+					put(grammarAccess.getElementoParametroAccess().getParametroAssignment(), "rule__ElementoParametro__ParametroAssignment");
+					put(grammarAccess.getElementoPrimitivoAccess().getElementoPrimitivoAssignment(), "rule__ElementoPrimitivo__ElementoPrimitivoAssignment");
 				}
 			};
 		}

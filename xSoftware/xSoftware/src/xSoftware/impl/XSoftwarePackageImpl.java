@@ -16,7 +16,6 @@ import xSoftware.Atributo;
 import xSoftware.AtributoArreglo;
 import xSoftware.AtributoMocka;
 import xSoftware.AtributoSimple;
-import xSoftware.BodyParam;
 import xSoftware.DatoPrimitivo;
 import xSoftware.ElementoAsersion;
 import xSoftware.Entidad;
@@ -183,13 +182,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	private EClass parametroEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass bodyParamEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -586,17 +578,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAsercion_ElementoPrimitivo2() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getAsercion_Operador() {
-		return (EAttribute)asercionEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)asercionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -605,7 +588,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	public EReference getAsercion_Elemento1() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(2);
+		return (EReference)asercionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -614,7 +597,7 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * @generated
 	 */
 	public EReference getAsercion_Elemento2() {
-		return (EReference)asercionEClass.getEStructuralFeatures().get(3);
+		return (EReference)asercionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -865,15 +848,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBodyParam() {
-		return bodyParamEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPathParam() {
 		return pathParamEClass;
 	}
@@ -903,6 +877,42 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 	 */
 	public EClass getElementoAsersion() {
 		return elementoAsersionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementoAsersion_Parametro() {
+		return (EReference)elementoAsersionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementoAsersion_Atributo() {
+		return (EReference)elementoAsersionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElementoAsersion_Tipo() {
+		return (EAttribute)elementoAsersionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getElementoAsersion_ElementoPrimitivo() {
+		return (EReference)elementoAsersionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1048,7 +1058,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		createEReference(testEClass, TEST__ASERTIONS);
 
 		asercionEClass = createEClass(ASERCION);
-		createEReference(asercionEClass, ASERCION__ELEMENTO_PRIMITIVO2);
 		createEAttribute(asercionEClass, ASERCION__OPERADOR);
 		createEReference(asercionEClass, ASERCION__ELEMENTO1);
 		createEReference(asercionEClass, ASERCION__ELEMENTO2);
@@ -1092,8 +1101,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		parametroEClass = createEClass(PARAMETRO);
 		createEAttribute(parametroEClass, PARAMETRO__NAME);
 
-		bodyParamEClass = createEClass(BODY_PARAM);
-
 		pathParamEClass = createEClass(PATH_PARAM);
 
 		queryParamEClass = createEClass(QUERY_PARAM);
@@ -1101,6 +1108,10 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		datoPrimitivoEClass = createEClass(DATO_PRIMITIVO);
 
 		elementoAsersionEClass = createEClass(ELEMENTO_ASERSION);
+		createEReference(elementoAsersionEClass, ELEMENTO_ASERSION__PARAMETRO);
+		createEReference(elementoAsersionEClass, ELEMENTO_ASERSION__ATRIBUTO);
+		createEAttribute(elementoAsersionEClass, ELEMENTO_ASERSION__TIPO);
+		createEReference(elementoAsersionEClass, ELEMENTO_ASERSION__ELEMENTO_PRIMITIVO);
 
 		urlEClass = createEClass(URL);
 		createEReference(urlEClass, URL__URLEXPRESIONS);
@@ -1152,11 +1163,8 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		atributoArregloEClass.getESuperTypes().add(this.getAtributo());
 		simpleEntityEClass.getESuperTypes().add(this.getEntidad());
 		mockarooEntityEClass.getESuperTypes().add(this.getEntidad());
-		atributoEClass.getESuperTypes().add(this.getElementoAsersion());
 		atributoSimpleEClass.getESuperTypes().add(this.getAtributo());
-		parametroEClass.getESuperTypes().add(this.getElementoAsersion());
 		parametroEClass.getESuperTypes().add(this.getUrlExpresion());
-		bodyParamEClass.getESuperTypes().add(this.getParametro());
 		pathParamEClass.getESuperTypes().add(this.getParametro());
 		queryParamEClass.getESuperTypes().add(this.getParametro());
 		stringTypeEClass.getESuperTypes().add(this.getUrlExpresion());
@@ -1196,10 +1204,9 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEReference(getTest_Asertions(), this.getAsercion(), null, "asertions", null, 0, -1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(asercionEClass, Asercion.class, "Asercion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAsercion_ElementoPrimitivo2(), this.getDatoPrimitivo(), null, "elementoPrimitivo2", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAsercion_Operador(), this.getOperador(), "operador", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAsercion_Elemento1(), this.getElementoAsersion(), null, "elemento1", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAsercion_Elemento2(), this.getElementoAsersion(), null, "elemento2", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsercion_Elemento1(), this.getElementoAsersion(), null, "elemento1", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAsercion_Elemento2(), this.getElementoAsersion(), null, "elemento2", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(primitiveTypeEClass, PrimitiveType.class, "PrimitiveType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrimitiveType_Name(), this.getTipoAtributo(), "name", null, 0, 1, PrimitiveType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1240,8 +1247,6 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEClass(parametroEClass, Parametro.class, "Parametro", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getParametro_Name(), ecorePackage.getEString(), "name", null, 0, 1, Parametro.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(bodyParamEClass, BodyParam.class, "BodyParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(pathParamEClass, PathParam.class, "PathParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(queryParamEClass, QueryParam.class, "QueryParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1249,6 +1254,10 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		initEClass(datoPrimitivoEClass, DatoPrimitivo.class, "DatoPrimitivo", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(elementoAsersionEClass, ElementoAsersion.class, "ElementoAsersion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getElementoAsersion_Parametro(), this.getParametro(), null, "parametro", null, 0, 1, ElementoAsersion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementoAsersion_Atributo(), this.getAtributo(), null, "atributo", null, 0, 1, ElementoAsersion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElementoAsersion_Tipo(), ecorePackage.getEString(), "tipo", null, 0, 1, ElementoAsersion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElementoAsersion_ElementoPrimitivo(), this.getDatoPrimitivo(), null, "elementoPrimitivo", null, 0, 1, ElementoAsersion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(urlEClass, Url.class, "Url", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getUrl_Urlexpresions(), this.getUrlExpresion(), null, "urlexpresions", null, 1, -1, Url.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1277,9 +1286,11 @@ public class XSoftwarePackageImpl extends EPackageImpl implements XSoftwarePacka
 		addEEnumLiteral(mockarooEEnum, Mockaroo.CITY_TYPE);
 		addEEnumLiteral(mockarooEEnum, Mockaroo.COUNTRY_CODE_TYPE);
 		addEEnumLiteral(mockarooEEnum, Mockaroo.LATITUDE_TYPE);
-		addEEnumLiteral(mockarooEEnum, Mockaroo.LONGITUD_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.LONGITUDE_TYPE);
 		addEEnumLiteral(mockarooEEnum, Mockaroo.ROW_NUMBER_TYPE);
 		addEEnumLiteral(mockarooEEnum, Mockaroo.BOOLEAN_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.FIRST_NAME_MALE_TYPE);
+		addEEnumLiteral(mockarooEEnum, Mockaroo.FIRST_NAME_FEMALE_TYPE);
 
 		initEEnum(tipoAtributoEEnum, TipoAtributo.class, "TipoAtributo");
 		addEEnumLiteral(tipoAtributoEEnum, TipoAtributo.STRING);

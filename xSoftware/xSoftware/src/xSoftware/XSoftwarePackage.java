@@ -250,34 +250,6 @@ public interface XSoftwarePackage extends EPackage {
 	int ENTIDAD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link xSoftware.impl.ElementoAsersionImpl <em>Elemento Asersion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.impl.ElementoAsersionImpl
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getElementoAsersion()
-	 * @generated
-	 */
-	int ELEMENTO_ASERSION = 23;
-
-	/**
-	 * The number of structural features of the '<em>Elemento Asersion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENTO_ASERSION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Elemento Asersion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENTO_ASERSION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link xSoftware.impl.AtributoImpl <em>Atributo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,7 +266,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__NAME = ELEMENTO_ASERSION_FEATURE_COUNT + 0;
+	int ATRIBUTO__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Primary Key</b></em>' attribute.
@@ -303,7 +275,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__PRIMARY_KEY = ELEMENTO_ASERSION_FEATURE_COUNT + 1;
+	int ATRIBUTO__PRIMARY_KEY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
@@ -312,7 +284,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO__TIPO = ELEMENTO_ASERSION_FEATURE_COUNT + 2;
+	int ATRIBUTO__TIPO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Atributo</em>' class.
@@ -321,7 +293,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_FEATURE_COUNT = ELEMENTO_ASERSION_FEATURE_COUNT + 3;
+	int ATRIBUTO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Atributo</em>' class.
@@ -330,7 +302,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATRIBUTO_OPERATION_COUNT = ELEMENTO_ASERSION_OPERATION_COUNT + 0;
+	int ATRIBUTO_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.AtributoMockaImpl <em>Atributo Mocka</em>}' class.
@@ -535,40 +507,31 @@ public interface XSoftwarePackage extends EPackage {
 	int ASERCION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Elemento Primitivo2</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASERCION__ELEMENTO_PRIMITIVO2 = 0;
-
-	/**
 	 * The feature id for the '<em><b>Operador</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__OPERADOR = 1;
+	int ASERCION__OPERADOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Elemento1</b></em>' reference.
+	 * The feature id for the '<em><b>Elemento1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ELEMENTO1 = 2;
+	int ASERCION__ELEMENTO1 = 1;
 
 	/**
-	 * The feature id for the '<em><b>Elemento2</b></em>' reference.
+	 * The feature id for the '<em><b>Elemento2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION__ELEMENTO2 = 3;
+	int ASERCION__ELEMENTO2 = 2;
 
 	/**
 	 * The number of structural features of the '<em>Asercion</em>' class.
@@ -577,7 +540,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION_FEATURE_COUNT = 4;
+	int ASERCION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Asercion</em>' class.
@@ -633,7 +596,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getDatoPrimitivo()
 	 * @generated
 	 */
-	int DATO_PRIMITIVO = 22;
+	int DATO_PRIMITIVO = 21;
 
 	/**
 	 * The number of structural features of the '<em>Dato Primitivo</em>' class.
@@ -1068,6 +1031,34 @@ public interface XSoftwarePackage extends EPackage {
 	int REQUEST_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.UrlExpresionImpl <em>Url Expresion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.UrlExpresionImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getUrlExpresion()
+	 * @generated
+	 */
+	int URL_EXPRESION = 24;
+
+	/**
+	 * The number of structural features of the '<em>Url Expresion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Url Expresion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_EXPRESION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.impl.ParametroImpl <em>Parametro</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1084,7 +1075,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO__NAME = ELEMENTO_ASERSION_FEATURE_COUNT + 0;
+	int PARAMETRO__NAME = URL_EXPRESION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Parametro</em>' class.
@@ -1093,7 +1084,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_FEATURE_COUNT = ELEMENTO_ASERSION_FEATURE_COUNT + 1;
+	int PARAMETRO_FEATURE_COUNT = URL_EXPRESION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Parametro</em>' class.
@@ -1102,44 +1093,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETRO_OPERATION_COUNT = ELEMENTO_ASERSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xSoftware.impl.BodyParamImpl <em>Body Param</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.impl.BodyParamImpl
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getBodyParam()
-	 * @generated
-	 */
-	int BODY_PARAM = 19;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY_PARAM__NAME = PARAMETRO__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Body Param</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY_PARAM_FEATURE_COUNT = PARAMETRO_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Body Param</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BODY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
+	int PARAMETRO_OPERATION_COUNT = URL_EXPRESION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.impl.PathParamImpl <em>Path Param</em>}' class.
@@ -1149,7 +1103,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getPathParam()
 	 * @generated
 	 */
-	int PATH_PARAM = 20;
+	int PATH_PARAM = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1186,7 +1140,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getQueryParam()
 	 * @generated
 	 */
-	int QUERY_PARAM = 21;
+	int QUERY_PARAM = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1216,6 +1170,70 @@ public interface XSoftwarePackage extends EPackage {
 	int QUERY_PARAM_OPERATION_COUNT = PARAMETRO_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link xSoftware.impl.ElementoAsersionImpl <em>Elemento Asersion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xSoftware.impl.ElementoAsersionImpl
+	 * @see xSoftware.impl.XSoftwarePackageImpl#getElementoAsersion()
+	 * @generated
+	 */
+	int ELEMENTO_ASERSION = 22;
+
+	/**
+	 * The feature id for the '<em><b>Parametro</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION__PARAMETRO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Atributo</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION__ATRIBUTO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Tipo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION__TIPO = 2;
+
+	/**
+	 * The feature id for the '<em><b>Elemento Primitivo</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION__ELEMENTO_PRIMITIVO = 3;
+
+	/**
+	 * The number of structural features of the '<em>Elemento Asersion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Elemento Asersion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENTO_ASERSION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link xSoftware.impl.UrlImpl <em>Url</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1223,7 +1241,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getUrl()
 	 * @generated
 	 */
-	int URL = 24;
+	int URL = 23;
 
 	/**
 	 * The feature id for the '<em><b>Urlexpresions</b></em>' containment reference list.
@@ -1253,34 +1271,6 @@ public interface XSoftwarePackage extends EPackage {
 	int URL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link xSoftware.impl.UrlExpresionImpl <em>Url Expresion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xSoftware.impl.UrlExpresionImpl
-	 * @see xSoftware.impl.XSoftwarePackageImpl#getUrlExpresion()
-	 * @generated
-	 */
-	int URL_EXPRESION = 25;
-
-	/**
-	 * The number of structural features of the '<em>Url Expresion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_EXPRESION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Url Expresion</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_EXPRESION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link xSoftware.impl.StringTypeImpl <em>String Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1288,7 +1278,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getStringType()
 	 * @generated
 	 */
-	int STRING_TYPE = 26;
+	int STRING_TYPE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1325,7 +1315,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoMetodoRest()
 	 * @generated
 	 */
-	int TIPO_METODO_REST = 27;
+	int TIPO_METODO_REST = 26;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Mockaroo <em>Mockaroo</em>}' enum.
@@ -1335,7 +1325,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getMockaroo()
 	 * @generated
 	 */
-	int MOCKAROO = 28;
+	int MOCKAROO = 27;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.TipoAtributo <em>Tipo Atributo</em>}' enum.
@@ -1345,7 +1335,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getTipoAtributo()
 	 * @generated
 	 */
-	int TIPO_ATRIBUTO = 29;
+	int TIPO_ATRIBUTO = 28;
 
 	/**
 	 * The meta object id for the '{@link xSoftware.Operador <em>Operador</em>}' enum.
@@ -1355,7 +1345,7 @@ public interface XSoftwarePackage extends EPackage {
 	 * @see xSoftware.impl.XSoftwarePackageImpl#getOperador()
 	 * @generated
 	 */
-	int OPERADOR = 30;
+	int OPERADOR = 29;
 
 
 	/**
@@ -1660,17 +1650,6 @@ public interface XSoftwarePackage extends EPackage {
 	EClass getAsercion();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link xSoftware.Asercion#getElementoPrimitivo2 <em>Elemento Primitivo2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Elemento Primitivo2</em>'.
-	 * @see xSoftware.Asercion#getElementoPrimitivo2()
-	 * @see #getAsercion()
-	 * @generated
-	 */
-	EReference getAsercion_ElementoPrimitivo2();
-
-	/**
 	 * Returns the meta object for the attribute '{@link xSoftware.Asercion#getOperador <em>Operador</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1682,10 +1661,10 @@ public interface XSoftwarePackage extends EPackage {
 	EAttribute getAsercion_Operador();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getElemento1 <em>Elemento1</em>}'.
+	 * Returns the meta object for the containment reference '{@link xSoftware.Asercion#getElemento1 <em>Elemento1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Elemento1</em>'.
+	 * @return the meta object for the containment reference '<em>Elemento1</em>'.
 	 * @see xSoftware.Asercion#getElemento1()
 	 * @see #getAsercion()
 	 * @generated
@@ -1693,10 +1672,10 @@ public interface XSoftwarePackage extends EPackage {
 	EReference getAsercion_Elemento1();
 
 	/**
-	 * Returns the meta object for the reference '{@link xSoftware.Asercion#getElemento2 <em>Elemento2</em>}'.
+	 * Returns the meta object for the containment reference '{@link xSoftware.Asercion#getElemento2 <em>Elemento2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Elemento2</em>'.
+	 * @return the meta object for the containment reference '<em>Elemento2</em>'.
 	 * @see xSoftware.Asercion#getElemento2()
 	 * @see #getAsercion()
 	 * @generated
@@ -1989,16 +1968,6 @@ public interface XSoftwarePackage extends EPackage {
 	EAttribute getParametro_Name();
 
 	/**
-	 * Returns the meta object for class '{@link xSoftware.BodyParam <em>Body Param</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Body Param</em>'.
-	 * @see xSoftware.BodyParam
-	 * @generated
-	 */
-	EClass getBodyParam();
-
-	/**
 	 * Returns the meta object for class '{@link xSoftware.PathParam <em>Path Param</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2037,6 +2006,50 @@ public interface XSoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EClass getElementoAsersion();
+
+	/**
+	 * Returns the meta object for the reference '{@link xSoftware.ElementoAsersion#getParametro <em>Parametro</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parametro</em>'.
+	 * @see xSoftware.ElementoAsersion#getParametro()
+	 * @see #getElementoAsersion()
+	 * @generated
+	 */
+	EReference getElementoAsersion_Parametro();
+
+	/**
+	 * Returns the meta object for the reference '{@link xSoftware.ElementoAsersion#getAtributo <em>Atributo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Atributo</em>'.
+	 * @see xSoftware.ElementoAsersion#getAtributo()
+	 * @see #getElementoAsersion()
+	 * @generated
+	 */
+	EReference getElementoAsersion_Atributo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xSoftware.ElementoAsersion#getTipo <em>Tipo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tipo</em>'.
+	 * @see xSoftware.ElementoAsersion#getTipo()
+	 * @see #getElementoAsersion()
+	 * @generated
+	 */
+	EAttribute getElementoAsersion_Tipo();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link xSoftware.ElementoAsersion#getElementoPrimitivo <em>Elemento Primitivo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Elemento Primitivo</em>'.
+	 * @see xSoftware.ElementoAsersion#getElementoPrimitivo()
+	 * @see #getElementoAsersion()
+	 * @generated
+	 */
+	EReference getElementoAsersion_ElementoPrimitivo();
 
 	/**
 	 * Returns the meta object for class '{@link xSoftware.Url <em>Url</em>}'.
@@ -2392,14 +2405,6 @@ public interface XSoftwarePackage extends EPackage {
 		EClass ASERCION = eINSTANCE.getAsercion();
 
 		/**
-		 * The meta object literal for the '<em><b>Elemento Primitivo2</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ASERCION__ELEMENTO_PRIMITIVO2 = eINSTANCE.getAsercion_ElementoPrimitivo2();
-
-		/**
 		 * The meta object literal for the '<em><b>Operador</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2408,7 +2413,7 @@ public interface XSoftwarePackage extends EPackage {
 		EAttribute ASERCION__OPERADOR = eINSTANCE.getAsercion_Operador();
 
 		/**
-		 * The meta object literal for the '<em><b>Elemento1</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Elemento1</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2416,7 +2421,7 @@ public interface XSoftwarePackage extends EPackage {
 		EReference ASERCION__ELEMENTO1 = eINSTANCE.getAsercion_Elemento1();
 
 		/**
-		 * The meta object literal for the '<em><b>Elemento2</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Elemento2</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2664,16 +2669,6 @@ public interface XSoftwarePackage extends EPackage {
 		EAttribute PARAMETRO__NAME = eINSTANCE.getParametro_Name();
 
 		/**
-		 * The meta object literal for the '{@link xSoftware.impl.BodyParamImpl <em>Body Param</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xSoftware.impl.BodyParamImpl
-		 * @see xSoftware.impl.XSoftwarePackageImpl#getBodyParam()
-		 * @generated
-		 */
-		EClass BODY_PARAM = eINSTANCE.getBodyParam();
-
-		/**
 		 * The meta object literal for the '{@link xSoftware.impl.PathParamImpl <em>Path Param</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2712,6 +2707,38 @@ public interface XSoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass ELEMENTO_ASERSION = eINSTANCE.getElementoAsersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametro</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENTO_ASERSION__PARAMETRO = eINSTANCE.getElementoAsersion_Parametro();
+
+		/**
+		 * The meta object literal for the '<em><b>Atributo</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENTO_ASERSION__ATRIBUTO = eINSTANCE.getElementoAsersion_Atributo();
+
+		/**
+		 * The meta object literal for the '<em><b>Tipo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ELEMENTO_ASERSION__TIPO = eINSTANCE.getElementoAsersion_Tipo();
+
+		/**
+		 * The meta object literal for the '<em><b>Elemento Primitivo</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ELEMENTO_ASERSION__ELEMENTO_PRIMITIVO = eINSTANCE.getElementoAsersion_ElementoPrimitivo();
 
 		/**
 		 * The meta object literal for the '{@link xSoftware.impl.UrlImpl <em>Url</em>}' class.

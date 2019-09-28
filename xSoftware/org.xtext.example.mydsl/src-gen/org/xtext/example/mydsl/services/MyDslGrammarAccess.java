@@ -1078,23 +1078,23 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Asercion");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cResponseStatusKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cResponseKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
+		private final Assignment cElemento1Assignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cElemento1ElementoStatusParserRuleCall_0_0_0 = (RuleCall)cElemento1Assignment_0_0.eContents().get(0);
+		private final Assignment cElemento1Assignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cElemento1ElementoResponseParserRuleCall_0_1_0 = (RuleCall)cElemento1Assignment_0_1.eContents().get(0);
 		private final Group cGroup_0_2 = (Group)cAlternatives_0.eContents().get(2);
 		private final Keyword cResponseKeyword_0_2_0 = (Keyword)cGroup_0_2.eContents().get(0);
 		private final Assignment cElemento1Assignment_0_2_1 = (Assignment)cGroup_0_2.eContents().get(1);
-		private final CrossReference cElemento1AtributoCrossReference_0_2_1_0 = (CrossReference)cElemento1Assignment_0_2_1.eContents().get(0);
-		private final RuleCall cElemento1AtributoQualifiedNameParserRuleCall_0_2_1_0_1 = (RuleCall)cElemento1AtributoCrossReference_0_2_1_0.eContents().get(1);
+		private final RuleCall cElemento1ElementoAtributoParserRuleCall_0_2_1_0 = (RuleCall)cElemento1Assignment_0_2_1.eContents().get(0);
 		private final Assignment cOperadorAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperadorOperadorEnumRuleCall_1_0 = (RuleCall)cOperadorAssignment_1.eContents().get(0);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cElementoPrimitivo2Assignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cElementoPrimitivo2DatoPrimitivoParserRuleCall_2_0_0 = (RuleCall)cElementoPrimitivo2Assignment_2_0.eContents().get(0);
+		private final Assignment cElemento2Assignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final RuleCall cElemento2ElementoPrimitivoParserRuleCall_2_0_0 = (RuleCall)cElemento2Assignment_2_0.eContents().get(0);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cParameterKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Assignment cElemento2Assignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final CrossReference cElemento2ParametroCrossReference_2_1_1_0 = (CrossReference)cElemento2Assignment_2_1_1.eContents().get(0);
-		private final RuleCall cElemento2ParametroQualifiedNameParserRuleCall_2_1_1_0_1 = (RuleCall)cElemento2ParametroCrossReference_2_1_1_0.eContents().get(1);
+		private final RuleCall cElemento2ElementoParametroParserRuleCall_2_1_1_0 = (RuleCall)cElemento2Assignment_2_1_1.eContents().get(0);
 		private final RuleCall cSEMICOLONTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		////Este codigo es para hacer la referencia cruzada y que se vea reflejada en el modelo, sin embargo sin scoping no fue posible hacer que la gramatica compilara bien las referencias
@@ -1103,37 +1103,40 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Asercion returns Asercion:
 		//	('response.status'|'response'|'response->'entidad=[Entidad]'.'atributo=[Atributo]) operador=Operador (elementoPrimitivo2=DatoPrimitivo|'parameter.'servicio=[ServicioRest] '.' parametro=[Parametro]) SEMICOLON;		
 		//*/ Asercion:
-		//	('response.status' | 'response' | 'response->' elemento1=[Atributo|QualifiedName]) operador=Operador
-		//	(elementoPrimitivo2=DatoPrimitivo | 'parameter.' elemento2=[Parametro|QualifiedName]) SEMICOLON;
+		//	(elemento1=ElementoStatus | elemento1=ElementoResponse | 'response->' elemento1=ElementoAtributo) operador=Operador
+		//	(elemento2=ElementoPrimitivo | 'parameter.' elemento2=ElementoParametro) SEMICOLON;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('response.status' | 'response' | 'response->' elemento1=[Atributo|QualifiedName]) operador=Operador
-		//(elementoPrimitivo2=DatoPrimitivo | 'parameter.' elemento2=[Parametro|QualifiedName]) SEMICOLON
+		//(elemento1=ElementoStatus | elemento1=ElementoResponse | 'response->' elemento1=ElementoAtributo) operador=Operador
+		//(elemento2=ElementoPrimitivo | 'parameter.' elemento2=ElementoParametro) SEMICOLON
 		public Group getGroup() { return cGroup; }
 		
-		//'response.status' | 'response' | 'response->' elemento1=[Atributo|QualifiedName]
+		//elemento1=ElementoStatus | elemento1=ElementoResponse | 'response->' elemento1=ElementoAtributo
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 		
-		//'response.status'
-		public Keyword getResponseStatusKeyword_0_0() { return cResponseStatusKeyword_0_0; }
+		//elemento1=ElementoStatus
+		public Assignment getElemento1Assignment_0_0() { return cElemento1Assignment_0_0; }
 		
-		//'response'
-		public Keyword getResponseKeyword_0_1() { return cResponseKeyword_0_1; }
+		//ElementoStatus
+		public RuleCall getElemento1ElementoStatusParserRuleCall_0_0_0() { return cElemento1ElementoStatusParserRuleCall_0_0_0; }
 		
-		//'response->' elemento1=[Atributo|QualifiedName]
+		//elemento1=ElementoResponse
+		public Assignment getElemento1Assignment_0_1() { return cElemento1Assignment_0_1; }
+		
+		//ElementoResponse
+		public RuleCall getElemento1ElementoResponseParserRuleCall_0_1_0() { return cElemento1ElementoResponseParserRuleCall_0_1_0; }
+		
+		//'response->' elemento1=ElementoAtributo
 		public Group getGroup_0_2() { return cGroup_0_2; }
 		
 		//'response->'
 		public Keyword getResponseKeyword_0_2_0() { return cResponseKeyword_0_2_0; }
 		
-		//elemento1=[Atributo|QualifiedName]
+		//elemento1=ElementoAtributo
 		public Assignment getElemento1Assignment_0_2_1() { return cElemento1Assignment_0_2_1; }
 		
-		//[Atributo|QualifiedName]
-		public CrossReference getElemento1AtributoCrossReference_0_2_1_0() { return cElemento1AtributoCrossReference_0_2_1_0; }
-		
-		//QualifiedName
-		public RuleCall getElemento1AtributoQualifiedNameParserRuleCall_0_2_1_0_1() { return cElemento1AtributoQualifiedNameParserRuleCall_0_2_1_0_1; }
+		//ElementoAtributo
+		public RuleCall getElemento1ElementoAtributoParserRuleCall_0_2_1_0() { return cElemento1ElementoAtributoParserRuleCall_0_2_1_0; }
 		
 		//operador=Operador
 		public Assignment getOperadorAssignment_1() { return cOperadorAssignment_1; }
@@ -1141,32 +1144,112 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Operador
 		public RuleCall getOperadorOperadorEnumRuleCall_1_0() { return cOperadorOperadorEnumRuleCall_1_0; }
 		
-		//elementoPrimitivo2=DatoPrimitivo | 'parameter.' elemento2=[Parametro|QualifiedName]
+		//elemento2=ElementoPrimitivo | 'parameter.' elemento2=ElementoParametro
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//elementoPrimitivo2=DatoPrimitivo
-		public Assignment getElementoPrimitivo2Assignment_2_0() { return cElementoPrimitivo2Assignment_2_0; }
+		//elemento2=ElementoPrimitivo
+		public Assignment getElemento2Assignment_2_0() { return cElemento2Assignment_2_0; }
 		
-		//DatoPrimitivo
-		public RuleCall getElementoPrimitivo2DatoPrimitivoParserRuleCall_2_0_0() { return cElementoPrimitivo2DatoPrimitivoParserRuleCall_2_0_0; }
+		//ElementoPrimitivo
+		public RuleCall getElemento2ElementoPrimitivoParserRuleCall_2_0_0() { return cElemento2ElementoPrimitivoParserRuleCall_2_0_0; }
 		
-		//'parameter.' elemento2=[Parametro|QualifiedName]
+		//'parameter.' elemento2=ElementoParametro
 		public Group getGroup_2_1() { return cGroup_2_1; }
 		
 		//'parameter.'
 		public Keyword getParameterKeyword_2_1_0() { return cParameterKeyword_2_1_0; }
 		
-		//elemento2=[Parametro|QualifiedName]
+		//elemento2=ElementoParametro
 		public Assignment getElemento2Assignment_2_1_1() { return cElemento2Assignment_2_1_1; }
 		
-		//[Parametro|QualifiedName]
-		public CrossReference getElemento2ParametroCrossReference_2_1_1_0() { return cElemento2ParametroCrossReference_2_1_1_0; }
-		
-		//QualifiedName
-		public RuleCall getElemento2ParametroQualifiedNameParserRuleCall_2_1_1_0_1() { return cElemento2ParametroQualifiedNameParserRuleCall_2_1_1_0_1; }
+		//ElementoParametro
+		public RuleCall getElemento2ElementoParametroParserRuleCall_2_1_1_0() { return cElemento2ElementoParametroParserRuleCall_2_1_1_0; }
 		
 		//SEMICOLON
 		public RuleCall getSEMICOLONTerminalRuleCall_3() { return cSEMICOLONTerminalRuleCall_3; }
+	}
+	public class ElementoStatusElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ElementoStatus");
+		private final Assignment cTipoAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cTipoResponseStatusKeyword_0 = (Keyword)cTipoAssignment.eContents().get(0);
+		
+		//ElementoStatus ElementoAsersion:
+		//	tipo='response.status';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//tipo='response.status'
+		public Assignment getTipoAssignment() { return cTipoAssignment; }
+		
+		//'response.status'
+		public Keyword getTipoResponseStatusKeyword_0() { return cTipoResponseStatusKeyword_0; }
+	}
+	public class ElementoResponseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ElementoResponse");
+		private final Assignment cTipoAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cTipoResponseKeyword_0 = (Keyword)cTipoAssignment.eContents().get(0);
+		
+		//ElementoResponse ElementoAsersion:
+		//	tipo='response';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//tipo='response'
+		public Assignment getTipoAssignment() { return cTipoAssignment; }
+		
+		//'response'
+		public Keyword getTipoResponseKeyword_0() { return cTipoResponseKeyword_0; }
+	}
+	public class ElementoAtributoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ElementoAtributo");
+		private final Assignment cAtributoAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cAtributoAtributoCrossReference_0 = (CrossReference)cAtributoAssignment.eContents().get(0);
+		private final RuleCall cAtributoAtributoQualifiedNameParserRuleCall_0_1 = (RuleCall)cAtributoAtributoCrossReference_0.eContents().get(1);
+		
+		//ElementoAtributo ElementoAsersion:
+		//	atributo=[Atributo|QualifiedName];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//atributo=[Atributo|QualifiedName]
+		public Assignment getAtributoAssignment() { return cAtributoAssignment; }
+		
+		//[Atributo|QualifiedName]
+		public CrossReference getAtributoAtributoCrossReference_0() { return cAtributoAtributoCrossReference_0; }
+		
+		//QualifiedName
+		public RuleCall getAtributoAtributoQualifiedNameParserRuleCall_0_1() { return cAtributoAtributoQualifiedNameParserRuleCall_0_1; }
+	}
+	public class ElementoParametroElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ElementoParametro");
+		private final Assignment cParametroAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cParametroParametroCrossReference_0 = (CrossReference)cParametroAssignment.eContents().get(0);
+		private final RuleCall cParametroParametroQualifiedNameParserRuleCall_0_1 = (RuleCall)cParametroParametroCrossReference_0.eContents().get(1);
+		
+		//ElementoParametro ElementoAsersion:
+		//	parametro=[Parametro|QualifiedName];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//parametro=[Parametro|QualifiedName]
+		public Assignment getParametroAssignment() { return cParametroAssignment; }
+		
+		//[Parametro|QualifiedName]
+		public CrossReference getParametroParametroCrossReference_0() { return cParametroParametroCrossReference_0; }
+		
+		//QualifiedName
+		public RuleCall getParametroParametroQualifiedNameParserRuleCall_0_1() { return cParametroParametroQualifiedNameParserRuleCall_0_1; }
+	}
+	public class ElementoPrimitivoElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ElementoPrimitivo");
+		private final Assignment cElementoPrimitivoAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cElementoPrimitivoDatoPrimitivoParserRuleCall_0 = (RuleCall)cElementoPrimitivoAssignment.eContents().get(0);
+		
+		//ElementoPrimitivo ElementoAsersion:
+		//	elementoPrimitivo=DatoPrimitivo;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//elementoPrimitivo=DatoPrimitivo
+		public Assignment getElementoPrimitivoAssignment() { return cElementoPrimitivoAssignment; }
+		
+		//DatoPrimitivo
+		public RuleCall getElementoPrimitivoDatoPrimitivoParserRuleCall_0() { return cElementoPrimitivoDatoPrimitivoParserRuleCall_0; }
 	}
 	public class EBooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.EBoolean");
@@ -1407,8 +1490,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCountryCodeTypeCountryCodeTypeKeyword_9_0 = (Keyword)cCountryCodeTypeEnumLiteralDeclaration_9.eContents().get(0);
 		private final EnumLiteralDeclaration cLatitudeTypeEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
 		private final Keyword cLatitudeTypeLatitudeTypeKeyword_10_0 = (Keyword)cLatitudeTypeEnumLiteralDeclaration_10.eContents().get(0);
-		private final EnumLiteralDeclaration cLongitudTypeEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
-		private final Keyword cLongitudTypeLongitudTypeKeyword_11_0 = (Keyword)cLongitudTypeEnumLiteralDeclaration_11.eContents().get(0);
+		private final EnumLiteralDeclaration cLongitudeTypeEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cLongitudeTypeLongitudeTypeKeyword_11_0 = (Keyword)cLongitudeTypeEnumLiteralDeclaration_11.eContents().get(0);
 		private final EnumLiteralDeclaration cRowNumberTypeEnumLiteralDeclaration_12 = (EnumLiteralDeclaration)cAlternatives.eContents().get(12);
 		private final Keyword cRowNumberTypeRowNumberTypeKeyword_12_0 = (Keyword)cRowNumberTypeEnumLiteralDeclaration_12.eContents().get(0);
 		private final EnumLiteralDeclaration cBooleanTypeEnumLiteralDeclaration_13 = (EnumLiteralDeclaration)cAlternatives.eContents().get(13);
@@ -1416,11 +1499,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//enum Mockaroo:
 		//	FirstNameType | LastNameType | FamilyNameType | FullNameType | GenderType | EmailAddressType | PhoneType |
-		//	CountryType | CityType | CountryCodeType | LatitudeType | LongitudType | RowNumberType | BooleanType;
+		//	CountryType | CityType | CountryCodeType | LatitudeType | LongitudeType | RowNumberType | BooleanType;
 		public EnumRule getRule() { return rule; }
 		
 		//FirstNameType | LastNameType | FamilyNameType | FullNameType | GenderType | EmailAddressType | PhoneType | CountryType |
-		//CityType | CountryCodeType | LatitudeType | LongitudType | RowNumberType | BooleanType
+		//CityType | CountryCodeType | LatitudeType | LongitudeType | RowNumberType | BooleanType
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//FirstNameType
@@ -1489,11 +1572,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'LatitudeType'
 		public Keyword getLatitudeTypeLatitudeTypeKeyword_10_0() { return cLatitudeTypeLatitudeTypeKeyword_10_0; }
 		
-		//LongitudType
-		public EnumLiteralDeclaration getLongitudTypeEnumLiteralDeclaration_11() { return cLongitudTypeEnumLiteralDeclaration_11; }
+		//LongitudeType
+		public EnumLiteralDeclaration getLongitudeTypeEnumLiteralDeclaration_11() { return cLongitudeTypeEnumLiteralDeclaration_11; }
 		
-		//'LongitudType'
-		public Keyword getLongitudTypeLongitudTypeKeyword_11_0() { return cLongitudTypeLongitudTypeKeyword_11_0; }
+		//'LongitudeType'
+		public Keyword getLongitudeTypeLongitudeTypeKeyword_11_0() { return cLongitudeTypeLongitudeTypeKeyword_11_0; }
 		
 		//RowNumberType
 		public EnumLiteralDeclaration getRowNumberTypeEnumLiteralDeclaration_12() { return cRowNumberTypeEnumLiteralDeclaration_12; }
@@ -1577,6 +1660,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final TestElements pTest;
 	private final MappingElements pMapping;
 	private final AsercionElements pAsercion;
+	private final ElementoStatusElements pElementoStatus;
+	private final ElementoResponseElements pElementoResponse;
+	private final ElementoAtributoElements pElementoAtributo;
+	private final ElementoParametroElements pElementoParametro;
+	private final ElementoPrimitivoElements pElementoPrimitivo;
 	private final EBooleanElements pEBoolean;
 	private final EDoubleElements pEDouble;
 	private final EIntElements pEInt;
@@ -1624,6 +1712,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTest = new TestElements();
 		this.pMapping = new MappingElements();
 		this.pAsercion = new AsercionElements();
+		this.pElementoStatus = new ElementoStatusElements();
+		this.pElementoResponse = new ElementoResponseElements();
+		this.pElementoAtributo = new ElementoAtributoElements();
+		this.pElementoParametro = new ElementoParametroElements();
+		this.pElementoPrimitivo = new ElementoPrimitivoElements();
 		this.pEBoolean = new EBooleanElements();
 		this.pEDouble = new EDoubleElements();
 		this.pEInt = new EIntElements();
@@ -1956,14 +2049,64 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//Asercion returns Asercion:
 	//	('response.status'|'response'|'response->'entidad=[Entidad]'.'atributo=[Atributo]) operador=Operador (elementoPrimitivo2=DatoPrimitivo|'parameter.'servicio=[ServicioRest] '.' parametro=[Parametro]) SEMICOLON;		
 	//*/ Asercion:
-	//	('response.status' | 'response' | 'response->' elemento1=[Atributo|QualifiedName]) operador=Operador
-	//	(elementoPrimitivo2=DatoPrimitivo | 'parameter.' elemento2=[Parametro|QualifiedName]) SEMICOLON;
+	//	(elemento1=ElementoStatus | elemento1=ElementoResponse | 'response->' elemento1=ElementoAtributo) operador=Operador
+	//	(elemento2=ElementoPrimitivo | 'parameter.' elemento2=ElementoParametro) SEMICOLON;
 	public AsercionElements getAsercionAccess() {
 		return pAsercion;
 	}
 	
 	public ParserRule getAsercionRule() {
 		return getAsercionAccess().getRule();
+	}
+	
+	//ElementoStatus ElementoAsersion:
+	//	tipo='response.status';
+	public ElementoStatusElements getElementoStatusAccess() {
+		return pElementoStatus;
+	}
+	
+	public ParserRule getElementoStatusRule() {
+		return getElementoStatusAccess().getRule();
+	}
+	
+	//ElementoResponse ElementoAsersion:
+	//	tipo='response';
+	public ElementoResponseElements getElementoResponseAccess() {
+		return pElementoResponse;
+	}
+	
+	public ParserRule getElementoResponseRule() {
+		return getElementoResponseAccess().getRule();
+	}
+	
+	//ElementoAtributo ElementoAsersion:
+	//	atributo=[Atributo|QualifiedName];
+	public ElementoAtributoElements getElementoAtributoAccess() {
+		return pElementoAtributo;
+	}
+	
+	public ParserRule getElementoAtributoRule() {
+		return getElementoAtributoAccess().getRule();
+	}
+	
+	//ElementoParametro ElementoAsersion:
+	//	parametro=[Parametro|QualifiedName];
+	public ElementoParametroElements getElementoParametroAccess() {
+		return pElementoParametro;
+	}
+	
+	public ParserRule getElementoParametroRule() {
+		return getElementoParametroAccess().getRule();
+	}
+	
+	//ElementoPrimitivo ElementoAsersion:
+	//	elementoPrimitivo=DatoPrimitivo;
+	public ElementoPrimitivoElements getElementoPrimitivoAccess() {
+		return pElementoPrimitivo;
+	}
+	
+	public ParserRule getElementoPrimitivoRule() {
+		return getElementoPrimitivoAccess().getRule();
 	}
 	
 	//EBoolean ecore::EBoolean:
@@ -2038,7 +2181,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//enum Mockaroo:
 	//	FirstNameType | LastNameType | FamilyNameType | FullNameType | GenderType | EmailAddressType | PhoneType |
-	//	CountryType | CityType | CountryCodeType | LatitudeType | LongitudType | RowNumberType | BooleanType;
+	//	CountryType | CityType | CountryCodeType | LatitudeType | LongitudeType | RowNumberType | BooleanType;
 	public MockarooElements getMockarooAccess() {
 		return eMockaroo;
 	}

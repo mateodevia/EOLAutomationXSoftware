@@ -24,7 +24,7 @@ import xSoftware.XSoftwarePackage;
  *
  * @generated
  */
-public abstract class ParametroImpl extends ElementoAsersionImpl implements Parametro {
+public abstract class ParametroImpl extends UrlExpresionImpl implements Parametro {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

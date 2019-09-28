@@ -129,7 +129,22 @@ Asercion returns Asercion:
 	('response.status'|'response'|'response->'entidad=[Entidad]'.'atributo=[Atributo]) operador=Operador (elementoPrimitivo2=DatoPrimitivo|'parameter.'servicio=[ServicioRest] '.' parametro=[Parametro]) SEMICOLON;		
 */
 Asercion returns Asercion:
-	('response.status'|'response'|'response->' elemento1=[Atributo | QualifiedName] ) operador=Operador (elementoPrimitivo2=DatoPrimitivo|'parameter.'elemento2=[Parametro | QualifiedName] ) SEMICOLON;
+	(elemento1=ElementoStatus |elemento1=ElementoResponse |'response->' elemento1=ElementoAtributo ) operador=Operador (elemento2=ElementoPrimitivo|'parameter.'elemento2=ElementoParametro ) SEMICOLON;
+
+ElementoStatus returns ElementoAsersion:
+	tipo='response.status';
+	
+ElementoResponse returns ElementoAsersion:
+	tipo='response';
+	
+ElementoAtributo returns ElementoAsersion:
+	atributo=[Atributo | QualifiedName];
+	
+ElementoParametro returns ElementoAsersion:
+	parametro=[Parametro | QualifiedName];
+	
+ElementoPrimitivo returns ElementoAsersion:
+	elementoPrimitivo=DatoPrimitivo;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -138,8 +153,7 @@ EDouble returns ecore::EDouble:
 	'-'? INT? '.' INT (('E'|'e') '-'? INT)?;
 
 EInt returns ecore::EInt: 
-	INT
-;
+	INT;
 	
 EString returns ecore::EString:
 	STRING | ID;
@@ -154,7 +168,7 @@ enum Operador returns Operador:
 	Igual = '==' | Mayor = '>' | Menor = '<' | MayorIgual = '>=' | MenorIgual = '<=';
 
 enum Mockaroo returns Mockaroo:
-				FirstNameType = 'FirstNameType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CityType = 'CityType' | CountryCodeType = 'CountryCodeType' | LatitudeType = 'LatitudeType' | LongitudType = 'LongitudType' | RowNumberType = 'RowNumberType' | BooleanType = 'BooleanType';
+				FirstNameType = 'FirstNameType' | LastNameType = 'LastNameType' | FamilyNameType = 'FamilyNameType' | FullNameType = 'FullNameType' | GenderType = 'GenderType' | EmailAddressType = 'EmailAddressType' | PhoneType = 'PhoneType' | CountryType = 'CountryType' | CityType = 'CityType' | CountryCodeType = 'CountryCodeType' | LatitudeType = 'LatitudeType' | LongitudeType = 'LongitudeType' | RowNumberType = 'RowNumberType' | BooleanType = 'BooleanType';
 
 enum TipoMetodoRest returns TipoMetodoRest:
 				GET = 'GET' | POST = 'POST' | PUT = 'PUT' | DELETE = 'DELETE';	

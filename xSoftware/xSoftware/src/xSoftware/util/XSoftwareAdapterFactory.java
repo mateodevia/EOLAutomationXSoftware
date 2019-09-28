@@ -144,10 +144,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createParametroAdapter();
 			}
 			@Override
-			public Adapter caseBodyParam(BodyParam object) {
-				return createBodyParamAdapter();
-			}
-			@Override
 			public Adapter casePathParam(PathParam object) {
 				return createPathParamAdapter();
 			}
@@ -458,20 +454,6 @@ public class XSoftwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParametroAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link xSoftware.BodyParam <em>Body Param</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xSoftware.BodyParam
-	 * @generated
-	 */
-	public Adapter createBodyParamAdapter() {
 		return null;
 	}
 

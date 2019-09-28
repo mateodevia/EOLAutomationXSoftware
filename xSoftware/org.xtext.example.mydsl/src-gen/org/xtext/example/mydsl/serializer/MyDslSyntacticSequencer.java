@@ -10,7 +10,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
@@ -22,7 +21,6 @@ import org.xtext.example.mydsl.services.MyDslGrammarAccess;
 public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MyDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Asercion_ResponseKeyword_0_1_or_ResponseStatusKeyword_0_0;
 	protected AbstractElementAlias match_QueryParam_QuestionMarkKeyword_0_q;
 	protected AbstractElementAlias match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
 	protected AbstractElementAlias match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q;
@@ -31,7 +29,6 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MyDslGrammarAccess) access;
-		match_Asercion_ResponseKeyword_0_1_or_ResponseStatusKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAsercionAccess().getResponseKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getAsercionAccess().getResponseStatusKeyword_0_0()));
 		match_QueryParam_QuestionMarkKeyword_0_q = new TokenAlias(false, true, grammarAccess.getQueryParamAccess().getQuestionMarkKeyword_0());
 		match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRequestAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getRequestAccess().getRightSquareBracketKeyword_5_1()));
 		match_Response___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getResponseAccess().getLeftSquareBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getResponseAccess().getRightSquareBracketKeyword_5_1()));
@@ -82,9 +79,7 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Asercion_ResponseKeyword_0_1_or_ResponseStatusKeyword_0_0.equals(syntax))
-				emit_Asercion_ResponseKeyword_0_1_or_ResponseStatusKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_QueryParam_QuestionMarkKeyword_0_q.equals(syntax))
+			if (match_QueryParam_QuestionMarkKeyword_0_q.equals(syntax))
 				emit_QueryParam_QuestionMarkKeyword_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q.equals(syntax))
 				emit_Request___LeftSquareBracketKeyword_5_0_RightSquareBracketKeyword_5_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -96,17 +91,6 @@ public class MyDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'response.status' | 'response'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) operador=Operador
-	 */
-	protected void emit_Asercion_ResponseKeyword_0_1_or_ResponseStatusKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     '?'?

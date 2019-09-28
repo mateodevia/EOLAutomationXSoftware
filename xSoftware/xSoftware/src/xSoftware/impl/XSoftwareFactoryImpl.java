@@ -73,7 +73,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 			case XSoftwarePackage.MOCKAROO_ENTITY: return createMockarooEntity();
 			case XSoftwarePackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
 			case XSoftwarePackage.REQUEST: return createRequest();
-			case XSoftwarePackage.BODY_PARAM: return createBodyParam();
 			case XSoftwarePackage.PATH_PARAM: return createPathParam();
 			case XSoftwarePackage.QUERY_PARAM: return createQueryParam();
 			case XSoftwarePackage.ELEMENTO_ASERSION: return createElementoAsersion();
@@ -285,16 +284,6 @@ public class XSoftwareFactoryImpl extends EFactoryImpl implements XSoftwareFacto
 	public Request createRequest() {
 		RequestImpl request = new RequestImpl();
 		return request;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BodyParam createBodyParam() {
-		BodyParamImpl bodyParam = new BodyParamImpl();
-		return bodyParam;
 	}
 
 	/**

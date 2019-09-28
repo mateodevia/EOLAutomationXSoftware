@@ -16,3 +16,4 @@ import internal.GlobalVariable as GlobalVariable
 response = WS.sendRequest(findTestObject('AddStudent', [('first_name') : "$first_name", ('last_name') : "$last_name", ('gender') : "$gender", ('code') : "$code", ('country') : "$country", ('city') : "$city", ('university') : "$university"]))
 
 WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'status', 'success')

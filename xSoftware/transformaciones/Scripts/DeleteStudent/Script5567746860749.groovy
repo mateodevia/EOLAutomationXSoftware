@@ -16,3 +16,4 @@ import internal.GlobalVariable as GlobalVariable
 response = WS.sendRequest(findTestObject('DeleteStudent', [('id') : "$id"]))
 
 WS.verifyResponseStatusCode(response, 200)
+WS.verifyElementPropertyValue(response, 'status', 'success')

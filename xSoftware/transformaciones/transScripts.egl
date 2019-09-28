@@ -42,4 +42,30 @@ for(parametro in test.service.url.urlexpresions.select(e|e.isKindOf(Parametro)))
 %]][%
 }%]))
 
-WS.verifyResponseStatusCode(response, 200)
+[%
+for(asertion in test.asertions){
+	if(asertion.elemento1.tipo = 'response.status'){
+		%]WS.verifyResponseStatusCode(response[%
+	}
+	else if(asertion.elemento1.tipo = 'response'){
+		%]List json = new JsonSlurper().parseText(response.getResponseText())
+WS.verifyGreaterThanOrEqual(json.size()[%
+	}
+	else if(asertion.elemento1.atributo.isDefined()){
+		%]WS.verifyElementPropertyValue(response, '[%=asertion.elemento1.atributo.name%]'[%
+	}
+	
+	if(asertion.elemento2.elementoPrimitivo.isDefined() and asertion.elemento2.elementoPrimitivo.isTypeOf(MyString)){
+		%], '[%=asertion.elemento2.elementoPrimitivo.name%]')
+		[%
+	}
+	else if(asertion.elemento2.elementoPrimitivo.isDefined()){
+		%], [%=asertion.elemento2.elementoPrimitivo.name%])
+		[%
+	}
+	else if(asertion.elemento2.parametro.isDefined()){
+		%], [%=asertion.elemento2.parametro.name%])
+		[%
+	}
+}
+%]

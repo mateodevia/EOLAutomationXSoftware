@@ -166,15 +166,6 @@ public interface XSoftwareFactory extends EFactory {
 	Request createRequest();
 
 	/**
-	 * Returns a new object of class '<em>Body Param</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Body Param</em>'.
-	 * @generated
-	 */
-	BodyParam createBodyParam();
-
-	/**
 	 * Returns a new object of class '<em>Path Param</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
