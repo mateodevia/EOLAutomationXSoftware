@@ -14,7 +14,7 @@
       <guid>401a5200-9cdf-40b5-94f1-16f2ecd59e09</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/[%=test.service.name%]</testCaseId>
+      <testCaseId>Test Cases/[%=test.service.name+id%]</testCaseId>
       <testDataLink>
          <combinationType>MANY</combinationType>
          <id>[%=id%]24daea7-c916-4f22-a7de-c0455e0ff432</id>

@@ -14,7 +14,7 @@
       <guid>401a5200-9cdf-40b5-94f1-16f2ecd59e09</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/AddStudent</testCaseId>
+      <testCaseId>Test Cases/AddStudent4</testCaseId>
       <testDataLink>
          <combinationType>MANY</combinationType>
          <id>424daea7-c916-4f22-a7de-c0455e0ff432</id>
