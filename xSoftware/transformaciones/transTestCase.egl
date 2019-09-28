@@ -36,7 +36,7 @@
       
    %]
       
-      <defaultValue>[%=defaultValue%]</defaultValue>
+      <defaultValue>'[%=defaultValue%]'</defaultValue>
       <description></description>
       <id>[%=variable%]0d1a722-5272-4668-a0d7-412c9cb1201f</id>
       <masked>false</masked>
