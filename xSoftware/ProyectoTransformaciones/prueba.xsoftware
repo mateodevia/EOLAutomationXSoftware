@@ -154,13 +154,9 @@ Test p4{
 }
 
 Test p5{
-    service = DeleteStudent;
-    description ="Elimina un estudiante";
-    Mapping[
-        {parameter=DeleteStudent.id,value=request->Student.id}
-    ]    
+    service = GetStudents;
+    description ="Probar que retorne 200";    
     Assertions{
-        response.status == 300; 
-        response->Respuesta.status == 'success';
+        response.status == 200; 
     }
 }
