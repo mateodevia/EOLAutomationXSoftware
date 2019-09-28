@@ -18,7 +18,7 @@
 		
 		t = TemplateFactory.load('transformaciones/transScripts.egl');
 		t.populate('test', test);
-		t.generate('ProyectoKatalon/Scripts/'+test.service.name+'/Script'+id+'567746860749.groovy');
+		t.generate('ProyectoKatalon/Scripts/'+test.service.name+id+'/Script'+id+'567746860749.groovy');
 		
 		if(test.service.request.isDefined()){
 			t = TemplateFactory.load('transformaciones/transTestSuitesTS.egl');
