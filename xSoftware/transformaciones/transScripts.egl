@@ -13,7 +13,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-response = WS.sendRequest(findTestObject('[%=test.service.name%]', [[%
+response = WS.sendRequest(findTestObject('[%=test.service.name%]'[%
+
+if(test.service.request.isDefined() or ( test.service.url.urlexpresions.select(e|e.isKindOf(Parametro)).size() )>0){
+
+%], [[%
 var esElPrimero = true;
 if(test.service.request.isDefined()){
 	for(atributo in test.service.request.tipoEntidad.atributos.select(p|p.name<>'id')){
@@ -35,6 +39,7 @@ for(parametro in test.service.url.urlexpresions.select(e|e.isKindOf(Parametro)))
 		%], ('[%=parametro.name%]') : "$[%=parametro.name%]"[%
 		}
 	}
-%]]))
+%]][%
+}%]))
 
 WS.verifyResponseStatusCode(response, 200)
