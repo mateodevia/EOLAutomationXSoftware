@@ -12,7 +12,7 @@
    <httpBodyType></httpBodyType>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://miso4202-apitest.herokuapp.com/api/v1/countries/${country}/cities?${state}</restUrl>
+   <restUrl>https://miso4202-apitest.herokuapp.com/api/v1/countries/${country}/cities?state=${state}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

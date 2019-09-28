@@ -60,9 +60,9 @@
 										for(urlExp in servicio.url.urlexpresions){
    											if(urlExp.isTypeOf(QueryParam)){
    												if(esElPrimero){
-   													%]?${[%=urlExp.name%]}[%
+   													%]?[%=urlExp.name%]=${[%=urlExp.name%]}[%
    												}else {
-   												%]&{[%=urlExp.name%]}[%
+   												%]&[%=urlExp.name%]=${[%=urlExp.name%]}[%
    												}
 											}
 										}
