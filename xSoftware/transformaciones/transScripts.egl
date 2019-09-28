@@ -48,8 +48,26 @@ for(asertion in test.asertions){
 		%]WS.verifyResponseStatusCode(response[%
 	}
 	else if(asertion.elemento1.tipo = 'response'){
-		%]List json = new JsonSlurper().parseText(response.getResponseText())
-WS.verifyGreaterThanOrEqual(json.size()[%
+		%]import groovy.json.JsonSlurper
+import org.junit.After
+
+List json = new JsonSlurper().parseText(response.getResponseText())
+[%
+		if(asertion.operador.toString()='Igual'){
+			%]WS.verifyEqual(json.size()[%
+		}
+		else if(asertion.operador.toString()='Mayor'){
+			%]WS.verifyGreaterThan(json.size()[%
+		}
+		else if(asertion.operador.toString()='Menor'){
+			%]WS.verifyLessThan(json.size()[%
+		}
+		else if(asertion.operador.toString()='MayorIgual'){
+			%]WS.verifyGreaterThanOrEqual(json.size()[%
+		}
+		else if(asertion.operador.toString()='MenorIgual'){
+			%]WS.verifyLessThanOrEqual(json.size()[%
+		}
 	}
 	else if(asertion.elemento1.atributo.isDefined()){
 		%]WS.verifyElementPropertyValue(response, '[%=asertion.elemento1.atributo.name%]'[%

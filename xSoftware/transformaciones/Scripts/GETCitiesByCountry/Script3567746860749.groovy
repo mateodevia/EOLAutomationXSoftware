@@ -16,5 +16,8 @@ import internal.GlobalVariable as GlobalVariable
 response = WS.sendRequest(findTestObject('GETCitiesByCountry', [('country') : "$country", ('state') : "$state"]))
 
 WS.verifyResponseStatusCode(response, 200)
+import groovy.json.JsonSlurper
+import org.junit.After
+
 List json = new JsonSlurper().parseText(response.getResponseText())
 WS.verifyGreaterThanOrEqual(json.size(), 10)
