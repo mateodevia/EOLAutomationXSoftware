@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>GetCountryByShort</name>
+   <name>GetCountryByShort2</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>2a6fbecf-953f-4630-94a2-957fda2d0d8a</testCaseGuid>		

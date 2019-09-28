@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>[%=test.service.name%]</name>
+   <name>[%=test.service.name+id%]</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>[%=id%]a6fbecf-953f-4630-94a2-957fda2d0d8a</testCaseGuid>[%
