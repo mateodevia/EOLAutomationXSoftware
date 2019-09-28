@@ -12,8 +12,6 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
 response = WS.sendRequest(findTestObject('AddStudent', [('first_name') : "$first_name", ('last_name') : "$last_name", ('gender') : "$gender", ('code') : "$code", ('country') : "$country", ('city') : "$city", ('university') : "$university"]))
-
 WS.verifyResponseStatusCode(response, 200)
 WS.verifyElementPropertyValue(response, 'status', 'success')

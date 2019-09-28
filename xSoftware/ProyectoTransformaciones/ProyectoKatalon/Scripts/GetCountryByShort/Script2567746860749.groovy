@@ -12,9 +12,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
-
 response = WS.sendRequest(findTestObject('GetCountryByShort', [('country') : "$country"]))
-
 WS.verifyResponseStatusCode(response, 200)
 WS.verifyElementPropertyValue(response, 'shortName', country)
 WS.verifyElementPropertyValue(response, 'name', 'Brazil')
